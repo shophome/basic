@@ -66,6 +66,14 @@
 } ?>
 
 <div class="container_24">
+    <div class="grid_24">
+        <?php if(isset($this->breadcrumbs)):?>
+            <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs -->
+        <?php endif?>
+    </div>
+    <div class="clearfix"></div>
     <?php echo $content; ?>
 </div>
 

@@ -16,17 +16,9 @@
  *
  * NOTE, this file must be saved in UTF-8 encoding.
  */
-//return array (
-//  'Category' => '',
-//  'Close' => '',
-//  'Create' => '',
-//  'ID' => '',
-//  'Language' => '',
-//  'Message' => '',
-//  'Message successfully saved' => '',
-//  'Message successfully updated' => '',
-//  'Set.run "{id}" does not point to a valid Ei18n application component.' => '',
-//  'Translation' => '',
-//  '{action} translation' => '',
-//  'Update' => '',
-//);
+return array (
+  'Approve Comments' => '审核评论',
+  'Create New Post' => '发布新帖子',
+  'Logout' => '登出',
+  'Manage Posts' => '管理帖子',
+);
