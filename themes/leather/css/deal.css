@@ -8,14 +8,24 @@
 }
 .deal_pic{
 	float:left;
-	width:550px;
+	width:600px;
 	margin-top:10px;
+    margin-left:-50px;
 	overflow:hidden;
 	margin-right:50px;
 }
 .hdnum{
 	float:left;
+    margin-left:10px;
 	margin-right:30px;
+}
+.idtransformview{
+    margin-top:10px;
+    margin-left:40px;
+}
+.slider{
+    margin-top:0px;
+    margin-left:-40px;
 }
 .hdnum li{
 	margin-bottom:20px;
