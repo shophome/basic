@@ -107,16 +107,21 @@
                             <?php $newItem = $items[0];
                             $itemUrl = Yii::app()->createUrl('item/view', array('id' => $newItem->item_id));
                             ?>
+
+
+
                             <div class="product_img_b"><a href="<?php echo $itemUrl; ?>">
-                                    <?php
-                                        if( $newItem->getMainPic()){
-                                            $picUrl=$image->thumb('470','530', $newItem->getMainPic());
-                                            $picUrl=Yii::app()->baseUrl.$picUrl;
-                                        }else $picUrl=$newItem->getHolderJs('470','530');
-                                    ?>
-                                    <img alt="<?php echo $newItem->title; ?>" src="<?php echo $picUrl; ?>"
-                                         width="220" height="220"></a>
-                            </div>
+                                 <?php
+                                      if( $newItem->getMainPic()){
+                                           $picUrl=$image->thumb('470','530', $newItem->getMainPic());
+                                                                        $picUrl=Yii::app()->baseUrl.$picUrl;
+                                                                    }else $picUrl=$newItem->getHolderJs('470','530');
+                                                                ?>
+                                                                <img alt="<?php echo $newItem->title; ?>" src="<?php echo $picUrl; ?>"
+                                                                     width="220" height="220"></a>
+                                                        </div>
+
+
                             <div class="product_name">
                                 <a href="<?php echo $itemUrl; ?>"><?php echo $newItem->title; ?></a>
                             </div>

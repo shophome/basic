@@ -164,6 +164,8 @@ Yii::app()->clientScript->registerCoreScript('jquery');
             ?>
         </div>
     </div>
+
+
     <div class="box">
         <div class="box-title container_24">商品列表</div>
         <div class="box-content cart container_24">
