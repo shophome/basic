@@ -1,0 +1,23 @@
+.add_summary {
+    width: 15%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.orderform {
+    width: 40%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input-group-addon {
+    height: 40px;
+    width: 90px !important;
+}
+
+.form-control1 {
+    height: 40px !important;
+    width: 343px !important;
+}

@@ -1,0 +1,1 @@
+<?php $this->widget('zii.widgets.CListView', array(    'dataProvider'=>$dataProvider,    'itemView'=>'articleList',    'htmlOptions'=>array('class'=>'container_24'),    'pager'=>array(        'header'=>'页码',        'prevPageLabel'=>'上一页',        'nextPageLabel'=>'下一页',    ),    'pagerCssClass'=>'shenyue',)); ?>
