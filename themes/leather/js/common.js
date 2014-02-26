@@ -7,18 +7,22 @@
  * @param sTitle
  * @constructor
  */
-function addFavorite() {
-    var url = window.location.hostname;
-    var title = document.title;
+function addFavorite(sURL,sTitle) {
+    var sURL = window.location;
+    var sTitle = document.title;
+//    sURL = encodeURI(sURL);
     try {
-        window.external.addFavorite(url, title);
+        window.external.addFavorite(sURL, sTitle);
     }
     catch (e) {
         try {
-            window.sidebar.addPanel(title, url, "");
+//            document.write(e);
+            window.sidebar.addPanel(sTitle, sURL, "");
         }
         catch (e) {
-            showPopup("加入收藏失败，请使用Ctrl+D进行添加");
+//            document.write(e);
+//            showPopup("加入收藏失败，请使用Ctrl+D进行添加");
+            return true;
         }
     }
 }
