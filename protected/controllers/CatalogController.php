@@ -80,7 +80,7 @@ class CatalogController extends YController
         }
         $count = Item::model()->count($criteria);
         $pager = new CPagination($count);
-        $pager->pageSize =6;
+        $pager->pageSize =8;
         $pager->applyLimit($criteria);
         $items = Item::model()->findAll($criteria);
 //        var_dump($criteria);die;
