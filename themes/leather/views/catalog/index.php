@@ -94,6 +94,7 @@
                 }
                 $params = $_GET;
                 $getprops = empty($params['props']) ? array() : array_flip(explode(';', $params['props']));
+
                 if ($itemProps) {
                     foreach ($itemProps as $itemProp) {
                         ?>
