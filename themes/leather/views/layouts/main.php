@@ -9,12 +9,13 @@
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.js"></script>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/common.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/common.css'/>
-        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/product.css'/>
-        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/member.css'/>
-        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/grid.css'/>
+    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/form.css'/>
+    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/product.css'/>
+    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/member.css'/>
+    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/grid.css'/>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/common.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
     <script type="text/javascript" src="<?php echo F::baseUrl(); ?>/js/holder.js"></script>
     <title><?php echo Yii::app()->params['title']; ?></title>
 <body>
@@ -29,7 +30,7 @@
             <?php echo CHtml::link('在线客服', Yii::app()->createUrl('contact'), array('class' => "online_ser")); ?>
         </div>
 
-        <?php $this->widget('widgets.default.WTopNav');?>
+        <?php $this->widget('widgets.default.WTopNav'); ?>
 
     </div>
 </div>
@@ -59,7 +60,7 @@
     </a>
 </div>
 <div class="nav">
-<?php $this->widget('widgets.leather.WMainMenu') ?>
+    <?php $this->widget('widgets.leather.WMainMenu') ?>
 </div>
 <?php if (Yii::app()->params['ads']) {
     echo $this->renderPartial('picture', array('ads' => Yii::app()->params['ads']), true, true);
@@ -67,11 +68,11 @@
 
 <div class="container_24">
     <div class="grid_24">
-        <?php if(isset($this->breadcrumbs)):?>
+        <?php if (isset($this->breadcrumbs)): ?>
             <?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
-        <?php endif?>
+        <?php endif ?>
     </div>
     <div class="clearfix"></div>
     <?php echo $content; ?>
