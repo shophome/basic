@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/cart/core.css');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/cart/box.css');
 $this->breadcrumbs = array(
@@ -179,12 +179,13 @@ Yii::app()->clientScript->registerCoreScript('jquery');
                 </tr>
                 <?php
                 if (isset($item)) {
+                    $item->getId();
                     ?>
                     <tr><?php
                         ?>
                         <td><?php echo CHtml::image($item->getMainPic(), $item->title, array('width' => '80px', 'height' => '80px')); ?></td>
                         <td><?php echo $item->title; ?></td>
-                        <td><?php echo empty($item->sku) ? '' : implode(';', json_decode($item->sku->props_name, true)); ?></td>
+                        <td><?php echo  empty($item->sku) ? '' : implode(';', json_decode($item->sku->props_name, true)); ?></td>
                         <td><?php echo $item->getPrice(); ?></td>
                         <td><?php echo $item->getQuantity(); ?></td>
                         <td><?php echo $item->getSumPrice() ?>元</td>
