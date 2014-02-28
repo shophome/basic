@@ -1,4 +1,4 @@
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/slides.jquery.js'); ?>
+ <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/slides.jquery.js'); ?>
 <div class="warp_banner index_bg05" id="mainbody">
     <div id="slides" class="banner">
         <div class="banner_l">

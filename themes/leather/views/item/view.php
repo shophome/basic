@@ -205,7 +205,6 @@ $imageHelper=new ImageHelper();
                             }
                         }else echo"No data";
                     ?>
-
                 </ul>
             </div>
         </div>

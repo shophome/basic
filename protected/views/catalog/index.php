@@ -55,7 +55,7 @@ $this->widget('widgets.default.WCategorySearch', array('category' => $category))
             } else {
                 ?>
                 <div style="text-align:center">没有找到商品!</div>
-<?php } ?>
+<?php }                                                                                                                                                                                                                                                     ?>
     </div>
     <div class="clear"></div>
     <div align="center" class="p-page"><?php
