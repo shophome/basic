@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: text/html;charset=utf-8");
 class ItemController extends MallBaseController
 {
     /**
@@ -90,8 +90,8 @@ class ItemController extends MallBaseController
 //批量操作
     public function actionBulk()
     {
-        print_r($_POST);
-        exit;
+//        print_r($_POST);
+//        exit;
         $ids = $_POST['item-grid_c0'];
 //        print_r($ids);
 //        exit;
@@ -136,7 +136,7 @@ class ItemController extends MallBaseController
                     echo '<script type="text/javascript">setTimeout(\'location.href="' . Yii::app()->createUrl('/mall/item/admin') . '"\',10);</script>';
                     die;
                 }
-            } elseif ('if_show' == $_POST['act']) { //批量上架
+            } elseif ('is_show' == $_POST['act']) { //批量上架
                 if ($count == 1) {
                     Item::model()->updateByPk($ids, array("is_show" => 1));
                     echo '<script type="text/javascript">setTimeout(\'location.href="' . Yii::app()->createUrl('/mall/item/admin') . '"\',10);</script>';
