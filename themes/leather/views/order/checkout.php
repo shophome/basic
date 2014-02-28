@@ -69,16 +69,16 @@ Yii::app()->clientScript->registerCoreScript('jquery');
 
 <?php } else { ?>
     <div class="box">
-        <div class="box-title">delivery address</div>
+        <div class="box-title main-title-txt">填写对核对订单信息</div>
         <div class="box-content">
             <?php $model = new AddressResult;
             ?>
 
-            <p class="note">Fields with <span class="required">*</span> are required.</p>
+            <p class="note">带<span class="required">*</span>的必须填写！</p>
 
             <div class="row">
                 <label for="AddressResult_contact_name" class="required">联系人<span class="required">*</span></label>
-                <input size="45" maxlength="45" name="AddressResult[contact_name]" id="AddressResult_contact_name"
+                <input size="30" maxlength="45" name="AddressResult[contact_name]" id="AddressResult_contact_name"
                        type="text"/>
             </div>
             <div class="row">
@@ -133,7 +133,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
             </div>
             <div class="row">
                 <label for="AddressResult_address" class="required">详细地址 <span class="required">*</span></label> <input
-                    size="60" maxlength="255" name="AddressResult[address]" id="AddressResult_address" type="text"/>
+                    size="57" maxlength="255" name="AddressResult[address]" id="AddressResult_address" type="text"/>
             </div>
             <div class="row">
                 <label for="AddressResult_mobile_phone" class="required">手机 <span class="required">*</span></label>
@@ -148,6 +148,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
 
 
         </div>
+         <input type="button" value="保存收货人信息" class="personal-infor">
     </div>
 
 <?php } ?>
@@ -167,9 +168,9 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     <div class="box">
         <div class="box-title container_24">商品列表</div>
         <div class="box-content cart container_24">
-            <table width="100%" border="1" cellspacing="1" cellpadding="0"
-                   style="text-align:center;vertical-align:middle">
-                <tr>
+            <table width="90%" border="1" cellspacing="1" cellpadding="0"
+                   style="text-align:center;vertical-align:middle" class="list-table">
+                <tr  class="table-first-line">
                     <th width="15%">图片</th>
                     <th width="15%">名称</th>
                     <th width="15%">属性</th>
