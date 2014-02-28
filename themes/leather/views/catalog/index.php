@@ -94,6 +94,7 @@
                 }
                 $params = $_GET;
                 $getprops = empty($params['props']) ? array() : array_flip(explode(';', $params['props']));
+
                 if ($itemProps) {
                     foreach ($itemProps as $itemProp) {
                         ?>
@@ -208,7 +209,11 @@
                         echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => 0))) . '" class="page_p"><img alt="" src=""/>首页</a></a></span>';
                         echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage))) . '" class="page_p"><img alt="" src=""/>上一页</a></a></span>';
                     }
-                    for ($i = 0; $i < $pager->pageCount; $i++) {
+                    for ($i = $pager->currentPage-5; $i < $pager->currentPage+6; $i++) {
+                        if($i < 0)
+                            continue;
+                        if($i >= $pager->pageCount)
+                            break;
                         $class = $i == $pager->currentPage ? 'current' : '';
                         echo '<span class="' . $class . '"><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $i+1))) . '">' . ($i+1) . '</a></span>';
                     }
@@ -216,7 +221,11 @@
                         echo '<span class="end"><a href="javascript:void(0)" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
                         echo '<span class="end"><a href="javascript:void(0)" class="page_n"><img alt="" src=""/>末页</a></a></span>';
                     } else {
+<<<<<<< HEAD
                         echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage + 2))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
+=======
+                        echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage+2))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
+>>>>>>> bc87d4394a4c8fe217ebbbd0b9ef17b4e7e8a084
                         echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->pageCount))) . '" class="page_n"><img alt="" src=""/>末页</a></a></span>';
                     }
                 }
