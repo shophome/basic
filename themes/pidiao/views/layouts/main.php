@@ -6,23 +6,19 @@
     <meta http-equiv="content-language" content="zh"/>
     <meta http-equiv="Cache-Control" content="max-age=7200"/>
     <meta content="IE=7" http-equiv="X-UA-Compatible"/>
-    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.js"></script>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/common.css'/>
-    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/common.css'/>
-    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/form.css'/>
-    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/product.css'/>
-    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/member.css'/>
-    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/grid.css'/>
+        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/product.css'/>
+        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/member.css'/>
+        <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/grid.css'/>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.4.4.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/common.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
-    <script type="text/javascript" src="<?php echo F::baseUrl(); ?>/js/holder.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
     <title><?php echo Yii::app()->params['title']; ?></title>
 <body>
 <div class="top">
     <div class="top_contant">
         <div class="top_left">
-            <?php echo CHtml::link('收藏网站', './basic/site/index', array(rel=>"sidebar",'onclick' => "addFavorite();"));
+            <?php echo CHtml::link('收藏网站', 'javascript:void(0)', array('onclick' => ""));
             echo CHtml::link('官网', Yii::app()->getBaseUrl(true));
             echo CHtml::link('新浪', 'http://www.sina.com.cn/', array('class' => 'sina'));
             echo CHtml::link('商城', Yii::app()->getBaseUrl(true), array('class' => 'mart')); ?>
@@ -30,7 +26,7 @@
             <?php echo CHtml::link('在线客服', Yii::app()->createUrl('contact'), array('class' => "online_ser")); ?>
         </div>
 
-        <?php $this->widget('widgets.default.WTopNav'); ?>
+        <?php $this->widget('widgets.default.WTopNav');?>
 
     </div>
 </div>
@@ -60,24 +56,18 @@
     </a>
 </div>
 <div class="nav">
-    <?php $this->widget('widgets.leather.WMainMenu') ?>
+    <ul class="nav_list">
+        <?php $class = isset(Yii::app()->params['categoryIds']) ? '' : 'current';
+        echo '<li class="' . $class . '"><a href="' . Yii::app()->getBaseUrl(true) . '">首页</a></li>';
+        $categories = Category::model()->findAllByAttributes(array('root' => '3', 'level' => 2));
+        foreach ($categories as $cate) {
+            $class = isset(Yii::app()->params['categoryIds']) && in_array($cate->category_id, Yii::app()->params['categoryIds']) ? 'current' : '';
+            echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('catalog/index', array('cat' => $cate->category_id)) . '">' . $cate->name . '</a></li>';
+        }
+        ?>
+    </ul>
 </div>
-<?php if (Yii::app()->params['ads']) {
-    echo $this->renderPartial('picture', array('ads' => Yii::app()->params['ads']), true, true);
-} ?>
-
-<div class="container_24">
-    <div class="grid_24">
-        <?php if (isset($this->breadcrumbs)): ?>
-            <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-        <?php endif ?>
-    </div>
-    <div class="clearfix"></div>
-    <?php echo $content; ?>
-</div>
-
+<?php echo $content; ?>
 <div class="footer">
     <div class="foot_c">
         <div class="foot_new">

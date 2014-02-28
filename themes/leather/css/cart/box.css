@@ -74,12 +74,12 @@ dd{
 }
 .item-list .image {
     border: 1px solid #D4D4D4;
-    height: 150px;
-    margin-bottom: 5px;
+    height: 0px;
+    margin-bottom: 0px;
     overflow: hidden;
-    padding: 3px;
+    padding: 0px;
     position: relative;
-    width: 150px;
+    width: 0px;
 }
 .item-list .image a {
     display: table-cell;

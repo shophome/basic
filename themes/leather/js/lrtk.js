@@ -104,10 +104,10 @@ TransformView.prototype = {
 
 	
 	
-	function mytv(aa,bb,cc,dd,ee,ff,gg,hh,ii,jj){
+	function mytv(aa,bb,cc,dd,ee,ff,gg,hh,ii,jj){//按钮容器aa，滚动容器bb，滚动内容cc，滚动宽度dd，滚动数量ee，滚动方向ff，延时gg，滚动速度hh，自动滚动ii，
 var objs = ybvvjdt(aa).getElementsByTagName("li");
 var tv = new TransformView(bb,cc,dd,ee, {
-onStart : function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) }//��ť��ʽ
+onStart : function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) }//按钮样式
 });
 
 
