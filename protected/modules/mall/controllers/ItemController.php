@@ -345,6 +345,7 @@ class ItemController extends MallBaseController
      */
     protected function handlePostData()
     {
+        $stock = null;
         $itemProps = array();
         if (isset($_POST['ItemProp']) && is_array($_POST['ItemProp'])) {
             $itemProps = $_POST['ItemProp'];
@@ -359,9 +360,11 @@ class ItemController extends MallBaseController
             $skus = array();
             foreach ($_POST['Item']['skus']['table'] as $pid => $sku) {
                 list($sku['props'], $sku['props_name']) = $this->handleItemProps($sku['props']);
+                $stock = $sku['stock'] + $stock;
                 $skus[] = $sku;
             }
             $_POST['Item']['skus'] = $skus;
+            $_POST['Item']['stock'] = $stock;
         }
 
         if (isset($_POST['ItemImg']['pic']) && isset($_POST['ItemImg']['item_img_id']) && is_array($_POST['ItemImg']['pic']) && is_array($_POST['ItemImg']['item_img_id'])) {

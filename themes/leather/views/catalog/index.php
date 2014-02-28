@@ -167,7 +167,7 @@
                         if ($pager->currentPage >= $pager->pageCount - 1 && false) {
                             echo '<span class="end"><a href="javascript:void(0)" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
                         } else {
-                            echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
+                            echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage + 2))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
                         }
                     } ?>
                 </div>
@@ -216,8 +216,8 @@
                         echo '<span class="end"><a href="javascript:void(0)" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
                         echo '<span class="end"><a href="javascript:void(0)" class="page_n"><img alt="" src=""/>末页</a></a></span>';
                     } else {
-                        echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
-                        echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->pageCount - 1))) . '" class="page_n"><img alt="" src=""/>末页</a></a></span>';
+                        echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->currentPage + 2))) . '" class="page_n"><img alt="" src=""/>下一页</a></a></span>';
+                        echo '<span><a href="' . Yii::app()->createUrl('catalog/index', array_merge($_GET, array('page' => $pager->pageCount))) . '" class="page_n"><img alt="" src=""/>末页</a></a></span>';
                     }
                 }
                 ?>
