@@ -363,8 +363,8 @@ class ItemController extends MallBaseController
                 $stock = $sku['stock'] + $stock;
                 $skus[] = $sku;
             }
-            $_POST['Item']['skus'] = $skus;
-            $_POST['Item']['stock'] = $stock;
+        $_POST['Item']['skus'] = $skus;
+        $_POST['Item']['stock'] = $stock;
         }
 
         if (isset($_POST['ItemImg']['pic']) && isset($_POST['ItemImg']['item_img_id']) && is_array($_POST['ItemImg']['pic']) && is_array($_POST['ItemImg']['item_img_id'])) {
