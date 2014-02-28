@@ -51,8 +51,8 @@ $imageHelper=new ImageHelper();
                     } ?>
                 </ul>
             </div>
-            <div style="width: 450px; height: 450px; overflow: hidden; position: relative;" id=idTransformView >
-                <ul id=idSlider class=slider>
+            <div style="width: 450px; height: 450px; overflow: hidden; position: relative;" id="idTransformView" class="idtransformview">
+                <ul id="idSlider" class="slider">
                     <?php foreach ($item->itemImgs as $itemImg) {
                         if($itemImg->pic){
                             $picUrl=$imageHelper->thumb('450','450',$itemImg->pic);
