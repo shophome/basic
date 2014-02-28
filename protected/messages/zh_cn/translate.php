@@ -16,18 +16,17 @@
  *
  * NOTE, this file must be saved in UTF-8 encoding.
  */
-return array (
-  'Category' => '',
-  'Close' => '',
-  'Create' => '',
-  'ID' => '',
-  'Language' => '',
-  'Message' => '',
-  'Message successfully saved' => '',
-  'Message successfully updated' => '',
-  'Set.run "{id}" does not point to a valid Ei18n application component.' => '',
-  'Translation' => '',
-  '{action} translation' => '',
-  0 => '',
-  'Update' => '',
-);
+//return array (
+//  'Category' => '',
+//  'Close' => '',
+//  'Create' => '',
+//  'ID' => '',
+//  'Language' => '',
+//  'Message' => '',
+//  'Message successfully saved' => '',
+//  'Message successfully updated' => '',
+//  'Set.run "{id}" does not point to a valid Ei18n application component.' => '',
+//  'Translation' => '',
+//  '{action} translation' => '',
+//  'Update' => '',
+//);

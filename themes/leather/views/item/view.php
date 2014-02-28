@@ -51,14 +51,15 @@ $imageHelper=new ImageHelper();
                     } ?>
                 </ul>
             </div>
-            <div style="height: 450px; overflow: hidden;" id=idTransformView>
+            <div style="width: 450px; height: 450px; overflow: hidden; position: relative;" id=idTransformView >
                 <ul id=idSlider class=slider>
                     <?php foreach ($item->itemImgs as $itemImg) {
                         if($itemImg->pic){
                             $picUrl=$imageHelper->thumb('450','450',$itemImg->pic);
                             $picUrl=yii::app()->baseUrl. $picUrl;
                         }else $picUrl=$item->getHolderJs('450','450');
-                        echo '<div><a href="javascript:void(0)" target="_blank"><img alt="' . $item->title . '" src="'  .$picUrl . '" width="450" height="450"/></a></div>';
+//                        echo '<li><img src="' .$picUrl . '" width="450" height="450"></li>';
+                        echo'<div><a href="javascript:void(0)" target="_blank" rel="nofollow"><img position=absolute   alt="' . $item->title . '" src="'  .$picUrl . '" width="450" height="450"/></a></div>';
                     } ?>
                 </ul>
             </div>

@@ -17,7 +17,7 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-  'Order ID' => '',
-  'Order Status' => '',
   'Value' => '',
+  'Order ID' => '@@@@',
+  'Order Status' => '@@@@',
 );

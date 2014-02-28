@@ -123,3 +123,4 @@ $this->breadcrumbs=array(
         </div>
   </div>
 </div>
+<div style="padding-bottom: 20px"></div>
