@@ -98,3 +98,33 @@ footer .copy {
 
 }
 
+#demo-table{
+    width: 800px;
+    height: auto;
+    text-align: center;
+
+}
+#demo-table tr:hover{
+
+    color:red;
+    font-weight: bold;
+}
+.view-txt{
+background: #FCFCFC;
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+}
+.view-txt:hover{
+    font-weight: bold;
+}
+#friendLink-table{
+    width:30%
+}
+#friendLink-table td{
+    width:50%
+}
+#friendLink-table tr:hover{
+    color:red;
+
+}
