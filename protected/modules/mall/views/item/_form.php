@@ -13,11 +13,11 @@ if ($model->hasErrors()) {
 }
 $this->widget('bootstrap.widgets.TbTabs', array(
     'tabs' => array(
-        array('label' => '基本信息', 'content' => $this->renderPartial("_form_base", array('model' => $model, 'form' => $form), true),'active' => true),
-        array('label' => '详细描述', 'content' => $this->renderPartial("_form_desc", array("model" => $model, 'form' => $form), true)),
-        array('label' => '其他信息', 'content' => $this->renderPartial("_form_other", array("model" => $model, 'form' => $form), true)),
-        array('label' => '商品类型', 'content' => $this->renderPartial("_form_type", array("model" => $model, 'form' => $form), true)),
-        array('label' => '商品图片', 'content' => $this->renderPartial("_form_image", array('model' => $model, 'form' => $form), true)),
+        array('label' => '基本信息', 'content' => $this->renderPartial("_form_base", array('model' => $model, 'form' => $form,'is_view' => $is_view), true),'active' => true),
+        array('label' => '详细描述', 'content' => $this->renderPartial("_form_desc", array("model" => $model, 'form' => $form,'is_view' => $is_view), true)),
+        array('label' => '其他信息', 'content' => $this->renderPartial("_form_other", array("model" => $model, 'form' => $form,'is_view' => $is_view), true)),
+        array('label' => '商品类型', 'content' => $this->renderPartial("_form_type", array("model" => $model, 'form' => $form,'is_view' => $is_view), true)),
+        array('label' => '商品图片', 'content' => $this->renderPartial("_form_image", array('model' => $model, 'form' => $form,'is_view' => $is_view), true)),
     ),
 ));
 if (!$is_view) {
