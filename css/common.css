@@ -48,4 +48,11 @@ width: 90%;
     font-size: 15px;
     color:#040404;
 }
+#table-th{
+    text-align: center;
+    background: #CCCCCC;
+}
+#describe_3{
+    text-align: center;
+}
 
