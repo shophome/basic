@@ -144,7 +144,7 @@
 }
 
 .intr_list_price{
-    margin-left: 150px;
+    margin-left: 65px;
 }
 
 .pd_l_intr h2{
@@ -154,7 +154,8 @@
 }
 
 .pd_intr_list{
-	margin-top:20px;
+
+    margin:10px auto;
 }
 
 .pd_intr_list li{
@@ -171,6 +172,7 @@
 	border-right:1px solid #D0D0D0;
 	border-bottom:1px solid #D0D0D0;
 	border-left:1px solid #D0D0D0;
+    margin-left: 0px;
 }
 .deal_describe_tit li{
 	float:left;

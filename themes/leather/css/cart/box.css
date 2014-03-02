@@ -47,7 +47,7 @@ dd{
     color: #0099FF
 }
 .box-content{
-    padding:10px;
+    padding:10px 10px 10px 50px ;
     overflow:hidden;
     display:block;
 }
@@ -302,6 +302,7 @@ dd{
     width: 151px;
     background-image: url("../../image/btn1.png");
     background-repeat: no-repeat;
+    background: #858585;
 }
 .btn1{
     background-position: 0 -0px;
@@ -324,6 +325,7 @@ dd{
 .btn:hover, .btn1:hover{
     color:#fff !important;
     text-decoration:underline !important;
+    background:#CC0000;
 }
 .ui-scrolltop {
     -moz-transition: opacity 0.3s ease-in 0s, opacity 0.3s ease-out 0s;
@@ -637,4 +639,7 @@ dd{
 }
 .shop_right a {
     float: left;
+}
+#list-div-box{
+    width: 90%;
 }
