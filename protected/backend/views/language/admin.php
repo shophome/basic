@@ -33,14 +33,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'language-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'language_id',
-		'code',
-		'name',
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
-	),
+    	'dataProvider'=>$model->search(),
+    	'filter'=>$model,
+    	'columns'=>array(
+    		'language_id',
+    		'code',
+    		'name',
+    		array(
+    			'class'=>'bootstrap.widgets.TbButtonColumn',
+    		),
+    	),
 )); ?>

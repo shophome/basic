@@ -8,7 +8,7 @@ echo $form->dropDownListControlGroup($model, 'category_id', $data, array('data-u
        data-url="<?php echo Yii::app()->createUrl('/mall/item/ajaxGetSkus'); ?>" value=""/>
 
 <div id="hint-contentbox" style="display: none">
-    <div class="batch-body row">
+    <div class="batch-body">
     </div>
     <div class="batch-foot">
         <a class="btn btn-success" id="btnPopSub" href="javascript:void(0)">确定</a>

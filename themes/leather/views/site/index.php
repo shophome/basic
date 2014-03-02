@@ -1,5 +1,8 @@
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/slides.jquery.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/pptBox.js'); ?>
+
+<?php $imageHelper=new ImageHelper();?>
+
 <div class="warp_contant">
     <div class="float">
         <div class="float_button">
@@ -32,7 +35,9 @@
                                     <?php
                                     $picUrl=$hotItem->getMainPic();
                                     if(!empty($picUrl)){
-                                        echo CHtml::image($hotItem->getMainPic(), $hotItem->title, array('width' => 220, 'height' => '220'));
+                                        $picUrl=$imageHelper->thumb('220','220',$picUrl);
+                                        $picUrl=yii::app()->baseUrl. $picUrl;
+                                        echo CHtml::image($picUrl, $hotItem->title, array('width' => 220, 'height' => '220'));
                                     }else {
                                         $picUrl=$hotItem->getHolderJs('220','220');
                                        ?> <img alt="<?php echo $hotItem->title; ?>" src="<?php echo $picUrl; ?>"
@@ -54,7 +59,7 @@
             <?php } ?>
         </div>
         <div class="warp_news">
-            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('article/index', array())); ?></div>
+            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('/cms/article/index', array())); ?></div>
             <div class="news_c">
                 <div class="news_img">
                     <script>
@@ -87,7 +92,7 @@
                     <?php
                     $class = 'current';
                     foreach ($articles as $article) {
-                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('article/view', array('id' => $article->article_id)) . '">' . $article->title . '</a></li>';
+                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('cms/article/view', array('id' => $article->article_id)) . '">' . $article->title . '</a></li>';
                         $class = '';
                     } ?>
                 </ul>

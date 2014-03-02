@@ -298,10 +298,10 @@ class Item extends YActiveRecord
         return ImageHelper::thumb($width, $height, $itemImg->pic);
     }
 
-    public function defaultScope()
-    {
-        return array('condition' => 'is_show = 1');
-    }
+//    public function defaultScope()
+//    {
+//        return array('condition' => 'is_show = 0');
+//    }
 
     public function scopes()
     {

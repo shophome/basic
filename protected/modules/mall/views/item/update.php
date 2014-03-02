@@ -12,12 +12,17 @@ $this->menu = array(
 );
 ?>
 
+
 <div id="loading-header">
     <div class="header-row">
 	    <header>
                 <h3 class="header-main"><i class="glyphicon glyphicon-pencil"></i>&nbsp;&nbsp;更新商品 #<?php echo $model->item_id; ?></h3>
 	    </header>
     </div> <!-- /.header-row -->
+
+
+
+
 </div>
 <div class="col-lg-12 main-content">
     <?php echo $this->renderPartial('_form', array('model'=>$model, 'image'=>$image, 'upload'=>$upload)); ?>

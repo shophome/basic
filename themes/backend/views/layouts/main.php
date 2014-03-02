@@ -74,7 +74,7 @@
                 array('label' => '站点配置', 'url' => array('/settings/index'), 'visible' => !Yii::app()->user->isGuest),
                 array('label' => '登录', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                 array('label' => Yii::app()->user->name, 'url' => '#', 'items' => array(
-                    array('label' => '个人资料', 'icon' => 'user', 'url' => '#'),
+                    array('label' => '个人资料', 'icon' => 'user', 'url' => array('/adminUser/index?id='.Yii::app()->user->id)),
                     array('label' => '退出', 'icon' => 'off', 'url' => array('/site/logout'))
                 ), 'visible' => !Yii::app()->user->isGuest),
             ),
