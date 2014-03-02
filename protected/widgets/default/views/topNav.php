@@ -1,4 +1,4 @@
-
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/login_nav.js'); ?>
 <div class="top_right">
                 <span>您好，欢迎来到皮雕软包耗材批发商城！</span>
     <?php if (Yii::app()->user->isGuest) { ?>
