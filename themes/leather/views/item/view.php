@@ -8,6 +8,8 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/cart/
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/review.js');
 
 $imageHelper=new ImageHelper();
+
+/** @var Item $item */
 ?>
 <script type="text/javascript">
     function describe(n) {
@@ -223,7 +225,12 @@ $imageHelper=new ImageHelper();
                 '_entityId'=>'1',
             ))?>
         </div>
+
         <div class="deal_describe" id="describe_3" style="display:none;">
+            <?php
+            $num=count($item->orderItems);
+            if($num>0){
+             ?>
             <table class="table table-bordered table-hover table-striped" >
                 <colgroup>
                     <col class="col-user">
@@ -244,28 +251,32 @@ $imageHelper=new ImageHelper();
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+
+                foreach($item->orderItems as $orderItem) {
+                    /** @var OrderItem $orderItem */
+                ?>
                 <tr>
-                    <td>user</td>
-                    <td>title</td>
-                    <td>price</td>
-                    <td>quantity</td>
-                    <td>time</td>
-                    <td>statu</td>
+                    <td><?php echo Tbfunction::getUser($orderItem->order->user_id);?></td>
+                    <td><?php echo $orderItem->title;?></td>
+                    <td><?php echo $orderItem->price;?></td>
+                    <td><?php echo $orderItem->quantity;?></td>
+                    <td><?php echo date("M j, Y",$orderItem->order->create_time);?></td>
+                    <td><?php echo $orderItem->order->status? finished:unfinished;?></td>
                 </tr>
-                <tr>
-                    <td>user</td>
-                    <td>title</td>
-                    <td>price</td>
-                    <td>quantity</td>
-                    <td>time</td>
-                    <td>statu</td>
-                </tr>
-
-
-
+                <?php
+                    }
+                ?>
                 </tbody>
-
             </table>
+            <?php
+            }
+            else echo "No data";
+            ?>
+
+
+
+
         </div>
     </div>
 </div>
