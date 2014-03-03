@@ -5,10 +5,9 @@ $this->breadcrumbs=array(
 );
 ?>
 <?php CHtml::$afterRequiredLabel = '';?>
+
 <div class="login_box">
-    <div class="login_tit">
-        <a class="current"><?php echo UserModule::t("Login"); ?></a>
-    </div>
+
 
 <?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
 
@@ -18,13 +17,14 @@ $this->breadcrumbs=array(
 
 <?php endif; ?>
 
-<!--    <p>--><?php //echo UserModule::t("Please fill out the following form with your login credentials:"); ?><!--</p>-->
+ <?php //echo UserModule::t("Please fill out the following form with your login credentials:"); ?>
 <div class="login_ct">
-    <div class="login">
+    <div class="login"  id="log-box-div">
+
         <div class="login_form">
         <?php echo CHtml::beginForm(); ?>
 
-<!--        <p class="note">--><?php //echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?><!--</p>-->
+   <p class="note"><?php //echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?>
 
         <?php echo CHtml::errorSummary($model); ?>
 
@@ -44,21 +44,24 @@ $this->breadcrumbs=array(
             <?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
             <span class="cor_gray">使用公用电脑请勿勾选</span>
             </div>
+
         </div>
 
         <div class="form_c">
             <div class="form_submit">
             <?php echo CHtml::submitButton(UserModule::t("Login"))."&nbsp&nbsp&nbsp&nbsp". CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl). "|".CHtml::link(UserModule::t("Register"),Yii::app()->getModule('user')->registrationUrl); ?>
+
             </div>
         </div>
-
+<div class="logo_b">
+          <img alt="" src="<?php echo Yii::app()->theme->baseUrl; ?>/image/logo_b.png" width="257" height="152"/>
+      </div>
         <?php echo CHtml::endForm(); ?>
-    </div><!-- form -->
 
+
+   </div>
 </div>
-    <div class="logo_b">
-        <img alt="" src="<?php echo Yii::app()->theme->baseUrl; ?>/image/logo_b.png" width="257" height="152"/>
-    </div>
+
     </div>
 </div>
 <?php

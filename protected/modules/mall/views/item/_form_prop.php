@@ -47,6 +47,7 @@ foreach ($itemProps as $itemProp) {
 }
 ?>
 <hr id="output" />
+<div id="sku_error" class="alert alert-info">您需要选择所有的销售属性，才能组合成完整的规格信息。</div>
 <div class="control-group">
     <div class="sku-map">
         <table id="sku" class="table table-bordered">

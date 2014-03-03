@@ -14,7 +14,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Friend Links</h1>
+<h1 align="center">Friend Links</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

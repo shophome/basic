@@ -6,18 +6,23 @@
     <meta http-equiv="content-language" content="zh"/>
     <meta http-equiv="Cache-Control" content="max-age=7200"/>
     <meta content="IE=7" http-equiv="X-UA-Compatible"/>
-    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.js"></script>
+    <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/common.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/common.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/form.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/product.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/member.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/grid.css'/>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/common.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
     <script type="text/javascript" src="<?php echo F::baseUrl(); ?>/js/holder.js"></script>
     <title><?php echo Yii::app()->params['title']; ?></title>
+
+
+
 <body>
 <div class="top">
     <div class="top_contant">
@@ -77,42 +82,41 @@
         <div class="foot_new">
             <ul>
                 <li><span class="font14 bold">新手指南</span></li>
-                <li><a href="">注册新用户</a></li>
-                <li><a href="">如何订购</a></li>
-                <li><a href="">如果修改订单</a></li>
+                <li><?php echo CHtml::link('注册新用户', array('/user/registration'));?></li>
+                <li><?php echo CHtml::link('如何订购', array('/page/index','key' => 'process'));?></li>
+                <li><?php echo CHtml::link('如何修改订单', array('/page/index','key' => 'modify_order'));?></li>
             </ul>
         </div>
         <div class="foot_pay">
             <ul>
                 <li><span class="font14 bold">支付方式</span></li>
-                <li><a href="">支付方式</a></li>
-                <li><a href="">账户提现及退款时效</a></li>
-                <li><a href="">查看账户余额</a></li>
+                <li><?php echo CHtml::link('支付方式', array('/page/index','key' => 'payment'));?></li>
+                <li><?php echo CHtml::link('账户提现及退款时效', array('/page/index','key' => 'onlinepayment'));?></li>
+                <li><?php echo CHtml::link('查看账户余额', array('/page/index','key' => 'process'));?></li>
             </ul>
         </div>
         <div class="foot_set">
             <ul>
                 <li><span class="font14 bold">配送方式</span></li>
-                <li><a href="">配送费用及收费标准</a></li>
-                <li><a href="">配送范围及配送时效</a></li>
-                <li><a href="">签收注意事项</a></li>
+                <li><?php echo CHtml::link('配送费用及收费标准', array('/page/index','key' => 'shipping'));?></li>
+                <li><?php echo CHtml::link('配送范围及配送时效', array('/page/index','key' => 'shipping'));?></li>
+                <li><?php echo CHtml::link('签收注意事项', array('/page/index','key' => 'shippinginfo'));?></li>
             </ul>
         </div>
         <div class="foot_back">
             <ul>
                 <li><span class="font14 bold">退换货服务</span></li>
-                <li><a href="">退换货政策</a></li>
-                <li><a href="">退换货流程</a></li>
-                <li><a href="">隐私申明</a></li>
+                <li><?php echo CHtml::link('退换货政策', array('/page/index','key' => 'return'));?></li>
+                <li><?php echo CHtml::link('退换货流程', array('/page/index','key' => 'return'));?></li>
+                <li><?php echo CHtml::link('隐私申明', array('/page/index','key' => 'privacy'));?></li>
             </ul>
         </div>
         <div class="foot_help">
             <ul>
                 <li><span class="font14 bold">帮助中心</span></li>
-                <li><a href="">忘记密码</a></li>
-                <li><a href="">常见问题</a></li>
-                <li><a href="">在线客服</a></li>
-                <li><a href="">联系我们</a></li>
+                <li><?php echo CHtml::link('常见问题', array('/page/index','key' => 'problems'));?></li>
+                <li><?php echo CHtml::link('在线客服', array('/page/index','key' => 'contact'));?></li>
+                <li><?php echo CHtml::link('关于我们', array('/page/index','key' => 'about'));?></li>
             </ul>
         </div>
         <div class="foot_call">
@@ -122,8 +126,18 @@
         </div>
     </div>
     <div class="foot_u">
-        <p class="foot_link"><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">商家入驻</a>|<a href="">广告服务</a>|<a
-                href="">手机商城</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">皮雕社区</a>|<a href="">资源交流</a></p>
+        <p class="foot_link">
+            <?php echo CHtml::link('关于我们', array('/page/index','key' => 'about'));?>|
+            <?php echo CHtml::link('联系我们', array('/page/index','key' => 'contact'));?>|
+            <a href="">人才招聘</a>|
+            <?php echo CHtml::link('商家入驻', array('/page/index','key' => 'join'));?>|
+            <a href="">广告服务</a>|
+            <a href="">手机商城</a>|
+            <a href="">友情链接</a>|
+            <a href="">销售联盟</a>|
+            <a href="/basic/index.php">皮雕社区</a>|
+            <a href="">资源交流</a>
+        </p>
 
         <p>Copyright ? 2013 - 2015 皮雕软包耗材批发商城 All Rights Reserved. <a href="">站长统计</a></p>
 
