@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs = array(
-    '商品列表' => array('list'),
+    '商品列表' => array('admin'),
     'Create',
 );
 
