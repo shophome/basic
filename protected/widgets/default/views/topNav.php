@@ -1,7 +1,6 @@
 <?php
-Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/js/login_nav.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/js/login_nav.js");
 ?>
-
 <div class="top_right">
                 <span>您好，欢迎来到皮雕软包耗材批发商城！</span>
     <?php if (Yii::app()->user->isGuest) { ?>
@@ -22,5 +21,17 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/js/l
             ?></div>
         <div class="login-nav"><?php echo CHtml::link('log out', array('/user/logout')) ?></div>
     <?php } ?>
-    <div class="top_daohang">网站导航<i>arrow</i></div>
+
+    <div class="top_daohang">
+        <li id="daohang" >网站导航<i>arrow</i>
+            <div class="daohang_box" style="width:250px; display:none;position:absolute;padding:6px; border:0px;box-shadow:0 1px 2px #666;background:#f9f9f9;z-index:10;font-size:12px;">
+                <a href="/"> 官方网站 </a><span style="width: 0;">|</span>
+                <a href="/"> 热卖信息 </a><span style="width: 0;">|</span>
+                <a href="/"> 合作伙伴 </a> <br>
+                <a href="/"> 官方网站 </a><span style="width: 0;">|</span>
+                <a href="/"> 热卖信息 </a><span style="width: 0;">|</span>
+                <a href="/"> 合作伙伴 </a> <br>
+            </div>
+        </li>
+    </div>
 </div>
