@@ -185,14 +185,13 @@ class Order extends CActiveRecord
         if ($this->isNewRecord) {
 
             $orderLog->op_name = 'create';
-            $orderLog->log_text = serialize($this);
+            $orderLog->log_text = serialize($this->attributes);
         } else {
             $orderLog->op_name = 'update';
             $orderLog->log_text = serialize($this->findByPk($this->order_id));
 
         }
         $orderLog->order_id = $this->order_id;
-//        var_dump($orderLog);exit;
         Yii::app()->params['orderLog'] = $orderLog;
         return parent::beforeSave();
     }
@@ -200,7 +199,13 @@ class Order extends CActiveRecord
     protected function afterSave() {
         $orderLog = Yii::app()->params['orderLog'];
         $orderLog->result = 'success';
+        try{
         $orderLog->save();
+        }
+        catch(Exception $e)
+        {
+            throw(new Exception('Save order Log fail'));
+        }
     }
 
     protected function afterDelete()

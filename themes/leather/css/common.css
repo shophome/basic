@@ -481,7 +481,7 @@ a.online_ser{
 	z-index:9999;
 }
 .banner_r {
-	top:  240px; 
+	top:  240px;
 	width: 43px;
 	position:absolute;
 	right:0;
@@ -509,7 +509,7 @@ a.online_ser{
 	MARGIN: 0px 1px; FLOAT: left
 }
 .pagination LI a{
-	BACKGROUND-IMAGE: url(../image/arrow_i.png); WIDTH: 47px; DISPLAY: block; FLOAT: left; HEIGHT: 8px; OVERFLOW: hidden; 
+	BACKGROUND-IMAGE: url(../image/arrow_i.png); WIDTH: 47px; DISPLAY: block; FLOAT: left; HEIGHT: 8px; OVERFLOW: hidden;
 	text-indent:-9999px;
 }
 .pagination li.current a {
@@ -649,3 +649,16 @@ a.online_ser{
 /*.container{*/
     /*text-align:center;*/
 /*}*/
+
+/**
+post css
+**/
+.post_nav {
+    background: #c0c0c0;
+    padding:5px;
+}
+.post_title {
+    font-size:14px;
+    border-bottom:solid 1px #c0c0c0;
+    padding-bottom: 5px;
+}
