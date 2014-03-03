@@ -10,6 +10,14 @@ class UserController extends Controller
 	/**
 	 * @return array action filters
 	 */
+
+    public function actionIsLogin() {
+        if (!Yii::app()->user->isGuest) {
+            echo  json_encode(array('status'=>'login'));
+        }else
+            echo json_encode(array('status'=>'notLogin'));
+    }
+
 	public function filters()
 	{
 		return CMap::mergeArray(parent::filters(),array(
@@ -25,7 +33,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('view'),
+				'actions'=>array('view', 'isLogin'),
 				'users'=>array('*'),
 			),
             array('allow',
