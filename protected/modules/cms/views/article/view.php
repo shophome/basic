@@ -23,10 +23,16 @@ $this->menu=array(
 		'author_id',
 		'title',
 		'from',
-                'summary:html',
+        'summary:html',
 		'content:html',
 		'views',
-		'create_time',
-		'update_time',
+		array(
+            'name' => 'create_time',
+            'value' => date("Y年m月d日 H:i:s",$model->create_time+8*3600 )
+        ),
+        array(
+            'name' => 'update_time',
+            'value' => date("Y年m月d日 H:i:s",$model->create_time+8*3600 )
+        ),
 	),
 )); ?>

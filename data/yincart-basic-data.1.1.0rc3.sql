@@ -5144,7 +5144,7 @@ INSERT INTO `order_item` (`order_item_id`, `order_id`, `item_id`, `title`, `desc
 
 CREATE TABLE IF NOT EXISTS `order_log` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) DEFAULT NULL,
+  `order_id` bigint(20) DEFAULT NULL,
   `op_name` varchar(45) DEFAULT NULL,
   `log_text` longtext,
   `action_time` int(10) unsigned DEFAULT NULL,

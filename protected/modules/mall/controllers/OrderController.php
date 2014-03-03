@@ -77,13 +77,11 @@ class OrderController extends Controller
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model)
         if (isset($_POST['Order']) && isset($_POST['Sku'])) {
-
             $transaction = $model->dbConnection->beginTransaction();
             try {
                 $model->attributes = $_POST['Order'];
                 $model->order_id=F::get_order_id();
                 $model->create_time = time();
-
                 if ($model->save()) {
                     foreach ($_POST['Sku']['item_id'] as $key => $itemId) {
                         $items = Item::model()->findByPk($itemId);

@@ -25,4 +25,9 @@ $(document).ready(function(){
         $(this).removeClass('current');
         personal_list.hide();
     })
+    $('#daohang').hover( function() {
+        $(this).addClass('hover').find('.daohang_box').show();
+    },function() {
+        $(this).removeClass('hover').find('.daohang_box').hide();
+    })
 })
