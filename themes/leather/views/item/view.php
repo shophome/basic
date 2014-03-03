@@ -226,40 +226,48 @@ $imageHelper=new ImageHelper();
                 ))?>
             </div>
             <div class="deal_describe" id="describe_3" style="display:none;">
-                <?php
-                $num=count($item->orderItems);
-                if($num>0){
-                    $dataprovider=new CActiveDataProvider('OrderItem',array(
-                        'criteria'=>array(
-                           'condition'=>'item_id='.$item->item_id,
-                        ),
-                        'pagination'=>array(
-                            'pageSize'=>10,
-                        ),
-                    ));
-                    $this->widget('zii.widgets.grid.CGridView',array(
-                        'dataProvider' =>$dataprovider,
-                        'columns' => array(
-                            array(
-                                'name'=>'user',
-                                'value'=>'Tbfunction::getUser($data->order->user_id)',
-                            ),
-                            'title',
-                            'price',
-                            'quantity',
-                            array(
-                                'name'=>'time',
-                                'value'=>'date("M j, Y",$data->order->create_time)',
-                            ),
-                            array(
-                                'name'=>'status',
-                                'value'=>'$data->order->status?finished:unfinished',
-                            ),
-                        )
-                    ));
-                }
-               else echo "No data";
-                ?>
+                 <table class="table table-bordered table-hover table-striped" >
+                                 <colgroup>
+                                 <col class="col-user">
+                                 <col class="col-title">
+                                 <col class="col-price">
+                                 <col class="col-quantity">
+                                 <col class="col-time">
+                                 <col class="col-status">
+                                 </colgroup>
+                                  <thead id="table-th">
+                                   <tr>
+                                    <th>买家</th>
+                                    <th>宝贝名称</th>
+                                    <th>价格</th>
+                                    <th>购买数量</th>
+                                    <th>成交时间</th>
+                                    <th>状态</th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                        <tr>
+                                            <td>user</td>
+                                            <td>title</td>
+                                            <td>price</td>
+                                            <td>quantity</td>
+                                            <td>time</td>
+                                            <td>statu</td>
+                                            </tr>
+                                            <tr>
+                                             <td>user</td>
+                                             <td>title</td>
+                                             <td>price</td>
+                                             <td>quantity</td>
+                                             <td>time</td>
+                                             <td>statu</td>
+                                             </tr>
+                              
+
+
+                                 </tbody>
+
+                               </table>
             </div>
         </div>
     </div>

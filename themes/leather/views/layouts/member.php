@@ -3,7 +3,7 @@
  $this->beginContent('//layouts/main'); ?>
 <div class="big-box container_24">
     <div class="big-box-left grid_4">
-        <div class="box">
+        <div class="box" id="box-left123">
             <div class="box-title">My account</div>
             <div class="box-content">
                 <ul>
