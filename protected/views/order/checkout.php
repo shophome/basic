@@ -46,13 +46,13 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     <div class="box-title">购物车</div>
     <div class="box-content cart">
 
-        <table width="80%" border="1" cellspacing="1" cellpadding="0" style="text-align:center;vertical-align:middle">
+        <table width="100%" border="1" cellspacing="1" cellpadding="0" style="text-align:center;vertical-align:middle">
             <tr>
-                <th width="15%">图片</th>
-                <th width="15%">编号</th>
-                <th width="15%">名称</th>
-                <th width="15%">数量</th>
-                <th width="15%">小计</th>
+                <th width="20%">图片</th>
+                <th width="20%">编号</th>
+                <th width="20%">名称</th>
+                <th width="20%">数量</th>
+                <th width="20%">小计</th>
             </tr>
             <?php
             print_r($mycart);

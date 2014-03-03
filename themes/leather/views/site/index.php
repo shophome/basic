@@ -3,10 +3,9 @@
 <div class="warp_contant">
     <div class="float">
         <div class="float_button">
-            <a href="#">联系<br/>在线客服</a>
+            <a href="">联系<br/>在线客服</a>
         </div>
-    </div><!--首页左侧的悬浮窗，只有联系在线客服这几个字是可以点击链接的，其他的都是图片，后期需要将这个链接指向与首页顶部的在线客服一样的页面-->
-
+    </div>
     <div class="warp_tab contaniner_24">
         <div class="warp_tab_con">
             <div class="warp_tab_t">
@@ -15,13 +14,12 @@
                     $i = 1;
                     $class = 'current';
                     foreach ($hotCategories as $hotCategory) {
-                        var_dump($class);
                         echo '<li class="' . $class . '" onclick="change_bg(' . $i++ . ');">' . $hotCategory->name . '</li>';
                         $class = '';
                     }
                     $i = 1;
                     ?>
-                </ul><!--首页轮播下第一行的精品男装和精品女装。这些分类是从数据库提取的信息。-->
+                </ul>
             </div>
             <?php foreach ($hotItems as $hotItemList) { ?>
                 <div class="warp_tab_c" id="pop_<?php echo $i; ?>" <?php if($i!=1) echo "style='display: none;'"?>>

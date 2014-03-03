@@ -19,7 +19,7 @@ dd{
     padding:0;
 }
 .box{
-    border: 1px solid #888DA0;
+    border: 1px solid #ececec;
     margin-bottom: 10px;
     padding: 0;
 }
@@ -47,7 +47,6 @@ dd{
     padding:10px;
     overflow:hidden;
     display:block;
-
 }
 .box-inside{
     overflow:hidden;
