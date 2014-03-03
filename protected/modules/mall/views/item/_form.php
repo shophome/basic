@@ -4,7 +4,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'htmlOptions' => array('enctype' => 'multipart/form-data', 'class' => 'form-horizontal'),
 ));
 ?>
-<div class="control-group"><p class="help-block">带 <span class="required">*</span> 的字段为必填项.</p></div>
+
+
 <?php
 echo TbHtml::alert(TbHtml::ALERT_COLOR_INFO, '<p class="help-block">带 <span class="required">*</span> 的字段为必填项.</p>');
 if ($model->hasErrors()) {
