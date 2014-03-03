@@ -153,7 +153,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
 <?php } ?>
     <div class="box">
         <div class="box-title container_24">支付方式</div>
-        <div class="box-content">
+        <div class="box-content" style="vertical-align:middle;">
             <?php
             $cri = new CDbCriteria(array(
                 'condition' => 'enabled = 1'

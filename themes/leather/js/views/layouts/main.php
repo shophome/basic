@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta http-equiv="content-language" content="zh"/>
     <meta http-equiv="Cache-Control" content="max-age=7200"/>
-    <meta content="IE=7" http-equiv="X-UA-Compatible"/>
+    <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.js"></script>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/css/common.css'/>
     <link type='text/css' rel='stylesheet' href='<?php echo Yii::app()->baseUrl; ?>/css/common.css'/>
@@ -18,6 +18,10 @@
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/passwordCheck.js"></script>
     <script type="text/javascript" src="<?php echo F::baseUrl(); ?>/js/holder.js"></script>
     <title><?php echo Yii::app()->params['title']; ?></title>
+   <style type="text/css">
+        *{margin:0;padding:0;}
+       </style>
+   </head>
 <body>
 <div class="top">
     <div class="top_contant">
