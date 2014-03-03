@@ -149,7 +149,32 @@ $imageHelper=new ImageHelper();
         <input type="hidden" id="item_id" name="item_id" value="<?php echo $item->item_id; ?>" />
         <input type="hidden" id="props" name="props" value="" />
         <div class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)">加入购物车</a></div>
-        <div class="deal_add"><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
+        <div class="deal_add" data-url="<?php echo Yii::app()->createUrl('user/user/isLogin'); ?>" ><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
+
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div id="warning-load">
+                    <div id="logo">皮雕软毛耗材商城天天乐购</div>
+                    <div class="user">
+                        <div> 登录名：</div>
+                        <input class="txt" name="user" type="text" value="手机号/邮箱/会员号"/>
+                    </div>
+                    <div class="user">
+                        <div> 登录密码：</div>
+                        <input class="txt" name="password" type="password"/>
+                    </div>
+                    <div id="safe"><input  name="warning" type="checkbox" />安全控件登录</div>
+                    <input id="btn"  name="button" type="button" value="登录" />
+                    <div id="register">
+                        <a href="localhost/user/registration" class="link"><u>免费注册</u></a>
+                        <a href="localhost/order/checkout" class="link" ><u>免登陆直接购买</u></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a href="javascript:void(0)">立即收藏</a></div>
     </form>
 </div>
@@ -446,13 +471,20 @@ $imageHelper=new ImageHelper();
 
         });
         $('.deal_add').click(function() {
-            var selectProps = $('.prop-select,.img-prop-select');
-            if (selectProps.length < $('.deal_size p').length) {
-                $('.deal_size').addClass('prop-div-select');
-            } else {
-                $('.deal_size').removeClass('prop-div-select');
-                $(this).parents('form').submit();
-            }
+            $.post($(this).data('url'), function(response){
+                if (response.status == 'login') {
+                    var selectProps = $('.prop-select,.img-prop-select');
+                    if (selectProps.length < $('.deal_size p').length) {
+                        $('.deal_size').addClass('prop-div-select');
+                    } else {
+                        $('.deal_size').removeClass('prop-div-select');
+                        $('#deal').submit();
+                    }
+                } else {
+//                     $('#loginPage')
+                    $('#myModal').modal('show');
+                }
+            }, 'json');
         });
     });
 </script>
