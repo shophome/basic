@@ -73,3 +73,20 @@
     line-height: 26px;
     display: block;
 }
+.table-first-line{
+    background-color:#EEEEEE;
+}
+.personal-infor{
+    display:block;
+    width:120px;
+    height: 38:px;
+    color:white;
+    background:#E43D40;
+   margin:10px 360px;
+}
+.personal-infor:hover{
+    background:#a9302a;
+}
+.required{
+    color:red;
+}

@@ -20,11 +20,12 @@ dd{
 }
 .box{
     border:0;
-    border-left: 1px solid #ececec;
+    border: 1px solid #888DA0;
     margin-bottom: 10px;
     padding: 0;
     width: 1180px;
     margin: 0 auto;
+    overflow:hidden;
 }
 .box-title{
     background:transparent url(../../image/box_title_bg.gif) repeat-x scroll 0 0;
@@ -37,14 +38,15 @@ dd{
 }
 .box-title span{
     float: right;
-    padding-right: 10px
+    padding-right: 10px;
 }
 .box-title a{
     text-decoration: none;
     color: #B7D6E7;
 }
 .box-title a:hover{
-    color: #0099FF
+    color: #0099FF;
+    overflow:hidden;
 }
 .box-content{
     padding:10px;
@@ -59,7 +61,7 @@ dd{
     text-decoration: none;
 }
 .box-content a:hover{
-    color: #0099FF
+    color: #0099FF;
 }
 .item-list{
     margin: 0 auto;
@@ -637,4 +639,7 @@ dd{
 }
 .shop_right a {
     float: left;
+}
+.main-title-txt{
+    font-family: "microsoft yahei";
 }
