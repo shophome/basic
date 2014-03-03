@@ -22,7 +22,7 @@
 <div class="top">
     <div class="top_contant">
         <div class="top_left">
-            <?php echo CHtml::link('收藏网站', './basic/site/index', array(rel=>"sidebar",'onclick' => "addFavorite();"));
+            <?php echo CHtml::link('收藏网站', 'http://127.0.0.1/basic/', array(rel=>"sidebar",'onclick' => "addFavorite();"));
             echo CHtml::link('官网', Yii::app()->getBaseUrl(true));
             echo CHtml::link('新浪', 'http://www.sina.com.cn/', array('class' => 'sina'));
             echo CHtml::link('商城', Yii::app()->getBaseUrl(true), array('class' => 'mart')); ?>
@@ -67,6 +67,7 @@
 } ?>
 
 <div class="container_24">
+
     <div class="clearfix"></div>
     <?php echo $content; ?>
 </div>
