@@ -31,32 +31,52 @@ $this->widget('bootstrap.widgets.TbGridView', array(
             'name' => 'item_id',
             'value' => '$data->item_id',
         ),
-        'category.name',
-        'title',
-        'stock',
-        'min_number',
-        'price',
+        array(
+            'name' =>   'category.name',
+            'header' => '商品分类',
+        ),
+        array(
+            'name' => 'title',
+            'header' => '商品名字',
+        ),
+        array(
+            'name' => 'stock',
+            'header' => '库存',
+        ),
+        array(
+            'name' => 'min_number',
+            'header'=> '最小数量',
+        ),
+        array(
+            'name'=> 'price',
+            'header' => '价格',
+        ),
         array(
             'name' => 'is_show',
+            'header' => '上架',
             'value' => 'Tbfunction::showYesOrNo($data->is_show)',
             'filter' => Tbfunction::ReturnYesOrNo(),
         ),
         array(
             'name' => 'is_promote',
+            'header' => '热销',
             'value' => 'Tbfunction::showYesOrNo($data->is_promote)',
             'filter' => Tbfunction::ReturnYesOrNo(),
         ),
         array(
             'name' => 'is_new',
+            'header' => '新品',
             'value' => 'Tbfunction::showYesOrNo($data->is_new)',
             'filter' => Tbfunction::ReturnYesOrNo(),
         ),
         array(
             'name' => 'is_hot',
+            'header' => '热卖',
             'value' => 'Tbfunction::showYesOrNo($data->is_hot)',
             'filter' => Tbfunction::ReturnYesOrNo(),
         ),array(
             'name' => 'is_best',
+            'header' => '精品',
             'value' => 'Tbfunction::showYesOrNo($data->is_best)',
             'filter' => Tbfunction::ReturnYesOrNo(),
         ),
@@ -65,7 +85,6 @@ $this->widget('bootstrap.widgets.TbGridView', array(
         ),
     ),
 ));
-
 ?>
     <div class="control-group bulk" style="padding-top:10px">
 
@@ -85,7 +104,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
             ), array('separator' => '&nbsp;')
         )
         ?>
-
+        
         <?php echo CHtml::submitButton('提交', array('class' => 'btn btn-primary')); ?>
 
     </div>
