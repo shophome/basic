@@ -85,7 +85,8 @@ class ArticleController extends Controller {
 	$model = new Article('search');
 	$model->unsetAttributes();  // clear any default value	
 	if (isset($_GET['Article']))
-	    $model->attributes = $_GET['Article'];$this->render('admin', array(
+	    $model->attributes = $_GET['Article'];
+        $this->render('admin', array(
 	    'model' => $model,
 	));
     }
