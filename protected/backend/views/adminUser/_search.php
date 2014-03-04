@@ -3,20 +3,19 @@
 	'method'=>'get',
 )); ?>
 
-	<?php echo $form->textFieldRow($model,'id',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldControlGroup($model,'id',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'username',array('class'=>'span5','maxlength'=>128)); ?>
+	<?php echo $form->textFieldControlGroup($model,'username',array('class'=>'span5','maxlength'=>128)); ?>
 
-	<?php echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>128)); ?>
+	<?php echo $form->textFieldControlGroup($model,'email',array('class'=>'span5','maxlength'=>128)); ?>
 
-	<?php echo $form->textFieldRow($model,'profile',array('class'=>'span5','maxlength'=>128)); ?>
+	<?php echo $form->textFieldControlGroup($model,'profile',array('class'=>'span5','maxlength'=>128)); ?>
 
-	<div class="form-actions">
-		<?php $this->widget('bootstrap.widgets.TbButton', array(
-			'buttonType'=>'submit',
-			'type'=>'primary',
-			'label'=>'Search',
-		)); ?>
-	</div>
+    <?php
+    echo TbHtml::formActions(array(
+        TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
+        TbHtml::resetButton('Reset'),
+    ));
+    ?>
 
 <?php $this->endWidget(); ?>
