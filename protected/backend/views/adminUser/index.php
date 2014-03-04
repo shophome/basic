@@ -10,7 +10,18 @@ $this->menu=array(
 ?>
 
 <h1>Admin Users</h1>
-<table class="tab">
+<?php
+    if($model) {
+        $this->widget('bootstrap.widgets.TbDetailView', array(
+            'data' => $model,
+            'attributes' => $attributes,
+        ));
+    }
+?>
+<div style="display: <?php
+                        if($model) echo "none";
+                           else echo "display";?>">
+<table class="tab" >
   <tr class="tr-border">
      <td class="td-border">ID</td>
      <td>1</td>
@@ -54,3 +65,4 @@ $this->menu=array(
      <td></td>
   </tr>
 </table>
+</div>
