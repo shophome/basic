@@ -28,13 +28,13 @@ $options = array(
         'url' => '/category/update',
     ),
     array(
-        'text' => '删除',
-        'htmlOptions' => array(
-            'submit' => '/category/delete',
-            'style' => 'cursor:pointer',
-            'confirm' => 'Are you sure you want to delete this item?'
+            'text' => '删除',
+            'htmlOptions' => array(
+                'submit' => '/category/delete',
+                'style' => 'cursor:pointer',
+                'confirm' => 'Are you sure you want to delete this item?'
+            )
         )
-    )
 );
 echo Category::model()->getTree(1, $options, 'getLabel');
 

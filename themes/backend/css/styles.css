@@ -93,5 +93,13 @@ background: #FCFCFC;
 .view-txt:hover{
     font-weight: bold;
 }
+#friendLink-table{
+    width:30%
+}
+#friendLink-table td{
+    width:50%
+}
+#friendLink-table tr:hover{
+    color:red;
 
-
+}
