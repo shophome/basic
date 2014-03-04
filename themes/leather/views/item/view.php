@@ -165,7 +165,7 @@ $imageHelper=new ImageHelper();
                          <div> 密码：</div>
                          <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
                      </div>
-                     <input id="log-btn-div"  name="button" type="button" value="登  录" class="form-control" />
+                     <input id="log-btn-div"  name="button" type="button" value="登      录" class="form-control" />
                      <div id="register">
                          <a href="localhost/user/registration" class="link"><u>免费注册</u></a>
                          <a href="localhost/order/checkout" class="link" ><u>免登陆直接购买</u></a>
