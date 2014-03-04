@@ -1,8 +1,5 @@
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/slides.jquery.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/pptBox.js'); ?>
-
-<?php $imageHelper=new ImageHelper();?>
-
 <div class="warp_contant">
     <div class="float">
         <div class="float_button">
@@ -35,9 +32,7 @@
                                     <?php
                                     $picUrl=$hotItem->getMainPic();
                                     if(!empty($picUrl)){
-                                        $picUrl=$imageHelper->thumb('220','220',$picUrl);
-                                        $picUrl=yii::app()->baseUrl. $picUrl;
-                                        echo CHtml::image($picUrl, $hotItem->title, array('width' => 220, 'height' => '220'));
+                                        echo CHtml::image($hotItem->getMainPic(), $hotItem->title, array('width' => 220, 'height' => '220'));
                                     }else {
                                         $picUrl=$hotItem->getHolderJs('220','220');
                                        ?> <img alt="<?php echo $hotItem->title; ?>" src="<?php echo $picUrl; ?>"

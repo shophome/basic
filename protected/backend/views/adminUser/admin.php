@@ -14,15 +14,15 @@ $this->menu=array(
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'admin-user-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'username',
-		'email',
-		'profile',
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
-	),
+        	'dataProvider'=>$model->search(),
+        	'filter'=>$model,
+        	'columns'=>array(
+        		'id',
+        		'username',
+        		'email',
+        		'profile',
+        		array(
+        			'class'=>'bootstrap.widgets.TbButtonColumn',
+        		),
+        	),
 )); ?>

@@ -69,8 +69,33 @@ footer .copy {
     margin-right:0 !important;
     padding-left:30px;
 }
-footer {
+#footer {
     text-align:center
+}
+.tab{
+      width:630px;
+      height:300px;
+      border:2px solid black;
+      margin:20px 0px;
+      text-align:center;
+      border-radius:5px;
+      color:black;
+}
+.tr-border,.td-border{
+    border:1px solid black;
+
+}
+.td-border:{
+        width:100px;
+}
+.td-border:hover{
+           background:gray;
+
+}
+.tr-border:hover{
+          background:lightgray;
+          border:2px solid gray;
+
 }
 
 #demo-table{
