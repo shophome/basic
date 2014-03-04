@@ -16,7 +16,7 @@ $this->menu=array(
 <h1>View Language #<?php echo $model->language_id; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
-	'data'=>$model,
+'data'=>$model,
 	'attributes'=>array(
 		'language_id',
 		'code',
