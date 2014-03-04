@@ -121,9 +121,14 @@ class AdminUserController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
+        $id = $_REQUEST['id'];
         $dataProvider = new CActiveDataProvider('AdminUser');
+        if($id) {
+            $model = AdminUser::model()->findByPk($id);
+        }
         $this->render('index', array(
             'dataProvider' => $dataProvider,
+            'model' => $model,
         ));
     }
 
