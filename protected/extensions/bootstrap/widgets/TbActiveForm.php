@@ -6,7 +6,7 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @package bootstrap.widgets
  */
-
+Yii::import('bootstrap.widgets.input.TbInput');
 Yii::import('bootstrap.helpers.TbHtml');
 Yii::import('bootstrap.behaviors.TbWidget');
 
@@ -15,6 +15,19 @@ Yii::import('bootstrap.behaviors.TbWidget');
  */
 class TbActiveForm extends CActiveForm
 {
+
+    // Form types.
+    const TYPE_VERTICAL = 'vertical';
+    const TYPE_INLINE = 'inline';
+    const TYPE_HORIZONTAL = 'horizontal';
+    const TYPE_SEARCH = 'search';
+
+    // Input classes.
+    const INPUT_HORIZONTAL = 'bootstrap.widgets.input.TbInputHorizontal';
+    const INPUT_INLINE = 'bootstrap.widgets.input.TbInputInline';
+    const INPUT_SEARCH = 'bootstrap.widgets.input.TbInputSearch';
+    const INPUT_VERTICAL = 'bootstrap.widgets.input.TbInputVertical';
+
     /**
      * @var string the form layout.
      */
@@ -36,6 +49,11 @@ class TbActiveForm extends CActiveForm
      * @var boolean whether to hide inline errors. Defaults to false.
      */
     public $hideInlineErrors = false;
+
+    /**
+     * @var string the form type. See class constants.
+     */
+    public $type = self::TYPE_VERTICAL;
 
     /**
      * Initializes the widget.
@@ -141,6 +159,43 @@ class TbActiveForm extends CActiveForm
     }
 
     /**
+     * Renders a password field input row.
+     * @param CModel $model the data model
+     * @param string $attribute the attribute
+     * @param array $htmlOptions additional HTML attributes
+     * @return string the generated row
+     */
+    public function passwordFieldRow($model, $attribute, $htmlOptions = array())
+    {
+        return $this->inputRow(TbInput::TYPE_PASSWORD, $model, $attribute, null, $htmlOptions);
+    }
+
+    /**
+     * Renders a drop-down list input row.
+     * @param CModel $model the data model
+     * @param string $attribute the attribute
+     * @param array $data the list data
+     * @param array $htmlOptions additional HTML attributes
+     * @return string the generated row
+     */
+    public function dropDownListRow($model, $attribute, $data = array(), $htmlOptions = array())
+    {
+        return $this->inputRow(TbInput::TYPE_DROPDOWN, $model, $attribute, $data, $htmlOptions);
+    }
+
+    /**
+     * Renders a text field input row.
+     * @param CModel $model the data model
+     * @param string $attribute the attribute
+     * @param array $htmlOptions additional HTML attributes
+     * @return string the generated row
+     */
+    public function textFieldRow($model, $attribute, $htmlOptions = array())
+    {
+        return $this->inputRow(TbInput::TYPE_TEXT, $model, $attribute, null, $htmlOptions);
+    }
+
+    /**
      * Displays a summary of validation errors for one or several models.
      * @param mixed $models the models whose input errors are to be displayed.
      * @param string $header a piece of HTML code that appears in front of the errors
@@ -217,6 +272,61 @@ class TbActiveForm extends CActiveForm
     public function emailField($model, $attribute, $htmlOptions = array())
     {
         return $this->createInput(TbHtml::INPUT_TYPE_EMAIL, $model, $attribute, $htmlOptions);
+    }
+
+    /**
+     * Creates an input row of a specific type.
+     * @param string $type the input type
+     * @param CModel $model the data model
+     * @param string $attribute the attribute
+     * @param array $data the data for list inputs
+     * @param array $htmlOptions additional HTML attributes
+     * @return string the generated row
+     */
+    public function inputRow($type, $model, $attribute, $data = null, $htmlOptions = array())
+    {
+        ob_start();
+        $this->getOwner()->widget($this->getInputClassName(), array(
+            'form'=>$this,
+            'type'=>$type,
+            'model'=>$model,
+            'attribute'=>$attribute,
+            'data'=>$data,
+            'htmlOptions'=>$htmlOptions,
+        ));
+        return ob_get_clean();
+    }
+
+    /**
+     * Returns the input widget class name suitable for the form.
+     * @return string the class name
+     */
+    protected function getInputClassName()
+    {
+        if (isset($this->input))
+            return $this->input;
+        else
+        {
+            switch ($this->type)
+            {
+                case self::TYPE_HORIZONTAL:
+                    return self::INPUT_HORIZONTAL;
+                    break;
+
+                case self::TYPE_INLINE:
+                    return self::INPUT_INLINE;
+                    break;
+
+                case self::TYPE_SEARCH:
+                    return self::INPUT_SEARCH;
+                    break;
+
+                case self::TYPE_VERTICAL:
+                default:
+                    return self::INPUT_VERTICAL;
+                    break;
+            }
+        }
     }
 
     /**
