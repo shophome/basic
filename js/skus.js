@@ -264,13 +264,15 @@
 
     //    $(".alert").remove();  //会注销掉所有的错误提示
 
+
         if((nameArr.length < window.chbGroupCount)&&flag){
             //显示提示信息
-            $("#output").after('<div id="sku" class="alert alert-info">您需要选择所有的销售属性，才能组合成完整的规格信息。</div>');
+            $("#output").after('<div id="sku_error" class="alert alert-info">您需要选择所有的销售属性，才能组合成完整的规格信息。</div>');
             flag = 0;
         }
         if((nameArr.length == window.chbGroupCount) && !flag){
-            $("#sku").hide();
+            $("#sku_error").hide();
+            flag = 1;
         }
 //        $(".alert").remove();
 //	    if (count < 2) {
