@@ -338,35 +338,36 @@
 			
 		}
 	
-	}	
-	
-	
-	$(document).on("click", "#btnPopSub", function(e) {		
-		$(".popover-content").find("input[type=radio][data-type=price]:checked").each(function(){
-			var optid = $(this).data('optid');
-			var index = $(this).data('index');
-			apply_same_param(optid,index,0);			
-		});
-		
-		$(".popover-content").find("input[type=radio][data-type=stock]:checked").each(function(){
-			var optid = $(this).data('optid');
-			var index = $(this).data('index');
-			apply_same_param(optid,index,1);			
-		});
-		
-		$("#hint-contentbox").html($(".popover-content").html());
-		$('#sku td.operation a').popover('hide');
-	});
-	
-	
-	$(document).on("click", "#btnPopCancel", function(e) {		
-		$(".popover-content").find("input[type=radio]:checked").each(function(){
-			$(this).removeAttr("checked");
-		});
-		$("#hint-contentbox").html($(".popover-content").html());
-		$('#sku td.operation a').popover('hide');
-	});
-	
+	}
 
-	
-});
+
+     $(document).on("click", "#btnPopSub", function(e) {
+         $(".popover-content").find("input[type=radio][data-type=price]:checked").each(function(){
+             var optid = $(this).data('optid');
+             var index = $(this).data('index');
+             apply_same_param(optid,index,0);
+         });
+
+
+         $(".popover-content").find("input[type=radio][data-type=stock]:checked").each(function(){
+             var optid = $(this).data('optid');
+             var index = $(this).data('index');
+             apply_same_param(optid,index,1);
+         });
+
+        $("#hint-contentbox").html($(".popover-content").html());
+         $('#sku td.operation a').popover('hide');
+     });
+
+
+     $(document).on("click", "#btnPopCancel", function(e) {
+         $(".popover-content").find("input[type=radio]:checked").each(function(){
+             $(this).removeAttr("checked");
+         });
+        $("#hint-contentbox").html($(".popover-content").html());
+         $('#sku td.operation a').popover('hide');
+     });
+
+
+
+ });

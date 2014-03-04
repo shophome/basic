@@ -65,7 +65,7 @@ $imageHelper=new ImageHelper();
             </div>
         </div>
         <script language=javascript>
-            mytv("idNum", "idTransformView", "idSlider", 450, 5, true, 2000, 5, true, "onmouseover");
+            mytv("idNum", "idTransformView", "idSlider", 450, 5, true, 2000, 4, true, "onmouseover");
             //按钮容器aa，滚动容器bb，滚动内容cc，滚动宽度dd，滚动数量ee，滚动方向ff，延时gg，滚动速度hh，自动滚动ii，
         </script>
 
