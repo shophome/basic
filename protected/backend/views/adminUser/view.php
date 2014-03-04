@@ -12,8 +12,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>View AdminUser #<?php echo $model->id; ?></h1>
-
+<h2 align="center">View AdminUser #<?php echo $model->id; ?></h2>
+<!--注释掉的部分
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -23,4 +23,31 @@ $this->menu=array(
 		'email',
 		'profile',
 	),
-)); ?>
+)); ?>    -->
+ <div class="container" id="demo-table" >
+   <table class="table table-striped table-bordered">
+       <tr>
+           <th class="col-xs-2">ID</th>
+           <td class="col-xs-4">1</td>
+       </tr>
+       <tr>
+           <th class="col-xs-2">Username：</th>
+           <td class="col-xs-4">demo</td>
+       </tr>
+       <tr>
+           <th class="col-xs-2">Password：</th>
+           <td class="col-xs-4">xxxx</td>
+       </tr>
+       <tr>
+           <th class="col-xs-2">Email：</th>
+           <td class="col-xs-4">xx@qq.com</td>
+       </tr>
+       <tr>
+           <th class="col-xs-2">profile：</th>
+           <td class="col-xs-4">xxxxx</td>
+       </tr>
+
+
+
+   </table>
+</div>
