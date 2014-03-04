@@ -25,5 +25,5 @@ $this->menu = array(
 
 </div>
 <div class="col-lg-12 main-content">
-    <?php echo $this->renderPartial('_form', array('model'=>$model, 'image'=>$image, 'upload'=>$upload)); ?>
+    <?php echo $this->renderPartial('_form', array('model'=>$model, 'image'=>$image, 'upload'=>$upload ,'is_view' => false)); ?>
 </div>
