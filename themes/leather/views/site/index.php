@@ -59,7 +59,7 @@
             <?php } ?>
         </div>
         <div class="warp_news">
-            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('article/index', array())); ?></div>
+            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('protected',array('cms/views/article/index'))); ?></div>
             <div class="news_c">
                 <div class="news_img">
                     <script>

@@ -51,7 +51,7 @@ $imageHelper=new ImageHelper();
                     } ?>
                 </ul>
             </div>
-            <div style="width: 450px; height: 450px; overflow: hidden; position: relative;" id="idTransformView" class="idtransformview">
+            <div style="width: 490px; height: 450px; overflow: hidden; position: relative;" id="idTransformView" class="idtransformview">
                 <ul id="idSlider" class="slider">
                     <?php foreach ($item->itemImgs as $itemImg) {
                         if($itemImg->pic){
