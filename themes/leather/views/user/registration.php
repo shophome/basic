@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 );
 ?>
 <div class="login_box">
-    <h1><?php echo UserModule::t("Registration"); ?></h1>
+
     <div class="login_ct">
     <div class="login">
     <div class="login_form">
@@ -67,6 +67,7 @@ $this->breadcrumbs=array(
             <?php echo $form->passwordField($model,'verifyPassword'); ?>
             <?php echo $form->error($model,'verifyPassword'); ?>
         </div>
+
         <?php
         $profileFields=Profile::getFields();
         if ($profileFields) {
@@ -92,24 +93,26 @@ $this->breadcrumbs=array(
         }
         ?>
         <?php if (UserModule::doCaptcha('registration')): ?>
-            <div class="">
-                <div class="form_c">
-                <div class="form_1"> <?php echo $form->labelEx($model,'verifyCode'); ?></div>
-                <?php echo $form->textField($model,'verifyCode'); ?>
-                </div>
-                <?php $this->widget('CCaptcha'); ?>
+                   <div class="">
+                                          <div class="form_c">
+                                          <div class="form_1"> <?php echo $form->labelEx($model,'verifyCode'); ?></div>
+                                          <?php echo $form->textField($model,'verifyCode'); ?>
+                                          </div>
+                                         <div id="code-div">
+                                          <?php $this->widget('CCaptcha'); ?>
 
-                <?php echo $form->error($model,'verifyCode'); ?>
+                                           <?php echo $form->error($model,'verifyCode'); ?>
 
-                <p class="hint"><?php echo UserModule::t("Please enter the letters as they are shown in the image above."); ?>
-                    <br/><?php echo UserModule::t("Letters are not case-sensitive."); ?></p>
-            </div>
-        <?php endif; ?>
+                                           <p class="hint"><?php echo UserModule::t("Please enter the letters as they are shown in the image above."); ?>
+                                               <br/><?php echo UserModule::t("Letters are not case-sensitive."); ?></p>
+                                         </div>
+                                      </div>
+               <?php endif; ?>
 
-        <div class="form_c">
+        <div class="form_c" id="submit-div">
         <div class="form_submit">
             <?php echo CHtml::submitButton(UserModule::t("Register")); ?>
-            <span><font class="cor_gray">已注册 请</font><?php echo CHtml::link(UserModule::t("Login"),Yii::app()->getModule('user')->loginUrl);?>
+            <span><font class="cor_gray">已注册请</font><?php echo CHtml::link(UserModule::t("Login"),Yii::app()->getModule('user')->loginUrl);?>
         </div>
         </div>
 
@@ -117,10 +120,10 @@ $this->breadcrumbs=array(
     </div><!-- form -->
 <?php endif; ?>
   </div>
-  </div>
+
         <div class="logo_b">
             <img alt="" src="<?php echo Yii::app()->theme->baseUrl; ?>/image/logo_b.png" width="257" height="152"/>
-        </div>
+        </div> </div>
   </div>
 </div>
 <div style="padding-bottom: 20px"></div>

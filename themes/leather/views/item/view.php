@@ -142,7 +142,7 @@ $imageHelper=new ImageHelper();
                     <label class="qty_num" id="num"><?php echo $item->min_number; ?></label>
                     <input type="hidden" id="qty" name="qty" value="<?php echo $item->min_number; ?>" />
                     <a href="javascript:void(0)" class="add"></a></span>
-            <span>库存剩余 <label id="stock"><?php echo $item->stock; ?></label> 台)</span>
+            <span>（库存剩余 <label id="stock"><?php echo $item->stock; ?></label> 台)</span>
         </div>
         <input type="hidden" id="item_id" name="item_id" value="<?php echo $item->item_id; ?>" />
         <input type="hidden" id="props" name="props" value="" />
