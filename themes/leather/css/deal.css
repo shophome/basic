@@ -16,12 +16,12 @@
 }
 .hdnum{
 	float:left;
-    /*margin-left:0px;*/
-    margin-right:30px;
+    margin-left:0px;
+	margin-right:30px;
 }
 .idtransformview{
     margin-top:10px;
-    /*margin-left:0px;*/
+    margin-left:0px;
 }
 .slider{
     margin-top:0px;
