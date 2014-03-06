@@ -153,7 +153,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
 <?php } ?>
     <div class="box">
         <div class="box-title container_24">支付方式</div>
-        <div class="box-content">
+        <div class="box-content" style="vertical-align:middle;">
             <?php
             $cri = new CDbCriteria(array(
                 'condition' => 'enabled = 1'
@@ -169,9 +169,9 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     <div class="box">
         <div class="box-title container_24">商品列表</div>
         <div class="box-content cart container_24">
-            <table width="100%" border="1" cellspacing="1" cellpadding="0"
-                   style="text-align:center;vertical-align:middle">
-                <tr>
+            <table width="90%" border="1" cellspacing="1" cellpadding="0"
+                   id="list-div-box" class=" table-bordered table table-striped table-hover">
+                <tr style="background:#F3F3F3;">
                     <th width="15%">图片</th>
                     <th width="15%">名称</th>
                     <th width="15%">属性</th>

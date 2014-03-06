@@ -1,3 +1,4 @@
+
 .pd_l{
 	overflow:hidden;
 }
@@ -5,8 +6,10 @@
 	float:left;
 	width:190px;
 	margin:10px 0;
+    padding: 0;
 	
 }
+
 .pd_l_nv{
 	border:1px solid #e2dfdf;
 	padding-bottom:10px;
@@ -52,7 +55,7 @@
 .pd_l_fr{
 	width:980px;
 	float:left;
-	margin-left:10px;
+	margin-left:0px;
 	margin-top:10px;
 }
 .pd_select{
@@ -73,21 +76,30 @@
 .pd_sort{
 	overflow:hidden;
 	border-top:3px solid #2d2d2d;
+    margin-left: 0px;
+    padding: 0px;
 }
 .pd_sort_sold,.pd_sort_price,.pd_sort_new{
 	background:url(../image/sort.png) no-repeat right center;
+    background-position:42px 10px;
 	float:left;
-	margin:0 10px;
-	padding:5px 15px 5px 10px;
+	margin:0 5px;
+	padding:5px 15px 5px 5px ;
 	cursor:pointer;
+    width: 40px;
+    text-align: center;
+
 	
 }
 .pd_sort_price_up{
     background:url(../image/sort_up.png) no-repeat right center;
+    background-position:42px 10px;
     float:left;
-    margin:0 10px;
-    padding:5px 15px 5px 10px;
+    margin:0 5px;
+    padding:5px 15px 5px 5px;
     cursor:pointer;
+    width: 40px;
+    text-align: center;
 }
 
 .pd_sort .current{
@@ -98,6 +110,22 @@
 	padding-top:5px;
 	margin-left:15px;
 	float:left;
+
+}
+#price_search{
+    margin-top:-9px;
+
+    border-radius:4px;
+    background: #F5F5F5;
+}
+
+#price_search:hover{
+    background:red;
+    color: white;
+}
+.pd_search form{
+    vertical-align:top;
+
 }
 .pd_search input{
 	border:1px solid #c4c4c4;
@@ -109,8 +137,9 @@
 }
 .pd_check{
 	float:left;
-	padding-top:5px;
+	padding-top:2px;
 	margin-left:15px;
+
 }
 .pd_check input{
 	vertical-align: middle;
@@ -118,7 +147,7 @@
 }
 .pd_page {
 	float:right;
-	padding-top:5px;
+	padding-top:2px;
 }
 .pd_page span{
 	padding:5px 5px;
@@ -255,11 +284,15 @@
 /*login*/
 
 .login{
-	margin:0px 0;
+	margin:5px 200px;
 	background:#F6F5F5;
 	width:750px;
+    height: 630px;
 	float:left;
+    position: relative;
+
 }
+
 .login_tit{
 	background:#fff;
 	overflow:hidden;
@@ -285,6 +318,17 @@
 .login_form{
 	margin:40px;
 }
+#RegistrationForm_verifyCode{
+    display:block;
+    position: absolute;
+    top: 355px;
+    left:100px;
+}
+#code-div{
+    position: absolute;
+    top: 400px;
+    left: 120px;
+}
 .form_c{
 	overflow:hidden;
 	margin:20px 0 0;
@@ -293,6 +337,10 @@
     overflow:hidden;
     margin:20px 0 0;
 
+}
+#submit-div{
+    position: absolute;
+    top: 440px;
 }
 .form_cd input{
     float:left;
@@ -351,7 +399,7 @@
 	margin-top:40px;
 }
 .form_submit input[type="submit"]{
-	background:url(../image/submit.png) no-repeat;
+	background:#990000;
 	width:99px;
 	height:35px;
 	line-height:35px;
@@ -360,6 +408,11 @@
 	color:#fff;
 	border:none 0;
 	cursor:pointer;
+}
+.form_submit input[type="submit"]:hover
+{
+    color:white;
+    background:#CC0000;
 }
 .form_submit span{
 	margin-left:40px;
@@ -398,11 +451,12 @@
 	background:#65CB33;
 }
 
+
 .logo_b{
-	float:left;
-	background:#F6F5F5;
-	padding:50px;
-	margin:100px 0 0 40px;
+    display:block;
+    position:absolute;
+    right:50px;
+   bottom:100px;
 }
 .login_ct{
 	overflow:hidden;

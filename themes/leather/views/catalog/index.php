@@ -144,7 +144,7 @@
                         到
                         <input id="top_price" name="top_price" type="text"
                                value="<?php echo empty($_GET['top_price']) ? '' : $_GET['top_price']; ?>"/>
-                        <input style="padding-right: 15px;" id="price_search" type="submit" value="确定" data-url="<?php echo json_encode($_GET); ?>"/>
+                        <input  id="price_search" type="submit" value="确定" data-url="<?php echo json_encode($_GET); ?>"/>
                         <?php foreach ($_GET as $key => $value) {
                             if (!in_array($key, array('floor_price', 'top_price')))
                                 echo '<input type="hidden" name="' . $key . '" value="' . $value . '" />';
