@@ -107,14 +107,14 @@
 	color:#fff;
 }
 .pd_search{
-	padding-top:1px;
+	padding-top:5px;
 	margin-left:15px;
 	float:left;
 
 }
 #price_search{
     margin-top:-9px;
-    padding-left:15px;
+
     border-radius:4px;
     background: #F5F5F5;
 }
