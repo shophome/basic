@@ -189,3 +189,68 @@
      height:220px;
      width:220px;
  }
+#warning-load{
+    width:350px;
+    height:320px;
+    border:1px solid black;
+    font-size:16px;
+    font-wight:bold;
+    border-radius:5px;
+}
+#btn{
+    width:130px;
+    height:45px;
+    margin:8px auto;
+    display:block;
+    background-color:#ce0606;
+    font-size:12px;
+    font-weight:bold;
+    font-family:"Arial Black", arial-black;
+    color:white;
+    border:1px solid gray;
+    border-radius:5px;
+
+}
+#btn:hover{
+    background:#f72b2b;
+}
+.txt{
+    width:200px;
+    height:30px;
+    display:block:
+
+}
+.user{
+    height:50px;
+    width:250px;
+    margin:10px auto;
+
+}
+#safe{
+    font-size:12px;
+    font-family:arial, verdana, sans-serif;
+    font-weight:bold;
+    color:gray;
+}
+#logo{
+    width:350px;
+    height:40px;
+    background-color:#ce0606;
+    font-size:20px;
+    font-family:Georgia, Times, "Times New Roman", serif;
+    text-align:center;
+    font-weight:bold;
+    color:gray;
+}
+#register{
+    width:350px;
+    text-align:right;
+
+}
+.link{
+    text-align:right;
+    color:#139ff7;
+    font-size:12px;
+    font-weight:normal;
+
+}
