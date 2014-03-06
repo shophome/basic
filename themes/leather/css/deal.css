@@ -8,23 +8,24 @@
 }
 .deal_pic{
 	float:left;
-	width:600px;
+	width:630px;
 	margin-top:10px;
+    /*margin-left:0px;*/
 	overflow:hidden;
 	margin-right:50px;
 }
 .hdnum{
 	float:left;
-    margin-left:10px;
+    margin-left:0px;
 	margin-right:30px;
 }
 .idtransformview{
     margin-top:10px;
-    margin-left:40px;
+    margin-left:0px;
 }
 .slider{
     margin-top:0px;
-    margin-left:-40px;
+    /*margin-left:0px;*/
 }
 .hdnum li{
 	margin-bottom:20px;
@@ -144,7 +145,7 @@
 }
 
 .intr_list_price{
-    margin-left: 65px;
+    margin-left: 150px;
 }
 
 .pd_l_intr h2{
@@ -154,8 +155,7 @@
 }
 
 .pd_intr_list{
-
-    margin:10px auto;
+	margin-top:20px;
 }
 
 .pd_intr_list li{
@@ -172,7 +172,6 @@
 	border-right:1px solid #D0D0D0;
 	border-bottom:1px solid #D0D0D0;
 	border-left:1px solid #D0D0D0;
-    margin-left: 0px;
 }
 .deal_describe_tit li{
 	float:left;
