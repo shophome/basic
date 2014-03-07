@@ -75,12 +75,11 @@ width: 90%;
 p{
     padding:6px;
 }
-#payment-method-id payment-method-id-0{
-     float:left;
-    margin:-1px 0;
 
-}
-#pament-method-id lable{
+
+
+input[type="radio"], input[type="checkbox"]{
     float:left;
-    margin-top:-3;
+    margin:4px 0 0;
 }
+
