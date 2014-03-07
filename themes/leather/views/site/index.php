@@ -107,49 +107,20 @@
                 <div class="product_new contaniner_24">
                     <div class="product_new_tit"><label><?php echo $category_name; ?></label><a href="<?php echo Yii::app()->baseUrl.'/'.Menu::model()->getUrl($category_name).'&sort=newd';?>">更多新品>></a></div>
                     <div class="product_c">
-                    <?php  if(!isset($newItem)){?>
-                        <div class="product_new_b">
-                            <?php $newItem = $items[0];
-                            $itemUrl = Yii::app()->createUrl('item/view', array('id' => $newItem->item_id));
-                            ?>
-
-
-
-                            <div class="product_img_b"><a href="<?php echo $itemUrl; ?>">
-                                 <?php
-                                      if( $newItem->getMainPic()){
-                                           $picUrl=$image->thumb('470','530', $newItem->getMainPic());
-                                                                        $picUrl=Yii::app()->baseUrl.$picUrl;
-                                                                    }else $picUrl=$newItem->getHolderJs('470','530');
-                                                                ?>
-                                                                <img alt="<?php echo $newItem->title; ?>" src="<?php echo $picUrl; ?>"
-                                                                     width="220" height="220"></a>
-                                                        </div>
-
-
-                            <div class="product_name">
-                                <a href="<?php echo $itemUrl; ?>"><?php echo $newItem->title; ?></a>
-                            </div>
-                            <div class="product_price">
-                                <div class="product_price_n"><?php echo $newItem->currency . $newItem->price ?></div>
-                                <div class="product_price_p"><?php echo $newItem->currency . $newItem->price ?></div>
-                                <div class="product_price_v"><a href="<?php echo $itemUrl; ?>">详情点击</a></div>
-                            </div>
-                        </div>
-                    <?php  }?>
                         <div class="product_list">
-                            <?php for ($i = 1, $count = count($items); $i < $count; $i++) {
+                            <?php
+                            for ($i = 1; $i <= 5; $i++) {
                                 $newItem = $items[$i];
                                 $itemUrl = Yii::app()->createUrl('item/view', array('id' => $newItem->item_id));
                                 ?>
                                 <div class="product_d">
                                     <div class="product_img"><a href="<?php echo $itemUrl; ?>">
                                             <?php
-                                            if( $newItem->getMainPic()){
-                                                $image=new ImageHelper();
-                                                $picUrl=$image->thumb('220','220', $newItem->getMainPic());
-                                                $picUrl=Yii::app()->baseUrl.$picUrl;
-                                            }else $picUrl=$newItem->getHolderJs('220','220');
+                                                if( $newItem->getMainPic()){
+                                                    $image=new ImageHelper();
+                                                    $picUrl=$image->thumb('220','220', $newItem->getMainPic());
+                                                    $picUrl=Yii::app()->baseUrl.$picUrl;
+                                                }else $picUrl=$newItem->getHolderJs('220','220');
                                             ?>
                                             <img alt="<?php echo $newItem->title; ?>" src="<?php echo $picUrl; ?>"
                                                  width="220" height="220"></a>
