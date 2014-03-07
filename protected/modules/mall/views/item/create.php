@@ -18,7 +18,6 @@ $this->menu = array(
 </div>
 <div class="col-lg-12 main-content">
     <?php
-        $model->country=0;
         echo $this->renderPartial('_form', array('model' => $model));
     ?>
 </div>

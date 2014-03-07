@@ -14,4 +14,4 @@ $this->menu = array(
 
     <h1>更新商品属性 <?php echo $model->item_prop_id; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model' => $model, 'props' => $props, 'is_view' => true)); ?>
+<?php echo $this->renderPartial('_view', array('model' => $model, 'props' => $props, 'is_view' => true)); ?>

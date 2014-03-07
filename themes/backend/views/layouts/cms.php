@@ -11,6 +11,7 @@
                 array('label' => '内容分类', 'icon' => 'bookmark', 'url' => array('/cms/contentCategory/admin')),
                 array('label' => '单页管理', 'icon' => 'leaf', 'url' => array('/cms/page/admin')),
                 array('label' => '文章管理', 'icon' => 'book', 'url' => array('/cms/article/admin')),
+                array('label' => '新闻管理', 'icon' => 'book','url' => array('/cms/news/admin')),
                 array('label' => '留言管理', 'icon' => 'envelope', 'url' => array('/cms/feedback/admin')),
                 array('label' => '广告管理', 'icon' => 'facetime-video', 'url' => array('/cms/ad/admin')),
                 array('label' => '友情链接', 'icon' => 'share', 'url' => array('/cms/friendLink/admin')),

@@ -29,7 +29,7 @@ class Delivery_addressController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('admin', 'create', 'update', 'dynamiccities', 'dynamicdistrict'),
+                'actions' => array('admin', 'create','delete', 'update', 'dynamiccities', 'dynamicdistrict'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -128,7 +128,11 @@ class Delivery_addressController extends Controller {
         if (isset($_REQUEST['AddressResult']))
             $model->attributes = $_REQUEST['AddressResult'];
 
+        $dataProvider = new CActiveDataProvider('AddressResult',array('criteria'=>array(
+            'condition'=>'user_id='.Yii::app()->user->id,
+        ),));
         $this->render('admin', array(
+            'dataProvider' => $dataProvider,
             'model' => $model,
         ));
     }

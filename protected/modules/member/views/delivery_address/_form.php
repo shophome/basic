@@ -1,10 +1,20 @@
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'address-result-form',
-    'action'=>'create',
-	'enableAjaxValidation'=>false,
-)); ?>
+   <?php ?>
+<?php
+    if($model->contact_name) {
+        $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'address-result-form',
+            'enableAjaxValidation'=>false,
+        ));
+    } else {
+        $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'address-result-form',
+            'action' => 'create',
+            'enableAjaxValidation'=>false,
+        ));
+    }
+ ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -37,7 +47,7 @@
                 if(!$model->isNewRecord){
                 $city_data=Area::model()->findAll("parent_id=:parent_id",
                   array(":parent_id"=>$model->state));
-                $city=CHtml::listData($city_data,"id","name");
+                $city=CHtml::listData($city_data,"area_id","name");
                 }
 
                 $city_update = $model->isNewRecord ? array() : $city;
@@ -54,7 +64,7 @@
                 if(!$model->isNewRecord){
                 $district_data=Area::model()->findAll("parent_id=:parent_id",
                   array(":parent_id"=>$model->city));
-                $district=CHtml::listData($district_data,"id","name");
+                $district=CHtml::listData($district_data,"area_id","name");
                 }
                 $district_update = $model->isNewRecord ? array() : $district;
                  echo '&nbsp;区&nbsp;'.CHtml::dropDownList('AddressResult[district]', $d_default, $district_update,

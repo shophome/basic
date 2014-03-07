@@ -248,13 +248,9 @@ class Item extends YActiveRecord
         $areasData = array();
         $areas = Area::model()->findAllByAttributes(array('grade' => 0));
         $areasData[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
-        if (!$this->isNewRecord) {
-            foreach (array('country', 'state') as $area) {
-                $areas = Area::model()->findAllByAttributes(array('parent_id' => $this->{$area}));
-                $areasData[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
-            }
-        } else {
-            $areasData = CMap::mergeArray($areasData, array(array('0' => ''), array('0' => '')));
+        foreach (array('country', 'state') as $area) {
+            $areas = Area::model()->findAllByAttributes(array('parent_id' => $this->{$area}));
+            $areasData[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
         }
         return $areasData;
     }

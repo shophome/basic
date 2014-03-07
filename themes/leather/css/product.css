@@ -57,6 +57,7 @@
 	float:left;
 	margin-left:0px;
 	margin-top:10px;
+    padding-left:0px;
 }
 .pd_select{
 	margin:20px;
@@ -107,14 +108,14 @@
 	color:#fff;
 }
 .pd_search{
-	padding-top:1px;
+	padding-top:5px;
 	margin-left:15px;
 	float:left;
 
 }
 #price_search{
     margin-top:-9px;
-    padding-left:15px;
+
     border-radius:4px;
     background: #F5F5F5;
 }
@@ -456,7 +457,7 @@
     display:block;
     position:absolute;
     right:50px;
-    top:50px;
+   bottom:100px;
 }
 .login_ct{
 	overflow:hidden;

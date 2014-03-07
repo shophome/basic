@@ -1,101 +1,101 @@
 .deal{
-	margin-top:10px;
-	overflow:hidden;
-}
+     margin-top:10px;
+     overflow:hidden;
+    position:relative;
+ }
 .deal_tip{
-	border-bottom:1px solid #a35f23;
-	padding:5px;
+    border-bottom:1px solid #a35f23;
+    padding:5px;
 }
 .deal_pic{
-	float:left;
-	width:630px;
-	margin-top:10px;
-    /*margin-left:0px;*/
-	overflow:hidden;
-	margin-right:50px;
+    float:left;
+    width:600px;
+    margin-top:10px;
+    overflow:hidden;
+    margin-right:50px;
 }
 .hdnum{
-	float:left;
-    margin-left:0px;
-	margin-right:30px;
+    float:left;
+    margin-left:10px;
+    margin-right:30px;
 }
 .idtransformview{
     margin-top:10px;
-    margin-left:0px;
+    margin-left:40px;
 }
 .slider{
     margin-top:0px;
-    /*margin-left:0px;*/
+    margin-left:0px;
 }
 .hdnum li{
-	margin-bottom:20px;
-	cursor:pointer;
+    margin-bottom:20px;
+    cursor:pointer;
 }
 .deal_info{
-	float:left;
-	margin-top:10px;
+    float:left;
+    margin-top:10px;
 }
 .deal_tit{
-	font-size:14px;
-	font-weight:700;
+    font-size:14px;
+    font-weight:700;
 }
 .deal_price{
-	margin:20px 0;
+    margin:20px 0;
 }
 .font30{
-	font-size:30px;
-	font-family:Arial;
+    font-size:30px;
+    font-family:Arial;
 }
 .deal_sold{
-	padding:5px;
-	border-bottom:1px dotted #CECDCD;
+    padding:5px;
+    border-bottom:1px dotted #CECDCD;
 }
 .deal_size{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 .deal_size p{
-	margin:5px;
-	overflow:hidden;
+    margin:5px;
+    overflow:hidden;
 }
 .deal_size p span{
-	float:left;
+    float:left;
 }
 .deal_size p a{
-	float:left;
-	margin:0px 5px;
+    float:left;
+    margin:0px 5px;
     padding:5px 7px
 }
 .deal_num{
-	margin-top:30px;
-	overflow:hidden;
-	padding:0 5px;
+    margin-top:30px;
+    overflow:hidden;
+    padding:0 5px;
 }
 .deal_num span{
-	float:left;
-	overflow:hidden;
-	line-height:21px;
+    float:left;
+    overflow:hidden;
+    line-height:21px;
 }
 .deal_num_c{
-	background:url(../image/deal_num.png) no-repeat;
-	width:65px;
-	height:21px;
-	text-align:center;
-	margin:0 10px;
+    background:url(../image/deal_num.png) no-repeat;
+    width:65px;
+    height:21px;
+    text-align:center;
+    margin:0 10px;
 }
 .minus{
-	width:18px;
-	display:block;
-	float:left;
-	height:21px;
+    width:18px;
+    display:block;
+    float:left;
+    height:21px;
 }
 .add{
-	width:22px;
-	display:block;
-	float:right;
-	height:21px;
+    width:22px;
+    display:block;
+    float:right;
+    height:21px;
 }
 .deal_add_car{
-	margin-top:30px;
+    margin-top:30px;
     font-size: 20px;
     border: 1px #000000;
     border-radius: 10px;
@@ -105,10 +105,10 @@
     display: inline-block;
 }
 .deal_add_car a{
-	/*display:block;*/
-	/*background:url(../image/add_s_car.png) no-repeat;*/
+    /*display:block;*/
+    /*background:url(../image/add_s_car.png) no-repeat;*/
     color: white;
-	/*text-indent:-9999px;*/
+    /*text-indent:-9999px;*/
 }
 
 .deal_add{
@@ -136,7 +136,7 @@
 }
 
 .pd_l_intr{
-	border:1px solid #e2dfdf;
+    border:1px solid #e2dfdf;
 }
 
 .intr_list_tit{
@@ -149,44 +149,159 @@
 }
 
 .pd_l_intr h2{
-	border-bottom: 2px solid #a35f23;
-	margin: 5px 0;
-	padding: 5px;
+    border-bottom: 2px solid #a35f23;
+    margin: 5px 0;
+    padding: 5px;
 }
 
 .pd_intr_list{
-	margin-top:20px;
+    margin-top:20px;
 }
 
 .pd_intr_list li{
-    margin-left: 25px;
-	border-bottom:1px dotted #cdcdcd;
-	padding:0 4px 10px 4px;
-	margin-bottom:10px;
-	line-height:25px;
+    margin-left: 0px;
+    border-bottom:1px dotted #cdcdcd;
+    padding:0 4px 10px 4px;
+    margin-bottom:10px;
+    line-height:25px;
 }
 
 .deal_describe_tit{
-	border-top:3px solid #2D2D2D;
-	overflow:hidden;
-	border-right:1px solid #D0D0D0;
-	border-bottom:1px solid #D0D0D0;
-	border-left:1px solid #D0D0D0;
+    border-top:3px solid #2D2D2D;
+    overflow:hidden;
+    border-right:1px solid #D0D0D0;
+    border-bottom:1px solid #D0D0D0;
+    border-left:1px solid #D0D0D0;
+    margin-left:10px;
 }
 .deal_describe_tit li{
-	float:left;
-	cursor:pointer;
-	padding:5px 15px;
-	border-right:1px solid #D0D0D0;
+    float:left;
+    cursor:pointer;
+    padding:5px 15px;
+    border-right:1px solid #D0D0D0;
 }
 .deal_describe_tit li.current{
-	background:#2D2D2D;
-	color:#fff;
+    background:#2D2D2D;
+    color:#fff;
 }
 .deal_describe{
     padding: 20px;
 }
- .chenyu{
-     height:220px;
-     width:220px;
- }
+.chenyu{
+    height:220px;
+    width:220px;
+}
+#warning-load{
+    width:350px;
+    height:320px;
+
+    font-size:16px;
+    font-weight:bold;
+    margin:10px;
+    position:fixed;
+    background:rgb(255,255,255);
+
+}
+#btn{
+    width:130px;
+    height:45px;
+    margin:8px auto;
+    display:block;
+    background-color:#ce0606;
+    font-size:12px;
+    font-weight:bold;
+    font-family:"Arial Black", arial-black;
+    color:white;
+    border:1px solid gray;
+    border-radius:5px;
+
+}
+#btn:hover{
+    background:#f72b2b;
+}
+.txt{
+    width:250px;
+    height:40px;
+    display:block:
+
+}
+.user{
+    height:50px;
+    width:250px;
+    margin:10px auto;
+
+}
+#safe{
+    font-size:12px;
+    font-family:arial, verdana, sans-serif;
+    font-weight:bold;
+    color:gray;
+    padding-left:50px;
+}
+#logo{
+    width:350px;
+    height:40px;
+    background-color:#ce0606;
+    font-size:25px;
+    font-family:Georgia, Times, "Times New Roman", serif;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+}
+#register{
+    width:350px;
+    text-align:right;
+
+}
+.link{
+    text-align:right;
+    color:#139ff7;
+    font-size:12px;
+    font-weight:normal;
+
+}
+#modal{
+    width:370px;
+    height:340px;
+    position:fixed;
+}
+
+
+#myModal .form-control{
+    height: 32px;
+    margin:  5px 0;
+}
+#form-checkbox{
+
+    margin:auto 5px;
+    margin-right:-20px;
+}
+
+.modal-header {
+    padding: 2px 2px;
+    border-bottom: 0px solid #eee;
+}
+
+#log-btn-div{
+    position: absolute;
+    display:block;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    left: 50px;
+    bottom: 80px;
+    background: #CE0606;
+    font-size:20px;
+    font-weight: bold;
+    color: white;
+}
+#log-btn-div:hover{
+    background: red;
+
+}
+#register{
+    width: 300px;
+position:absolute;
+ bottom: 50px;
+   padding-right: 50px;
+}
