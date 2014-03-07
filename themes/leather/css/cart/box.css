@@ -313,9 +313,9 @@ dd{
     overflow: hidden;
     text-decoration: none !important;
     width: 151px;
-    background-image: url("../../image/btn1.png");
+
     background-repeat: no-repeat;
-    background: #858585;
+   /* background: #858585; background-image: url("../../image/btn1.png");*/
 }
 .btn1{
     background-position: 0 -0px;
@@ -329,7 +329,7 @@ dd{
     overflow: hidden;
     text-decoration: none !important;
     width: 151px;
-    background-image: url("../../image/btn1.png");
+   /* background-image: url("../../image/btn1.png");*/
     background-repeat: no-repeat;
 }
 .btn-list{
