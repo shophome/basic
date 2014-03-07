@@ -30,7 +30,7 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'category.name',
-		'author.username',
+		'author',
 		'title',
         'content',
         'tags',

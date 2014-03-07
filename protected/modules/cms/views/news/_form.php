@@ -1,5 +1,5 @@
 <?php
-$action = 'news';
+$action = 'post';
 //$id = Yii::app()->user->id;
 //$id = array_rand(array_fill_keys(range('a','z'), null), 1);
 $id = NULL;
@@ -54,23 +54,26 @@ echo '</select>';
 <?php echo $form->dropDownListControlGroup($model, 'language', array('en_us' => 'English' , 'zh_cn' => '中文')); ?>
 
 
-<?php //echo $form->textFieldControlGroup($model, 'from', array('class' => 'span5', 'value' => '本站')); ?>
+<?php echo $form->textFieldControlGroup($model, 'source', array('class' => 'span5', 'value' => '本站')); ?>
 
+<?php echo $form->textFieldControlGroup($model, 'tags', array('class' => 'span5')); ?>
 
-<?php echo $form->textFieldControlGroup($model, 'url', array('class' => 'span5')); ?>
+<?php echo $form->textFieldControlGroup($model, 'status', array('class' => 'span5')); ?>
 
-<?php //$this->widget('ext.elFinder.ServerFileInput', array(
-//    'model' => $model,
-//    'attribute' => 'pic_url',
-//    'filebrowserBrowseUrl' => Yii::app()->createUrl('mall/elfinder/view'),
-//));?>
+<?php echo $form->textFieldControlGroup($model, 'author', array('class' => 'span5', 'value' => Yii::app()->user->name)); ?>
 
-<?php //echo $form->textAreaControlGroup($model, 'summary', array('class' => 'span5', 'style'=>'height:100px')); ?>
+<?php $this->widget('ext.elFinder.ServerFileInput', array(
+    'model' => $model,
+    'attribute' => 'pic_url',
+    'filebrowserBrowseUrl' => Yii::app()->createUrl('mall/elfinder/view'),
+));?>
+
+<?php echo $form->textAreaControlGroup($model, 'summary', array('class' => 'span5', 'style'=>'height:100px')); ?>
 
 <?php echo $form->textAreaControlGroup($model, 'content', array('visibility' => 'hidden')); ?>
 <?php
 $this->widget('ext.kindeditor.KindEditorWidget', array(
-    'id' => 'News_content', //Textarea id
+    'id' => 'Post_content', //Textarea id
     'items' => array(
         'width' => '700px',
         'height' => '300px',

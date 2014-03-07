@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'News'=>array('index'),
+	'Post'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List News', 'icon'=>'list', 'url'=>array('index')),
-	array('label'=>'Manage News', 'icon'=>'cog','url'=>array('admin')),
+	array('label'=>'List Post', 'icon'=>'list', 'url'=>array('index')),
+	array('label'=>'Manage Post', 'icon'=>'cog','url'=>array('admin')),
 );
 ?>
 

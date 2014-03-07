@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'News'=>array('index'),
+	'Post'=>array('index'),
 	$model->title,
 );
 
@@ -26,6 +26,13 @@ $this->menu=array(
 		'content:html',
 		'views',
         'tags',
+        'status',
+        'author',
+        'user_id',
+        'url',
+        'pic_url',
+        'summary',
+        'language',
 		array(
             'name' => 'create_time',
             'value' => date("Y年m月d日 H:i:s",$model->create_time+8*3600 )

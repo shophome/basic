@@ -54,7 +54,7 @@
             <?php } ?>
         </div>
         <div class="warp_news">
-            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('cms/article/index', array())); ?></div>
+            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('cms/post/index', array())); ?></div>
             <div class="news_c">
                 <div class="news_img">
                     <script>
@@ -65,16 +65,16 @@
                         //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
                         <?php
                         $num=0;
-                              foreach($articles as $article){
+                              foreach($post as $post){
                                   if($num==3){
                                     break;
                                   }
-                                  if(!empty($article->pic_url)){
+                                  if(!empty($post->pic_url)){
                                      $imageHelper=new ImageHelper();
-                                            $picUrl=$imageHelper->thumb('180','178',$article->pic_url);
+                                            $picUrl=$imageHelper->thumb('180','178',$post->pic_url);
                                             $picUrl=Yii::app()->baseUrl.$picUrl;
-                                            $news=Yii::app()->createUrl("article/$article->article_id");
-                                            echo 'box.add({"url": "'. $picUrl.'", "href": "'.$news.'", "title": "'.$article->title.'"});';
+                                            $post=Yii::app()->createUrl("post/$post->id");
+                                            echo 'box.add({"url": "'. $picUrl.'", "href": "'.$post.'", "title": "'.$post->title.'"});';
                                             $num++;
                                   }
                                }
@@ -86,8 +86,8 @@
                 <ul class="news_list">
                     <?php
                     $class = 'current';
-                    foreach ($articles as $article) {
-                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('cms/article/view', array('id' => $article->article_id)) . '">' . $article->title . '</a></li>';
+                    foreach ($posts as $post) {
+                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('cms/article/view', array('id' => $post->id)) . '">' . $post->title . '</a></li>';
                         $class = '';
                     } ?>
                 </ul>

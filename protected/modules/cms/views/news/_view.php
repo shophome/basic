@@ -32,6 +32,14 @@
     <p><?php echo CHtml::encode($data->getAttributeLabel('tags')); ?>:&nbsp;&nbsp;&nbsp;&nbsp;
     <?php echo CHtml::encode($data->tags); ?>
     </p>
+
+    <p><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:&nbsp;&nbsp;&nbsp;&nbsp;
+    <?php echo CHtml::encode($data->status); ?>
+    </p>
+
+    <p><?php echo CHtml::encode($data->getAttributeLabel('author')); ?>:&nbsp;&nbsp;&nbsp;&nbsp;
+    <?php echo CHtml::encode($data->author); ?>
+    </p>
 <br />
 <br />
 
