@@ -74,11 +74,11 @@
                                   if($num==3){
                                     break;
                                   }
-                                  if(!empty($article->pic_url)){
+                                  if(!empty($post->pic_url)){
                                      $imageHelper=new ImageHelper();
                                             $picUrl=$imageHelper->thumb('180','178',$post->pic_url);
-                                            $picUrl=Yii::app()->baseUrl.$picUrl;
-                                            $news=Yii::app()->createUrl("news/$post->id");
+                                            $picUrl=Yii::app()->baseUrl. $picUrl;
+                                            $news=Yii::app()->createUrl("cms/news/$post->id");
                                             echo 'box.add({"url": "'. $picUrl.'", "href": "'.$news.'", "title": "'.$post->title.'"});';
                                             $num++;
                                   }

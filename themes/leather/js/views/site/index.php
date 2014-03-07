@@ -54,7 +54,7 @@
             <?php } ?>
         </div>
         <div class="warp_news">
-            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('cms/post/index', array())); ?></div>
+            <div class="news_tit"><?php echo CHtml::link('更多>>', Yii::app()->createUrl('cms/news/index', array())); ?></div>
             <div class="news_c">
                 <div class="news_img">
                     <script>
@@ -87,7 +87,7 @@
                     <?php
                     $class = 'current';
                     foreach ($posts as $post) {
-                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('cms/article/view', array('id' => $post->id)) . '">' . $post->title . '</a></li>';
+                        echo '<li class="' . $class . '"><a href="' . Yii::app()->createUrl('cms/news/view', array('id' => $post->id)) . '">' . $post->title . '</a></li>';
                         $class = '';
                     } ?>
                 </ul>
