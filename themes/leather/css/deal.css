@@ -196,10 +196,10 @@
     height:320px;
 
     font-size:16px;
-    font-wight:bold;
+    font-weight:bold;
     margin:10px;
     position:fixed;
-    background:rgba(255,255,255);
+    background:rgb(255,255,255);
 
 }
 #btn{
@@ -263,9 +263,9 @@
 #modal{
     width:370px;
     height:340px;
-    background-color: white;
+
     position:fixed;
-    border: 2px solid red;
+    border: 1px solid #802420;
 }
 
 
@@ -288,11 +288,13 @@
     left: 50px;
     bottom: 80px;
     background: #CE0606;
-    font-weight: 350;
+    font-size:20px;
+    font-weight: bold;
+    color: white;
 }
 #log-btn-div:hover{
     background: red;
-    color: white;
+
 }
 #register{
     width: 300px;
