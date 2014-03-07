@@ -194,8 +194,8 @@
 #warning-load{
     width:350px;
     height:320px;
-    right: 800px;
-    top: 255px;
+    right: 189px;
+    top: 96px;
     font-size:16px;
     font-weight:bold;
     margin:10px;
@@ -311,9 +311,30 @@ position:absolute;
 }
 #log-out-close{
     position: absolute;
-    top: 196px;
-    left: 125px;
+    top: 101px;
+    left: 380px;
     color: rgb(0, 0, 0);
     z-index: 11111;
     font-size: 25px;
+}
+#mymodal-1-png{
+    background-image: url('http://a.tbcdn.cn/apps/tmall/mui/msg/img/msg.png');
+    background-position: 0 -66px;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 56px;
+    display: inline-block;
+
+}
+#myModal-1-content span{
+    display:block;
+    height: 56px;
+    line-height: 56px;
+    font-size: 15px;
+    color: green;
+}
+
+#myModal-1-content{
+    top: 255px;
+    left: 160px;
 }

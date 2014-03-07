@@ -18,16 +18,16 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     <div class="box-title container_24">购物车</div>
     <div class="box-content cart container_24">
         <?php echo CHtml::beginForm(array('/order/checkout'), 'POST', array('id' => 'cartForm')) ?>
-        <table width="100%" border="1" cellspacing="1" cellpadding="0" style="text-align:center;vertical-align:middle" id="cart-table">
+        <table class="table table-bordered" id="cart-table">
             <tr>
-                <th width="2%"><?php echo CHtml::checkBox('checkAllPosition', false, array('data-url' => Yii::app()->createUrl('cart/getPrice'))); ?></th>
-                <th width="14%">图片</th>
-                <th width="14%">名称</th>
-                <th width="14%">属性</th>
-                <th width="14%">价格</th>
-                <th width="14%">数量</th>
-                <th width="14%">小计</th>
-                <th width="14%">操作</th>
+                <th class="col-md-1"><?php echo CHtml::checkBox('checkAllPosition', false, array('data-url' => Yii::app()->createUrl('cart/getPrice'))); ?></th>
+                <th class="col-md-3">图片</th>
+                <th class="col-md-2">名称</th>
+                <th class="col-md-2">属性</th>
+                <th class="col-md-1">价格</th>
+                <th class="col-md-1">数量</th>
+                <th class="col-md-1">小计</th>
+                <th class="col-md-1">操作</th>
             </tr>
             <?php
             $cart = Yii::app()->cart;
