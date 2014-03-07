@@ -152,13 +152,13 @@ $imageHelper=new ImageHelper();
         <div class="deal_add" data-url="<?php echo Yii::app()->createUrl('user/user/isLogin'); ?>" ><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
 
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
+            <div class="modal-header" id="modal">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <div id="warning-load">
                     <div id="logo">皮雕软毛耗材商城天天乐购</div>
                     <div class="user">
                         <div> 登录名：</div>
-                        <input class="txt" name="user" type="text" value="手机号/邮箱/会员号"/>
+                        <input class="txt" name="user" type="text" placeholder="手机号/邮箱/会员号"/>
                     </div>
                     <div class="user">
                         <div> 登录密码：</div>
