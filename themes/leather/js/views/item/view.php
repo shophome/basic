@@ -151,7 +151,7 @@ $imageHelper=new ImageHelper();
             <div class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)">加入购物车</a></div>
             <div class="deal_add"><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
             <div class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a href="javascript:void(0)">立即收藏</a></div>
-        </form>
+     </form>
     </div>
     <div class="pd_l container_24">
         <div class="pd_l_fl grid_5">

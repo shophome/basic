@@ -287,6 +287,19 @@ dd{
 .order-confirm{
     padding:10px;
     text-align:right;
+
+}
+#confirmOrder{
+    display: block;
+    width: 149px;
+    height: 35px;
+    padding:0;
+    margin:0;
+}
+#confirmOrder:hover{
+    background: #858585;
+   
+
 }
 .btn{
     background-position: 0 -38px;
@@ -323,9 +336,9 @@ dd{
     text-align:center;
 }
 .btn:hover, .btn1:hover{
-    color:#fff !important;
+
     text-decoration:underline !important;
-    background:#CC0000;
+
 }
 .ui-scrolltop {
     -moz-transition: opacity 0.3s ease-in 0s, opacity 0.3s ease-out 0s;
@@ -642,4 +655,11 @@ dd{
 }
 #list-div-box{
     width: 90%;
+}
+#memo{
+    width: 650px;
+    height: 150px;
+    display:block;
+    resize: none;
+
 }
