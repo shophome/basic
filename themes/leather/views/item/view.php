@@ -150,32 +150,34 @@ $imageHelper=new ImageHelper();
         <input type="hidden" id="props" name="props" value="" />
         <div class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)">加入购物车</a></div>
         <div class="deal_add" data-url="<?php echo Yii::app()->createUrl('user/user/isLogin'); ?>" ><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
-
+       <div class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a href="javascript:void(0)">立即收藏</a></div>
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header" id="modal">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <div id="warning-load">
-                    <div id="logo">皮雕软毛耗材商城天天乐购</div>
-                    <div class="user">
-                        <div> 登录名：</div>
-                        <input class="txt" name="user" type="text" placeholder="手机号/邮箱/会员号"/>
+                <form role="form">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div id="warning-load">
+                        <div id="logo">皮雕软毛耗材商城天天乐购</div>
+                     <div class="user">
+                         <div> 用户名：</div>
+                         <input class="txt form-control" name="user" type="text" placeholder="请输入用户名"/>
+                     </div>
+                     <div class="user">
+                         <div> 密码：</div>
+                         <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
+                     </div>
+                     <input id="log-btn-div"  name="button" type="button" value="登  录" class="form-control" />
+                     <div id="register">
+                         <a href="localhost/user/registration" class="link"><u>免费注册</u></a>
+                         <a href="localhost/order/checkout" class="link" ><u>免登陆直接购买</u></a>
+                     </div>
+
                     </div>
-                    <div class="user">
-                        <div> 登录密码：</div>
-                        <input class="txt" name="password" type="password"/>
-                    </div>
-                    <div id="safe"><input  name="warning" type="checkbox" />安全控件登录</div>
-                    <input id="btn"  name="button" type="button" value="登录" />
-                    <div id="register">
-                        <a href="localhost/user/registration" class="link"><u>免费注册</u></a>
-                        <a href="localhost/order/checkout" class="link" ><u>免登陆直接购买</u></a>
-                    </div>
-                </div>
+                      </form>
             </div>
         </div>
 
 
-        <div class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a href="javascript:void(0)">立即收藏</a></div>
+
     </form>
 </div>
 <div class="pd_l container_24">

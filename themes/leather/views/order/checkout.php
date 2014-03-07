@@ -231,7 +231,8 @@ Yii::app()->clientScript->registerCoreScript('jquery');
         </div>
         <div class="box-content">
             <div class="memo" style="float:left"><h3>
-                    给卖家留言：</h3><?php echo CHtml::textArea('memo', '', array('rows' => '1', 'cols' => '60', 'placeholder' => '选填，可以告诉卖家您对商品的特殊要求，如：颜色、尺码等')); ?>
+                    给卖家留言：</h3>
+                    <textarea id="memo" name="memo" placeholder="选填，可以告诉卖家您对商品的特殊要求，如：颜色、尺码等" rows="5"></textarea>
             </div>
         </div>
     </div>

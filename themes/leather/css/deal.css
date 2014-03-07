@@ -1,6 +1,7 @@
 .deal{
      margin-top:10px;
      overflow:hidden;
+    position:relative;
  }
 .deal_tip{
     border-bottom:1px solid #a35f23;
@@ -171,6 +172,7 @@
     border-right:1px solid #D0D0D0;
     border-bottom:1px solid #D0D0D0;
     border-left:1px solid #D0D0D0;
+    margin-left:10px;
 }
 .deal_describe_tit li{
     float:left;
@@ -192,7 +194,7 @@
 #warning-load{
     width:350px;
     height:320px;
-    border:1px solid lightgray;
+
     font-size:16px;
     font-wight:bold;
     margin:10px;
@@ -263,9 +265,38 @@
     height:340px;
     background-color: white;
     position:fixed;
-}
-#myModal{
-
+    border: 2px solid red;
 }
 
 
+#myModal .form-control{
+    height: 32px;
+    margin:  5px 0;
+}
+#form-checkbox{
+
+    margin:auto 5px;
+    margin-right:-20px;
+}
+
+#log-btn-div{
+    position: absolute;
+    display:block;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    left: 50px;
+    bottom: 80px;
+    background: #CE0606;
+    font-weight: 350;
+}
+#log-btn-div:hover{
+    background: red;
+    color: white;
+}
+#register{
+    width: 300px;
+position:absolute;
+ bottom: 50px;
+   padding-right: 50px;
+}
