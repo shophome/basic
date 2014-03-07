@@ -52,7 +52,7 @@
                         <?php
                         if($Order->create_time){
 
-                            echo date("Y-m-d H:i;s",$Order->create_time + 8*3600);
+                            echo date("Y-m-d H:i:s",$Order->create_time + 8*3600);
                         }
                         ?>
                     </dd></dl>
