@@ -10,7 +10,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     -moz-box-shadow:none;
     box-shadow:none;
 }
-a img{border:1px solid #E5E5E5;}
+a img{border:none;}
 /*top*/
 .top{
 	background:#f5f4f2;
