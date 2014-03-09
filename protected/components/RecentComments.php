@@ -1,3 +1,6 @@
+
+
+<div>
 <?php
 
 Yii::import('zii.widgets.CPortlet');
@@ -5,15 +8,19 @@ Yii::import('zii.widgets.CPortlet');
 class RecentComments extends CPortlet
 {
 	public $title='Recent Comments';
-	public $maxComments=10;
+        	public $maxComments=10;
+        /*
+        	public function getRecentComments()
+                	{
+                		return Comment::model()->findRecentComments($this->maxComments);
+                	}
 
-	public function getRecentComments()
-	{
-		return Comment::model()->findRecentComments($this->maxComments);
-	}
-
-	protected function renderContent()
-	{
-		$this->render('recentComments');
-	}
+        	protected function renderContent()
+        	{
+        		$this->render('recentComments');
+        	}
+        	*/
 }
+
+?>
+</div>

@@ -78,7 +78,7 @@
 	overflow:hidden;
 	border-top:3px solid #2d2d2d;
     margin-left: 5px;
-   margin-bottom:0px;
+   margin-bottom:10px;
    height:30px;
    vertical-align:middle
 
@@ -141,13 +141,14 @@
 }
 .pd_check{
 	float:left;
-	padding-top:2px;
+	padding-top:5px;
 	margin-left:15px;
 
 }
+
 .pd_check input{
 	vertical-align: middle;
-	margin: 0 0 2px;
+	margin: 3px 0 2px;
 }
 .pd_page {
 	float:right;
@@ -180,8 +181,9 @@
 }
 .product_pd{
 	float:left;
-    margin-right: 10px;
+    margin-right:10px;
     margin-bottom:10px;
+
 }
 .page_p{
 	text-align:right;

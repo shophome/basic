@@ -35,7 +35,7 @@
             echo CHtml::link('新浪', 'http://www.sina.com.cn/', array('class' => 'sina'));
             echo CHtml::link('商城', Yii::app()->getBaseUrl(true), array('class' => 'mart')); ?>
             <span class="cor_red bold font14">Tel: 13967414054</span>
-            <?php echo CHtml::link('在线客服', Yii::app()->createUrl('contact'), array('class' => "online_ser")); ?>
+            <?php echo CHtml::link('在线客服',  array('page/contact','key' => 'help')); ?>
         </div>
 
         <?php $this->widget('widgets.default.WTopNav'); ?>
@@ -142,7 +142,7 @@
             <a href="">资源交流</a>
         </p>
 
-        <p>Copyright ? 2013 - 2015 皮雕软包耗材批发商城 All Rights Reserved. <a href="">站长统计</a></p>
+        <p>Copyright ? 2013 - 2015 演示商城 All Rights Reserved. <a href="">站长统计</a></p>
 
         <p>银河方舟 全程技术支持</p>
     </div>
