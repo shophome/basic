@@ -423,30 +423,60 @@ a.online_ser{
 	overflow:hidden;
 	zoom:1;
 }
-.product_price_n{
-	font-size:18px;
-	font-weight:700;
-	color:#d50000;
-	float:center;
-    font-family:"仿宋";
 
-} 
+
+
+
+
+.product_price_n{
+    font-size:18px;
+    font-weight:700;
+    color:#d50000;
+    float:left;
+}
 .product_price_p{
-    padding-top: 0px;
-	color:#b2b2b2;
-	float:center;
-	text-decoration:line-through;
-	line-height:21px;
-    margin-top:-10px ;
+    padding-top: 3px;
+    color:#b2b2b2;
+    float:left;
+    text-decoration:line-through;
+    line-height:21px;
 }
 .product_price_v{
-	background:#d50000;
-	padding:1px 5px;
-	float:center;
-    width: 60px;
-    margin-top: -10px;
+    background:#d50000;
+    padding:1px 5px;
+    float:right;
+}
+
+.product_price_n1{
+    font-size:18px;
+    font-weight:700;
+    color:#d50000;
+
+    font-family:"仿宋";
 
 }
+.product_price_p1{
+    padding-top: 0px;
+    color:#b2b2b2;
+
+    text-decoration:line-through;
+    line-height:21px;
+    margin-top:-10px ;
+}
+
+.product_price_v1{
+    background:#d50000;
+    padding:1px 5px;
+
+    width: 60px;
+    margin-top: -10px;
+    color: white;
+
+}
+.product_price_v1 a{
+    color:#fff;
+}
+
 .product_price_v a{
 	color:#fff;
 }
@@ -677,3 +707,7 @@ post css
 table th{
     background: #F5F5F5;
 }
+.product_price{
+    height: 50px;
+}
+
