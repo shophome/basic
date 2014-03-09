@@ -20,11 +20,12 @@ dd{
 }
 .box{
     border:0;
-    border-left: 1px solid #ececec;
+    border: 1px solid #D5D5D5;
     margin-bottom: 10px;
     padding: 0;
     width: 1180px;
-    margin: 0 auto;
+    margin: 5px auto;
+    overflow: hidden;
 }
 .box-title{
     background:transparent url(../../image/box_title_bg.gif) repeat-x scroll 0 0;
@@ -668,4 +669,8 @@ dd{
     display:block;
     resize: none;
 
+}
+#list-div-box th,#list-div-box td{
+    text-align: center;
+    vertical-align: middle;
 }
