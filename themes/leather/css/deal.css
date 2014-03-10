@@ -194,7 +194,8 @@
 #warning-load{
     width:350px;
     height:320px;
-
+    right: 800px;
+    top: 255px;
     font-size:16px;
     font-weight:bold;
     margin:10px;
@@ -304,4 +305,15 @@
 position:absolute;
  bottom: 50px;
    padding-right: 50px;
+}
+#log-out-box{
+    position: relative;
+}
+#log-out-close{
+    position: absolute;
+    top: 10px;
+    left: 343px;
+    color: rgb(26, 21, 18);
+    z-index: 11111;
+    font-size: 25px;
 }
