@@ -36,6 +36,7 @@ $('.search-form form').submit(function(){
         'tags',
 		'source',
         'language',
+        'pic_url',
 //		'views',
 //		'create_time',
 //		'update_time',
