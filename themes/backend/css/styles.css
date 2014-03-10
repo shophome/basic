@@ -10,6 +10,7 @@ footer {
 footer .powered {
     color: #888888;
     margin-bottom: 20px;
+
 }
 footer .copy {
     color: #666666;
@@ -130,5 +131,27 @@ background: #FCFCFC;
 
 }
 .span12{
-    text-align:center;
+    text-align:left;
+}
+#sidebar-content ul{
+    text-align: left;
+}
+#sidebar-content h3{
+    text-align: left;
+}
+
+.row-fluid{
+    position: relative;
+}
+.pagination ul {
+    position: absolute;
+    right: 150px;
+    bottom: 0px;
+}
+
+footer .powered{
+    text-align: center;
+}
+#item-form div[class="control-group bulk"]{
+    text-align: center;
 }
