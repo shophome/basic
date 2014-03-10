@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'News'=>array('index'),
-	$model->title=>array('view','id'=>$model->id),
+	'Post'=>array('index'),
+	''=>array('view','id'=>$model->id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List News', 'icon'=>'list', 'url'=>array('index')),
-	array('label'=>'Create News', 'icon'=>'plus','url'=>array('create')),
-	array('label'=>'View News', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage News', 'icon'=>'cog','url'=>array('admin')),
+	array('label'=>'List Post', 'icon'=>'list', 'url'=>array('index')),
+	array('label'=>'Create Post', 'icon'=>'plus','url'=>array('create')),
+	array('label'=>'View Post', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Post', 'icon'=>'cog','url'=>array('admin')),
 );
 ?>
 

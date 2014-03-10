@@ -3,28 +3,23 @@
 /**
  * This is the model class for table "{{post}}".
  *
- * The followings are the available columns in table '{{post}}':
+ * The followings are the available columns in table '{{article}}':
  * @property integer $id
- * @property integer $store_id
  * @property integer $category_id
+ * @property integer $author_id
  * @property string $title
+ * @property string $source
  * @property string $content
- * @property integer $tags
- * @property integer $status
  * @property integer $views
  * @property integer $create_time
  * @property integer $update_time
- * @property integer $author
- * @property integer $user_id
- * @property integer $language
  */
 class News extends CActiveRecord {
 
     /**
-     * @param string $className
-     * @return CActiveRecord
+     * Returns the static model of the specified AR class.
+     * @return Article the static model class
      */
-
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
@@ -43,14 +38,16 @@ class News extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('category_id, title, content', 'required'),
+            array('category_id, author, title, content, language', 'required'),
             array('category_id, views', 'numerical', 'integerOnly' => true),
             array('title', 'length', 'max' => 250),
+            array('source', 'length', 'max' => 200),
+            array('pic_url','length','max'=>150),
             array('url', 'url'),
             array('language', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, category_id, store_id, title, content, views, create_time, update_time', 'safe', 'on' => 'search'),
+            array('id, category_id, user_id, title, source, content, views, create_time, update_time', 'safe', 'on' => 'search'),
         );
     }
 
@@ -73,13 +70,14 @@ class News extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id' => 'Id',
-            'store_id' => '商店',
+            'id' => 'ID',
             'category_id' => '分类',
-            'author' => '作者',
             'user_id' => '作者ID',
             'title' => 'title',
             'language' => 'language',
+            'source' => '来源',
+            'pic_url'=>'封面图片',
+            'summary' => 'summary',
             'content' => 'content',
             'views' => '热度',
             'create_time' => '发布时间',
@@ -102,11 +100,10 @@ class News extends CActiveRecord {
 
         $criteria->order = 'id desc';
         $criteria->compare('id', $this->id);
-        $criteria->compare('store_id', $this->store_id);
         $criteria->compare('category_id', $this->category_id);
-        $criteria->compare('author', $this->author);
         $criteria->compare('user_id', $this->user_id);
         $criteria->compare('title', $this->title, true);
+        $criteria->compare('source', $this->source, true);
         $criteria->compare('content', $this->content, true);
         $criteria->compare('views', $this->views);
         $criteria->compare('create_time', $this->create_time);
@@ -135,7 +132,7 @@ class News extends CActiveRecord {
         return array(
             array(
                 'class' => 'ext.seo.behaviors.SeoActiveRecordBehavior',
-                'route' => 'news/view',
+                'route' => 'article/view',
                 'params' => array('id' => $this->id, 'title' => $this->title),
             ),
         );
@@ -143,9 +140,9 @@ class News extends CActiveRecord {
 
 //        public function afterFind() {
 //           $retVal = parent::afterSave();
-//                $this->create_time=date('m/d/Y', $this->create_time);
+//                $this->create_time=date('m/d/Y', $this->create_time); 
 //                if(!is_null($this->update_time)) {
-//                        $this->update_time=date('m/d/Y', $this->update_time);
+//                        $this->update_time=date('m/d/Y', $this->update_time); 
 //                } //EndIf
 ////                $this->author_id = $this->author->username;
 ////                $this->category_id = $this->cate->name;

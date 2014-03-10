@@ -22,11 +22,15 @@ class NewsController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Post;
-        $model->attributes = $_POST['Post'];
-        if (isset($_POST['Post'])){
-            if ($model->save())
-                $this->redirect(array('admin'));
+        $model = new News;
+        $model->attributes = $_POST['News'];
+//        var_dump($model);
+        if (isset($_POST['News'])){
+            if ($model->save()){
+//                var_dump($_POST);
+//                exit;
+                $this->redirect(array('admin'));}
+
         }
         $this->render('create', array(
             'model' => $model
@@ -40,10 +44,10 @@ class NewsController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-        if (isset($_POST['Post'])) {
-            $model->attributes = $_POST['Post'];
+        if (isset($_POST['News'])) {
+            $model->attributes = $_POST['News'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->news_id));
+                $this->redirect(array('view', 'id' => $model->id));
         }
 
         $this->render('update', array(
@@ -84,8 +88,8 @@ class NewsController extends Controller {
     public function actionAdmin() {
         $model = new News('search');
         $model->unsetAttributes();  // clear any default value
-        if (isset($_GET['Post']))
-            $model->attributes = $_GET['Post'];$this->render('admin', array(
+        if (isset($_GET['News']))
+            $model->attributes = $_GET['News'];$this->render('admin', array(
             'model' => $model,
         ));
     }
