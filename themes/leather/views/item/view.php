@@ -167,10 +167,9 @@ $imageHelper=new ImageHelper();
                      </div>
                      <input id="log-btn-div"  name="button" type="button" value="登      录" class="form-control" />
                      <div id="register">
-                         <a href="localhost/user/registration" class="link"><u>免费注册</u></a>
-                         <a href="localhost/order/checkout" class="link" ><u>免登陆直接购买</u></a>
+                         <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
+                         <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
                      </div>
-
                     </div>
                       </form>
             </div>
@@ -473,20 +472,25 @@ $imageHelper=new ImageHelper();
 
         });
         $('.deal_add').click(function() {
-            $.post($(this).data('url'), function(response){
-                if (response.status == 'login') {
-                    var selectProps = $('.prop-select,.img-prop-select');
-                    if (selectProps.length < $('.deal_size p').length) {
-                        $('.deal_size').addClass('prop-div-select');
-                    } else {
-                        $('.deal_size').removeClass('prop-div-select');
+            var selectProps = $('.prop-select,.img-prop-select');
+            if (selectProps.length < $('.deal_size p').length) {
+                $('.deal_size').addClass('prop-div-select');
+            } else {
+                $('.deal_size').removeClass('prop-div-select');
+//                $('#deal').submit();
+                $.post($(this).data('url'), function(response){
+                    if (response.status == 'login') {
                         $('#deal').submit();
-                    }
-                } else {
+                    } else {
 //                     $('#loginPage')
-                    $('#myModal').modal('show');
-                }
-            }, 'json');
+                        $('#myModal').modal('show');
+                    }
+                }, 'json');
+            }
+        });
+
+        $('.buy-without-login').click(function() {
+            $('#deal').submit();
         });
     });
 </script>

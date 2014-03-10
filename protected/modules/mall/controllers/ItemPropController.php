@@ -8,7 +8,7 @@ class ItemPropController extends MallBaseController
      * @return array
      * @author Lujie.Zhou(gao_lujie@live.cn, qq:821293064).
      */
-    protected function getProps($category_id = 3)
+    protected function getProps($category_id = 110)
     {
         $item_props = ItemProp::model()->findAllByAttributes(array('category_id' => $category_id));
         $props = array('请选择');
