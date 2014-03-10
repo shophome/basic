@@ -5,9 +5,11 @@ $this->breadcrumbs = array(
 );
 
 ?>
-<link rel="stylesheet" href="/css/yi.css" type="text/css"/>
-<script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
-<script language="JavaScript" type="text/javascript" src="/protected/extensions/bootstrap/assets/js/bootstrap.js"></script>
+
+<link rel="stylesheet" href="../../../../extensions/bootstrap/assets/css/bootstrap.min.css" />
+<script language="JavaScript" type="text/javascript" src="../../../../../js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../../../extensions/bootstrap/assets/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../../../../../css/yi.css" type="text/css"/>
 
 <h1>Manage Orders</h1>
 
@@ -81,12 +83,12 @@ $this->breadcrumbs = array(
                 'deliver' => array(
                     'label' => '发货',
                     'icon' => 'plane',
-//                    'url'=>'Yii::app()->createUrl("mall/shipping/deliver")',
-
+//                    'url'=>'Yii::app()->createUrl(Yii::app()->theme->baseUrl."/views/site/index.php")',
                     'options'=>array(
                         'class'=>'btn btn-small',
                         'data-target'=> '#myModal',
                         'data-toggle' => 'modal',
+
                     ),
                 ),
             ),
@@ -97,9 +99,8 @@ $this->breadcrumbs = array(
     )
 ));
 ?>
-
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -110,7 +111,8 @@ $this->breadcrumbs = array(
                 <div id="manage-order">
                     <h1 align="center"">MANAGE ORDER</h1>
 
-                    订单号：<input class="txt"  type="text" />
+                    订单号：<input class="txt"  type="text" readonly="false" value= <?php var_dump($data) ?> >
+
 
                     会员：<input class="txt"  type="text" />
 
@@ -163,3 +165,6 @@ $this->breadcrumbs = array(
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+
