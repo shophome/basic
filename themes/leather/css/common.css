@@ -677,3 +677,6 @@ post css
 #log-box-div{
     height: 400px;
 }
+table th{
+    background: #F5F5F5;
+}

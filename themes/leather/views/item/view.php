@@ -148,9 +148,9 @@ $imageHelper=new ImageHelper();
         </div>
         <input type="hidden" id="item_id" name="item_id" value="<?php echo $item->item_id; ?>" />
         <input type="hidden" id="props" name="props" value="" />
-        <div class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)">加入购物车</a></div>
+        <div  class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)" id="addToShopCart" data-toggle="modal" data-target="#myModal-1">加入购物车</a></div>
         <div class="deal_add" data-url="<?php echo Yii::app()->createUrl('user/user/isLogin'); ?>" ><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
-       <div class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a href="javascript:void(0)">立即收藏</a></div>
+       <div  class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a data-toggle="modal" data-target="#myModal-2" href="javascript:void(0)">立即收藏</a></div>
         <!-- Modal -->
                <div tabindex="-1" class="modal fade in" id="myModal" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
                    <div class="modal-dialog">
@@ -169,7 +169,7 @@ $imageHelper=new ImageHelper();
                                 <div> 密码：</div>
                                 <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
                             </div>
-                            <input id="log-btn-div"  name="button" type="button" value="登      录" class="form-control" />
+                            <button id="log-btn-div"  name="button" type="submit"  class="btn-success btn">登录</button>
                             <div id="register">
                                 <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
                                 <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
@@ -186,6 +186,31 @@ $imageHelper=new ImageHelper();
 
     </form>
 </div>
+                                 <!-- Modal -->
+                                      <div tabindex="-1" class="modal fade in" id="myModal-1" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
+                                              <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入购物车！</span>
+
+                                               <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+                                              </div><!-- /.modal-content -->
+                                          </div><!-- /.modal-dialog -->
+                                      </div>
+               <!-- Modal -->
+                                    <div tabindex="-1" class="modal fade in" id="myModal-2" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
+                                            <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
+
+                                             <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div>
+
+
+
 <div class="pd_l container_24">
     <div class="pd_l_fl grid_5">
         <div class="pd_l_nv">
