@@ -158,7 +158,7 @@ $imageHelper=new ImageHelper();
 
                           <form role="form" id="log-out-box">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="log-out-close">×</button>
-                           <div id="warning-load">
+                           <div id="warning-load" >
                                <div id="logo">演示商城</div>
 
                             <div class="user">
