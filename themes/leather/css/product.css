@@ -78,7 +78,9 @@
 	overflow:hidden;
 	border-top:3px solid #2d2d2d;
     margin-left: 0px;
-    padding: 0px;
+    height:33px;
+    padding:10px 6px;
+    vertical-align:middle:
 }
 .pd_sort_sold,.pd_sort_price,.pd_sort_new{
 	background:url(../image/sort.png) no-repeat right center;
@@ -178,6 +180,7 @@
 .product_pd{
 	float:left;
     margin-right: 10px;
+    margin-bottom:10px;
 }
 .page_p{
 	text-align:right;
@@ -488,3 +491,4 @@
     margin: 5px 0;
     width:555px;
 }
+

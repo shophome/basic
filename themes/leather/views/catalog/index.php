@@ -119,7 +119,7 @@
                 }
                 ?>
             </div>
-            <div class="pd_sort" data-sort="<?php echo $sort?>">
+            <div class="pd_sort" id="pd-sort" data-sort="<?php echo $sort?>">
                 <a href="<?php echo Yii::app()->createUrl('catalog/index', array_merge($_GET, array('sort' => 'soldd'))); ?>">
                     <div class="pd_sort_sold current">销量</div>
                 </a>
