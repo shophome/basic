@@ -69,16 +69,16 @@ Yii::app()->clientScript->registerCoreScript('jquery');
                 <td colspan="8" style="padding:10px;text-align:right">总计：<label id="total_price">0</label>元</td>
             </tr>
             <tr>
-                <td colspan="8" style="vertical-align:middle"><span
-                        style="float:left;padding:5px 10px;" ><?php echo CHtml::link('清空购物车', array('/cart/clear'), array('class' => 'btn1')) ?></span>
-                    <span
-                        style="float:right;padding:5px 10px;"><?php echo CHtml::link('继续购物', array('./'), array('class' => 'btn1')) ?></span>&nbsp;&nbsp;&nbsp;&nbsp;<span
-                        style="float:right;padding:5px 10px;"><?php echo CHtml::link('更新购物车', array('/cart/index'), array('id' => 'updateCart', 'class' => 'btn1')) ?></span>
+                <td colspan="8" style="vertical-align:middle"><button
+                        class="btn btn-danger"  style="float:left;padding:1px 10px;" ><?php echo CHtml::link('清空购物车', array('/cart/clear'), array('class' => 'btn1')) ?></button>
+                    <button class="btn btn-primary"
+                        style="float:right;padding:1px 10px;"><?php echo CHtml::link('继续购物', array('./'), array('class' => 'btn1')) ?></button>&nbsp;&nbsp;&nbsp;&nbsp;<button
+                        class="btn btn-warning"
+                        style="float:right;padding:1px 10px;"><?php echo CHtml::link('更新购物车', array('/cart/index'), array('id' => 'updateCart', 'class' => 'btn1')) ?></button>
                 </td>
             </tr>
             <tr>
-                <td colspan="8"><span
-                        style="float:right;padding:5px 10px;"><?php echo CHtml::link('结算','#', array('class' => 'btn','id'=>'account')) ?></span>
+                <td colspan="8"><button class="btn btn-success" style="float:right;padding:1px 10px;"><?php echo CHtml::link('结算','#', array('class' => 'btn1','id'=>'account')) ?></button>
                 </td>
             </tr>
         </table>
