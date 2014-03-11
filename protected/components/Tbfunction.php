@@ -48,14 +48,6 @@ class Tbfunction {
         return array('0' => '无效', '1' => '有效');
     }
 
-    /**
-     * @return array
-     * return member if superuser
-     */
-    public function ReturnMemberRight()
-    {
-        return array('0' => '普通会员','1' => '超级会员');
-    }
 
     public function ReturnPayStatus(){
         return array('0' => '待支付', '1' => '已支付');
@@ -81,13 +73,6 @@ class Tbfunction {
         return array('0' => '货到付款', '1' => '支付宝', '2' => '银行卡');
     }
 
-    public function  showMemberRight($user_id)
-    {
-        $user = Users::model()->findByAttributes(array('id' => $user_id));
-        $member_right = $user->superuser;
-        $memberRight = array('0' => '普通会员','1' => '超级会员');
-        return $memberRight[$member_right];
-    }
 
     public function showPayStatus($pay_status){
         $payStatus=array('0'=>'待支付','1'=>'已支付');

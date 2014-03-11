@@ -33,13 +33,6 @@ $this->breadcrumbs = array(
             'name' => 'user_id',
             'header' => '会员账号',
             'value' => 'Tbfunction::getUser($data->user_id)',
-            'filter' => Tbfunction::showUser(),
-        ),
-        array(
-            'name' => 'user_id',
-            'value' => 'Tbfunction::showMemberRight($data->user_id)',
-            'header' => '会员级别',
-            'filter' => Tbfunction::ReturnMemberRight(),
         ),
         array(
             'name' => 'pay_status',
