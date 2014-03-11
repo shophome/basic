@@ -51,6 +51,7 @@ dd{
     overflow:hidden;
     display:block;
 }
+
 .box-inside{
     overflow:hidden;
     width: 688px;
@@ -331,6 +332,11 @@ dd{
     width: 151px;
    /* background-image: url("../../image/btn1.png");*/
     background-repeat: no-repeat;
+
+
+}
+#btn-primary{
+    margin-left:20px;
 }
 .btn-list{
     text-align:center;
