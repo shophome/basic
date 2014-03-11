@@ -427,19 +427,25 @@ a.online_ser{
 	font-size:18px;
 	font-weight:700;
 	color:#d50000;
-	float:left;
+	float:center;
+    font-family:"仿宋";
+
 } 
 .product_price_p{
-    padding-top: 3px;
+    padding-top: 0px;
 	color:#b2b2b2;
-	float:left;
+	float:center;
 	text-decoration:line-through;
 	line-height:21px;
+    margin-top:-10px ;
 }
 .product_price_v{
 	background:#d50000;
 	padding:1px 5px;
-	float:right;
+	float:center;
+    width: 60px;
+    margin-top: -10px;
+
 }
 .product_price_v a{
 	color:#fff;
