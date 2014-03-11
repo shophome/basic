@@ -326,7 +326,7 @@ position:absolute;
     display: inline-block;
 
 }
-#myModal-1-content span{
+#myModal-1-content span,#myModal-2-content span{
     display:block;
     height: 56px;
     line-height: 56px;
@@ -344,4 +344,13 @@ position:absolute;
 .li-img{
     width:70px;
     height: 70px;
+}
+#myModal-2-content{
+
+    left:167px;
+    top: 225px;
+}
+#num{
+    font-size: 12px;
+    font-weight: normal;
 }
