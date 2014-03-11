@@ -49,7 +49,7 @@
             <input id="Item-number" name="Item-number[]" type="hidden" value="<?php echo $orderItem->quantity ?>"/>
             <div>商品标题：<?php echo $item->title ?></div>
             <div>商品属性：<?php  foreach (json_decode($orderItem->props_name, true) as $props) {
-                    echo $props.' ';
+                    echo ($props).' ';
                 }?></div>
             <div>商品数量：<?php echo $orderItem->quantity ?></div>
                 <div class="btn btn-danger" id="delete">Delete</div>
