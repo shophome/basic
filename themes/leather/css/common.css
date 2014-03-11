@@ -605,22 +605,12 @@ a.online_ser{
     margin:0 auto;
 
 }
-.chenyu{
-    height:220px;
-    width:220px;
-}
 .view1 {
     width: 280px;
     display: inline-block;
 }
-.wangjingye{
-    position : static;
-    text-align: center;
-}
-.shenyue{
-    text-align: right;
-    padding:10px;
-}
+
+
 .summary{
     text-align: right;
 }
