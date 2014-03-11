@@ -155,13 +155,13 @@ Yii::app()->clientScript->registerCoreScript('jquery');
         <div class="box-title container_24">支付方式</div>
         <div class="box-content" style="vertical-align:middle;">
             <?php
-            $cri = new CDbCriteria(array(
-                'condition' => 'enabled = 1'
-            ));
-            $paymentMethod = PaymentMethod::model()->findAll($cri);
-            $list = CHtml::listData($paymentMethod, 'payment_method_id', 'name');
-            echo CHtml::radioButtonList('payment_method_id', '0', $list);
-            ?>
+                      $cri = new CDbCriteria(array(
+                          'condition' => 'enabled = 1'
+                      ));
+                      $paymentMethod = PaymentMethod::model()->findAll($cri);
+                      $list = CHtml::listData($paymentMethod, 'payment_method_id', 'name');
+                      echo CHtml::radioButtonList('payment_method_id', '0', $list);
+                      ?>
         </div>
     </div>
 

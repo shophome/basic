@@ -34,9 +34,9 @@ class Tbfunction {
         $data_user=array();
         $users= Users::model()->findAll();
         foreach($users as $user){
-            if($user->superuser!=1){
-                $data_user[$user->id]=$user->username;}
+                $data_user[$user->id]=$user->username;
         }
+
         return $data_user;
     }
 

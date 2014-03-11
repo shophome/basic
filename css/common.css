@@ -19,10 +19,11 @@
     position: fixed;
     top: 40%;
     left: 40%;
+    border-radius: 5px;
     z-index: 3000;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 10px
+
 }
 
 .popup-container .close {
@@ -75,3 +76,11 @@ width: 90%;
 p{
     padding:6px;
 }
+
+
+
+input[type="radio"], input[type="checkbox"]{
+    float:left;
+    margin:4px 0 0;
+}
+
