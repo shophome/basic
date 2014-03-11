@@ -338,3 +338,10 @@ position:absolute;
     top: 255px;
     left: 160px;
 }
+#look-collect{
+    padding: 1px 34px;
+}
+.li-img{
+    width:70px;
+    height: 70px;
+}
