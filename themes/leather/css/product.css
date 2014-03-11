@@ -77,19 +77,20 @@
 .pd_sort{
 	overflow:hidden;
 	border-top:3px solid #2d2d2d;
-    margin-left: 0px;
-    height:33px;
-    padding:10px 6px;
-    vertical-align:middle:
+    margin-left: 5px;
+   margin-bottom:0px;
+   height:30px;
+   vertical-align:middle
+
 }
 .pd_sort_sold,.pd_sort_price,.pd_sort_new{
 	background:url(../image/sort.png) no-repeat right center;
     background-position:42px 10px;
 	float:left;
 	margin:0 5px;
-	padding:5px 15px 5px 5px ;
+	padding:5px 5px 5px 5px ;
 	cursor:pointer;
-    width: 40px;
+    width: 46px;
     text-align: center;
 
 	
