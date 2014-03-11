@@ -81,7 +81,9 @@ Yii::app()->clientScript->registerCoreScript('jquery');
                 <input size="45" maxlength="45" name="AddressResult[contact_name]" id="AddressResult_contact_name"
                        type="text"/>
             </div>
-            <div class="row">
+            <div class="row" data-url="<?php echo Yii::app()->createUrl('order/getChildAreas'); ?>">
+
+            <label for="AddressResult_contact_name" class="required">联系地址<span class="required">*</span></label>
                 <?php
                 $state_data = Area::model()->findAll("grade=:grade",
                     array(":grade" => 1));
@@ -244,3 +246,24 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     </div>
     <div style="clear: both;margin-bottom: 10px"></div>
 <?php echo CHtml::endForm() ?>
+
+<script type="text/javascript">
+    $('#AddressResult_state, #AddressResult_city').change(function() {
+        var url = $(this).parent('.row').data('url');
+        var select = '';
+        if (this.id == 'AddressResult_state') {
+            select = '#AddressResult_city';
+        } else {
+            select = '#AddressResult_district';
+        }
+        $.get(url,{'parent_id': $(this).val()},function(response){
+            var html = '';
+            for (var i in response) {
+                var option = '<option value="'+i+'">'+response[i]+'</option>';
+                html += option;
+            }
+            $(select).html(html);
+        },'json');
+    });
+</script>
+
