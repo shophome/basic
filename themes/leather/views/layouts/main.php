@@ -142,7 +142,7 @@
             <a href="">资源交流</a>
         </p>
 
-        <p>Copyright ? 2013 - 2015 皮雕软包耗材批发商城 All Rights Reserved. <a href="">站长统计</a></p>
+        <p>Copyright ? 2013 - 2015 演示商城 All Rights Reserved. <a href="">站长统计</a></p>
 
         <p>银河方舟 全程技术支持</p>
     </div>

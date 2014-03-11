@@ -554,7 +554,7 @@ a.online_ser{
 	background:url(../image/bottom_newuser.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_new li,.foot_pay li,.foot_set li,.foot_back li,.foot_help li{
 	line-height:25px;
@@ -566,31 +566,31 @@ a.online_ser{
 	background:url(../image/bottom_pay.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_set{
 	background:url(../image/bottom_set.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_back{
 	background:url(../image/bottom_back.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_help{
 	background:url(../image/bottom_help.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_call{
 	background:url(../image/bottom_adv.png) no-repeat bottom left;
 	float:left;
 	padding-bottom:90px;
-	margin: 0 30px;
+	margin: 0 0 0 55px;
 }
 .cor_r{color:#990000;}
 .foot_u{

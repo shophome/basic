@@ -159,7 +159,7 @@ $imageHelper=new ImageHelper();
                           <form role="form" id="log-out-box">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="log-out-close">×</button>
                            <div id="warning-load">
-                               <div id="logo">皮雕软毛耗材商城天天乐购</div>
+                               <div id="logo">演示商城</div>
 
                             <div class="user">
                                 <div> 用户名：</div>
@@ -206,7 +206,7 @@ $imageHelper=new ImageHelper();
                                                <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
                                                </br>
                                                </div>
-                                               <div width="100%" id="look-collect"> 你可以<a href=""><font color="#3388BB">查看收藏夹</font></a></div>
+                                               <div width="100%" id="look-collect"> 你可以<a href="/basic/member/wishlist/admin"><font color="#3388BB">查看收藏夹</font></a></div>
                                                <hr />
                                                <div class="col-xs-6 pull-left" align="left">收藏此商品的人还喜欢</div>
                                                <div class="col-xs-6 pull-right" align="right"><a><font color="#3388BB">换一组更好的</font></a></div>
