@@ -31,7 +31,8 @@
             echo CHtml::link('新浪', 'http://www.sina.com.cn/', array('class' => 'sina'));
             echo CHtml::link('商城', Yii::app()->getBaseUrl(true), array('class' => 'mart')); ?>
             <span class="cor_red bold font14">Tel: 13967414054</span>
-            <?php echo CHtml::link('在线客服', Yii::app()->createUrl('contact'), array('class' => "online_ser")); ?>
+            <?php echo CHtml::link('在线客服', $this->createUrl('/basic/contact'), array('class' => "online_ser")); ?>
+
         </div>
 
         <?php $this->widget('widgets.default.WTopNav'); ?>
