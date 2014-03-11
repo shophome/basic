@@ -200,44 +200,10 @@ $imageHelper=new ImageHelper();
                <!-- Modal -->
                                     <div tabindex="-1" class="modal fade in" id="myModal-2" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
                                         <div class="modal-dialog">
-                                            <div class="modal-content" style="width:560px;height:310px;border:1px solid black;padding:20px 20px;" id="myModal-1-content">
-                                             <div class="clearfix">
-                                               <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
-                                               <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                               </br>
-                                               </div>
-                                               <div width="100%" id="look-collect"> 你可以<a href=""><font color="#3388BB">查看收藏夹</font></a></div>
-                                               <hr />
-                                               <div class="col-xs-6 pull-left" align="left">收藏此商品的人还喜欢</div>
-                                               <div class="col-xs-6 pull-right" align="right"><a><font color="#3388BB">换一组更好的</font></a></div>
-                                               <div>
-                     <ul class="clearfix">
-       <li class="col-xs-2">
-        <a href="/basic/item/57" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_d_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-        <div width="100%" align="center" height="15px">$1299.00</div>
-       </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/59" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_iii_adaptiveResize_70_70.jpg" alt=""></a>
-         <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/35" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_T1vyPGFhxeXXXXXXXX_!!0-item_pic.jpg_460x460q90_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-         <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/37" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_1015622205-1_u_1_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-            <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-         <li class="col-xs-2">
-     <a href="/basic/item/58" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_f_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-          <div width="100%" align="center" height="15px">$1299.00</div>
-      </li>
-      <li class="col-xs-2">
-     <a href="/basic/item/31" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_01_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-          <div width="100%" align="center" height="15px">$1299.00</div>
-     </li>
-                                                 </ul>
-                                               </div>
+                                            <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
+                                            <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
+
+                                             <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
                                              <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
