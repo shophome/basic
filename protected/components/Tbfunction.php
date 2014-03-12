@@ -79,6 +79,11 @@ class Tbfunction {
         return $payStatus[$pay_status];
     }
 
+    public function showReceiveAddress()
+    {
+
+    }
+
     public function showRefundStatus($refund_status){
         $refundStatus=array('0'=>'未退款','1'=>'已退款');
         return $refundStatus[$refund_status];
