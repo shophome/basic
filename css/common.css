@@ -79,8 +79,10 @@ p{
 
 
 
-input[type="radio"], input[type="checkbox"]{
-    float:left;
-    margin:2px 0 0;
+#payment_method_id{
+    font-size: 14px;
+    margin:0px 0 0;
 }
 
+input[type="radio"], input[type="checkbox"] {
+    margin: 0px 0 0;}
