@@ -112,13 +112,7 @@ class ShippingController extends Controller {
 	}
 
 
-    /**
-     * deliver product
-     */
-    public  function actionDeliver()
-    {
-        echo 'Here';exit;
-    }
+
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -145,4 +139,5 @@ class ShippingController extends Controller {
 			Yii::app()->end();
 		}
 	}
+
 }
