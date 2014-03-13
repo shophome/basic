@@ -37,4 +37,27 @@ class LoginController extends Controller
 		$lastVisit->save();
 	}
 
+    public  function  actionLlogin()
+    {
+        //  print_r(Yii::app()->controller->module);exit;
+        $username = $_REQUEST["username"];
+        $password = $_REQUEST["password"];
+        // collect user input data
+        if(isset($_REQUEST["username"])&&isset($_REQUEST["password"]))
+        {
+            $model=new UserLogin;
+            $model->username = $username;
+            $model->password = $password;
+            // validate user input and redirect to previous page if valid
+            if($model->validate()) {
+                $this->lastViset();
+                echo json_encode(array('status'=>'login'));
+            }
+            else
+            {
+                echo json_encode(array('status'=>'notlogin'));
+            }
+        }
+    }
+
 }
