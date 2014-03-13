@@ -158,24 +158,27 @@ $imageHelper=new ImageHelper();
 
                           <form role="form" id="log-out-box">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="log-out-close">×</button>
-                           <div id="warning-load">
+                           <div id="warning-load" >
                                <div id="logo">演示商城</div>
 
                             <div class="user">
                                 <div> 用户名：</div>
-                                <input class="txt form-control" name="user" type="text" placeholder="请输入用户名"/>
+                                <input class="txt form-control" id="user" name="user" type="text" placeholder="请输入用户名"/>
                             </div>
+                               <div id="ajax"></div>
                             <div class="user">
                                 <div> 密码：</div>
-                                <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
+                                <input class="txt form-control" id="password" name="password" type="password" placeholder="请输入密码"/>
                             </div>
-                            <button id="log-btn-div"  name="button" type="submit"  class="btn-success btn">登录</button>
+                            <button id="log-btn-div"  name="button" type="button" onclick="llogin()" class="btn-success btn">登录</button>
                             <div id="register">
                                 <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
                                 <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
                             </div>
                            </div>
                              </form>
+
+
 
 
                            </form>
@@ -193,8 +196,7 @@ $imageHelper=new ImageHelper();
                                               <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入购物车！</span>
 
                                                <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
-
+                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
                                               </div><!-- /.modal-content -->
                                           </div><!-- /.modal-dialog -->
                                       </div>
@@ -239,8 +241,11 @@ $imageHelper=new ImageHelper();
      </li>
                                                  </ul>
                                                </div>
-                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
+                                            <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
+                                            <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
 
+                                             <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
                                     </div>
@@ -545,12 +550,10 @@ $imageHelper=new ImageHelper();
                 $('.deal_size').addClass('prop-div-select');
             } else {
                 $('.deal_size').removeClass('prop-div-select');
-//                $('#deal').submit();
                 $.post($(this).data('url'), function(response){
                     if (response.status == 'login') {
                         $('#deal').submit();
                     } else {
-//                     $('#loginPage')
                         $('#myModal').modal('show');
                     }
                 }, 'json');
@@ -561,4 +564,73 @@ $imageHelper=new ImageHelper();
             $('#deal').submit();
         });
     });
+
+    var xmlHttp
+//    function test() {
+//        window.open("http://yincart/user/login/test?username="+$("#user").val()+"&password="+$("#password").val());
+//    }
+    function llogin() {
+        xmlHttp=GetXmlHttpObject();
+        if (xmlHttp==null)
+        {
+            alert ("Browser does not support HTTP Request")
+            return
+        }
+
+        var url= "http://yincart/user/login/llogin";
+        var data = { username: $("#user").val(), password: $("#password").val() };
+        url=url+"?username="+$("#user").val();
+        url=url+"&password="+$("#password").val();
+        xmlHttp.onreadystatechange=stateChanged(url);
+//        xmlHttp.open("POST",url,true);
+//        xmlHttp.send();
+    }
+
+    function stateChanged(url)
+    {
+//        if (xmlHttp.readyState==2 || xmlHttp.readyState=="complete")
+//        {
+//            if(){
+//                $('#deal').submit();
+//            }
+//            else
+//            {
+//                alert("Wrong username or password!");
+//            }
+            $.post(url, function(response){
+                if (response.status == 'login') {
+                    $('#deal').submit();
+                } else {
+                    alert("Wrong username or password!");
+                }
+            }, 'json');
+
+//            document.getElementById("user").innerHTML=xmlHttp.responseText;
+            //$("#myModal").css("display","none");
+  //      }
+    }
+
+    function GetXmlHttpObject()
+    {
+        var xmlHttp=null;
+
+        try
+        {
+            // Firefox, Opera 8.0+, Safari
+            xmlHttp=new XMLHttpRequest();
+        }
+        catch (e)
+        {
+            // Internet Explorer
+            try
+            {
+                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e)
+            {
+                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        return xmlHttp;
+    }
 </script>

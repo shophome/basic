@@ -79,9 +79,19 @@ class Tbfunction {
         return $payStatus[$pay_status];
     }
 
-    public function showReceiveAddress()
+    public function showReceiveAddress($order)
     {
 
+        $detailAddress = '';
+        $country = Area::model()->findByPk(array('area_id'=>$order->receiver_country))->name;
+        $state = Area::model()->findByPk(array('area_id'=>$order->receiver_state))->name;
+        $city = Area::model()->findByPk(array('area_id' => $order->receiver_city))->name;
+        $district = Area::model()->findByPk(array('area_id'=>$order->receiver_district))->name;
+        $address = $order->receiver_address;
+//        var_dump($order);
+//        var_dump($address);
+        $detailAddress = $country.' '.$state.' '.$city.' '.$district.' '.$address;
+        return $detailAddress;
     }
 
     public function showRefundStatus($refund_status){
@@ -93,6 +103,8 @@ class Tbfunction {
         $shipMethod=array('0'=>'未设置','1'=>'平邮','2'=>'快递','3'=>'EMS');
         return $shipMethod[$ship_method];
     }
+
+
 
     public function showStatus($status){
         $Status=array('0'=>'未提交','1'=>'有效');

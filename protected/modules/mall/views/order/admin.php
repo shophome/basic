@@ -4,8 +4,6 @@ $this->breadcrumbs = array(
     'Manage',
 );
 ?>
-
-
 <h1>Manage Orders</h1>
 
 <p>
@@ -76,6 +74,11 @@ $this->breadcrumbs = array(
                         'class'=>'plane',
                         'data-target'=> '#myModal',
                         'data-toggle' => 'modal',
+//                        'ajax'=>array(
+//                            'type'=>'POST',
+//                            'url'=>"js:$(this).attr('href')",
+//                            'success'=>'function(data) { $("#myModal .modal-body p").html(data); $("#myModal").modal(); }'
+//                        ),
                     ),
                 ),
             ),
@@ -96,15 +99,14 @@ $this->breadcrumbs = array(
                 <h4 class="modal-title" id="myModalLabel">Deliver</h4>
             </div>
             <div class="modal-body">
-
+                loading...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">deliver</button>
+
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>
 
 
 
@@ -112,5 +114,4 @@ $this->breadcrumbs = array(
     $("#myModal").on("hidden", function() {
         $(this).removeData("modal");
     });
-
 </script>
