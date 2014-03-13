@@ -109,11 +109,18 @@ class ItemController extends MallBaseController
                 if ($count == 1) {
                     $item = Item::model()->findByPk($ids);
                     $images = ItemImg::model()->findAllByAttributes(array('item_id' => $item->item_id));
+//                    var_dump($images);exit;
                     foreach ($images as $k => $v) {
-                        $img = $v['url'];
+                        $img = $v['pic'];
 // we only allow deletion via POST request
                         ItemImg::model()->deleteAllByAttributes(array('item_id' => $item->item_id));
                         @unlink(dirname(Yii::app()->basePath) . '/upload/item/image/' . $img);
+                    }
+
+                    $skus = Sku::model()->findAllByAttributes(array('item_id' => $item->item_id));
+                    foreach($skus as $sk => $sku)
+                    {
+                        Sku::model()->deleteAllByAttributes(array('item_id' => $item->item_id));
                     }
 
                     Item::model()->deleteByPk($ids);
@@ -125,12 +132,19 @@ class ItemController extends MallBaseController
                     foreach ($item as $i) {
                         $images = ItemImg::model()->findAllByAttributes(array('item_id' => $i->item_id));
                         foreach ($images as $k => $v) {
-                            $img = $v['url'];
+                            $img = $v['pic'];
 // we only allow deletion via POST request
                             ItemImg::model()->deleteAllByAttributes(array('item_id' => $i->item_id));
                             @unlink(dirname(Yii::app()->basePath) . '/upload/item/image/' . $img);
+
+                        }
+                        $skus = Sku::model()->findAllByAttributes(array('item_id' => $i->item_id));
+                        foreach($skus as $sk => $sku)
+                        {
+                            Sku::model()->deleteAllByAttributes(array('item_id' => $i->item_id));
                         }
                     }
+
                     Item::model()->deleteAllByAttributes(array('item_id' => $ids));
                     echo '<script>alert("删除成功.")</script>';
                     echo '<script type="text/javascript">setTimeout(\'location.href="' . Yii::app()->createUrl('/mall/item/admin') . '"\',10);</script>';

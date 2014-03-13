@@ -8,7 +8,9 @@
                        var oLi=document.createElement('li');
                         oLi.innerHTML=oAu.innerHTML+'<br/>'+'<p>'+oTxt.value+'</p>';
                         oUl.appendChild(oLi);
+                        
                     }
+
                    }
                  </script>
 <?php

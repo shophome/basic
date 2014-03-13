@@ -372,4 +372,14 @@ class OrderController extends Controller
         $order->save();
         $this->redirect(array('/mall/order/admin'));
     }
+
+    /**
+     * deliver product
+     */
+    public  function actionDeliver($id)
+    {
+        $order = Order::model()->findByPk($id);
+        var_dump($order);
+        $this->renderPartial('deliver', array('Order' => $order));
+    }
 }

@@ -194,6 +194,7 @@ $imageHelper=new ImageHelper();
 
                                                <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
                                                <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+
                                               </div><!-- /.modal-content -->
                                           </div><!-- /.modal-dialog -->
                                       </div>
@@ -239,6 +240,7 @@ $imageHelper=new ImageHelper();
                                                  </ul>
                                                </div>
                                              <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
                                     </div>
