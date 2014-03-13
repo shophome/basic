@@ -258,6 +258,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
                     <td colspan="6" style="padding:10px;text-align:right">总计：<?php echo $price; ?> 元</td>
                 </tr>
             </table>
+
         </div>
         <div class="box-content">
             <div class="memo" style="float:left"><h3>

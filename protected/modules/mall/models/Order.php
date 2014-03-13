@@ -123,6 +123,7 @@ class Order extends CActiveRecord
             'payment_method_id' => '付款方式',
             'shipping_method_id' => '配送方式',
             'detail_address' => '具体地址',
+            'order_ship_id' => '快递单号',
         );
     }
 
