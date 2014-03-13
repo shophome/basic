@@ -6,16 +6,7 @@
             </div>
             <!-- content -->
         </div>
-        <div class="grid_6 omega">
-            <div class="box" style="padding: 20px">
-                <?php if (!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
 
-                <?php $this->widget('TagCloud', array(
-                    'maxTags' => Yii::app()->params['tagCloudCount'],
-                    'htmlOptions' => array('class' => 'box-title')
-                )); ?>
-
-            </div>
             <div class="box">
                 <?php $this->widget('RecentComments', array(
                     'maxComments' => Yii::app()->params['recentCommentCount'],
