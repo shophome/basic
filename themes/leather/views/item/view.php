@@ -143,38 +143,7 @@ $imageHelper=new ImageHelper();
                     <label class="qty_num" id="num"><?php echo $item->min_number; ?></label>
                     <input type="hidden" id="qty" name="qty" value="<?php echo $item->min_number; ?>" />
                     <a href="javascript:void(0)" class="add"></a></span>
-<<<<<<< HEAD
-            <span>（库存剩余 <label id="stock"><?php echo $item->stock; ?></label> 台)</span>
-        </div>
-        <input type="hidden" id="item_id" name="item_id" value="<?php echo $item->item_id; ?>" />
-        <input type="hidden" id="props" name="props" value="" />
-        <div  class="deal_add_car" data-url="<?php echo Yii::app()->createUrl('cart/add'); ?>"><a href="javascript:void(0)" id="addToShopCart" data-toggle="modal" data-target="#myModal-1">加入购物车</a></div>
-        <div class="deal_add" data-url="<?php echo Yii::app()->createUrl('user/user/isLogin'); ?>" ><?php echo CHtml::link("立即购买", 'javascript:void(0);')?></div>
-       <div  class="deal_collect" data-url="<?php echo Yii::app()->createUrl('member/wishlist/addWish'); ?>" ><a data-toggle="modal" data-target="#myModal-2" href="javascript:void(0)">立即收藏</a></div>
-        <!-- Modal -->
-               <div tabindex="-1" class="modal fade in" id="myModal" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
-                   <div class="modal-dialog">
-                       <div class="modal-content" >
 
-                          <form role="form" id="log-out-box">
-                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="log-out-close">×</button>
-                           <div id="warning-load">
-                               <div id="logo">皮雕软毛耗材商城天天乐购</div>
-
-                            <div class="user">
-                                <div> 用户名：</div>
-                                <input class="txt form-control" id="user" name="user" type="text" placeholder="请输入用户名"/>
-                            </div>
-                               <div id="ajax"></div>
-                               <div class="user">
-                                <div> 密码：</div>
-                                <input class="txt form-control" id="password" name="password" type="password" placeholder="请输入密码"/>
-                            </div>
-                               <button id="log-btn-div"  name="button" type="button" onclick="llogin()" class="btn-success btn">登录</button>
-                               <div id="register">
-                                <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
-                                <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
-=======
                 <span>（库存剩余 <label id="stock"><?php echo $item->stock; ?></label> 台)</span>
             </div>
             <input type="hidden" id="item_id" name="item_id" value="<?php echo $item->item_id; ?>" />
@@ -206,22 +175,13 @@ $imageHelper=new ImageHelper();
                                     <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
                                     <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
                                 </div>
->>>>>>> 3942208fd99a48d14efc1cc3752b2a17525eb35e
                             </div>
                         </form>
-
-
-<<<<<<< HEAD
-                           </form>
-                       </div><!-- /.modal-content -->
-                   </div><!-- /.modal-dialog -->
-=======
 
 
         </form>
     </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
->>>>>>> 3942208fd99a48d14efc1cc3752b2a17525eb35e
 
 
 
@@ -284,7 +244,7 @@ $imageHelper=new ImageHelper();
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
-<<<<<<< HEAD
+
                                  <!-- Modal -->
                                       <div tabindex="-1" class="modal fade in" id="myModal-1" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
                                           <div class="modal-dialog">
@@ -307,9 +267,6 @@ $imageHelper=new ImageHelper();
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
                                     </div>
-=======
->>>>>>> 3942208fd99a48d14efc1cc3752b2a17525eb35e
-
 
 
 <div class="pd_l container_24">
@@ -602,8 +559,6 @@ $(function () {
             }else
                 showPopup(response.status) ;
         },'json');
-
-<<<<<<< HEAD
         });
         $('.deal_add').click(function() {
             var selectProps = $('.prop-select,.img-prop-select');
@@ -622,31 +577,11 @@ $(function () {
                 }, 'json');
             }
         });
-=======
-    });
-    $('.deal_add').click(function() {
-        var selectProps = $('.prop-select,.img-prop-select');
-        if (selectProps.length < $('.deal_size p').length) {
-            $('.deal_size').addClass('prop-div-select');
-        } else {
-            $('.deal_size').removeClass('prop-div-select');
-            $.post($(this).data('url'), function(response){
-                if (response.status == 'login') {
-                    $('#deal').submit();
-                } else {
-                    $('#myModal').modal('show');
-                }
-            }, 'json');
-        }
-    });
->>>>>>> 3942208fd99a48d14efc1cc3752b2a17525eb35e
+
 
     $('.buy-without-login').click(function() {
         $('#deal').submit();
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 });
 
 var xmlHttp
@@ -672,7 +607,6 @@ function llogin() {
 
 function stateChanged(url)
 {
-=======
     var xmlHttp
     //    function test() {
     //        window.open("http://yincart/user/login/test?username="+$("#user").val()+"&password="+$("#password").val());
@@ -696,17 +630,6 @@ function stateChanged(url)
 
     function stateChanged(url)
     {alert("1");
->>>>>>> d456d00fcbdc3f564bd15fc89dff42cdf72c84e0
-//        if (xmlHttp.readyState==2 || xmlHttp.readyState=="complete")
-//        {
-//            if(){
-//                $('#deal').submit();
-//            }
-//            else
-//            {
-//                alert("Wrong username or password!");
-//            }
-<<<<<<< HEAD
     $.post(url, function(response){
         if (response.status == 'login') {
             $('#deal').submit();
@@ -743,8 +666,6 @@ function GetXmlHttpObject()
     }
     return xmlHttp;
 }
->>>>>>> 3942208fd99a48d14efc1cc3752b2a17525eb35e
-=======
         $.post(url, function(response){
 
             if (response.status == 'login') {
@@ -783,5 +704,4 @@ function GetXmlHttpObject()
         }
         return xmlHttp;
     }
->>>>>>> d456d00fcbdc3f564bd15fc89dff42cdf72c84e0
 </script>
