@@ -37,6 +37,29 @@ class ItemController extends MallBaseController
     }
 
     /**
+     * delete a item
+     */
+    public function actionDelete($id)
+    {
+        $item = Item::model()->findByPk($id);
+        $images = ItemImg::model()->findAllByAttributes(array('item_id' => $item->item_id));
+        //                    var_dump($images);exit;
+        foreach ($images as $k => $v) {
+            $img = $v['pic'];
+    // we only allow deletion via POST request
+            ItemImg::model()->deleteAllByAttributes(array('item_id' => $item->item_id));
+            @unlink(dirname(Yii::app()->basePath) . '/upload/item/image/' . $img);
+        }
+
+        $skus = Sku::model()->findAllByAttributes(array('item_id' => $item->item_id));
+        foreach($skus as $sk => $sku)
+        {
+            Sku::model()->deleteAllByAttributes(array('item_id' => $item->item_id));
+        }
+
+        Item::model()->deleteByPk($id);
+    }
+    /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id the ID of the model to be updated

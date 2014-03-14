@@ -8,7 +8,7 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/cart/
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/review.js');
 
 $imageHelper=new ImageHelper();
-
+var_dump(Yii::app()->getBaseUrl());
 /** @var Item $item */
 ?>
 <script type="text/javascript">
@@ -158,27 +158,24 @@ $imageHelper=new ImageHelper();
 
                           <form role="form" id="log-out-box">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="log-out-close">×</button>
-                           <div id="warning-load" >
-                               <div id="logo">演示商城</div>
+                           <div id="warning-load">
+                               <div id="logo">皮雕软毛耗材商城天天乐购</div>
 
                             <div class="user">
                                 <div> 用户名：</div>
-                                <input class="txt form-control" id="user" name="user" type="text" placeholder="请输入用户名"/>
+                                <input class="txt form-control" name="user" type="text" placeholder="请输入用户名"/>
                             </div>
-                               <div id="ajax"></div>
                             <div class="user">
                                 <div> 密码：</div>
-                                <input class="txt form-control" id="password" name="password" type="password" placeholder="请输入密码"/>
+                                <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
                             </div>
-                            <button id="log-btn-div"  name="button" type="button" onclick="llogin()" class="btn-success btn">登录</button>
+                            <button id="log-btn-div" type="button" name="button" onClick=location="<?php echo Yii::app()->createUrl('user/login/Login/'); ?>" class="btn-success btn">登录</button>
                             <div id="register">
                                 <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
                                 <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
                             </div>
                            </div>
                              </form>
-
-
 
 
                            </form>
@@ -192,60 +189,22 @@ $imageHelper=new ImageHelper();
                                  <!-- Modal -->
                                       <div tabindex="-1" class="modal fade in" id="myModal-1" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
                                           <div class="modal-dialog">
-                                              <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-2-content">
+                                              <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
                                               <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入购物车！</span>
 
                                                <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
+                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
                                               </div><!-- /.modal-content -->
                                           </div><!-- /.modal-dialog -->
                                       </div>
                <!-- Modal -->
                                     <div tabindex="-1" class="modal fade in" id="myModal-2" role="dialog" aria-hidden="false" aria-labelledby="myModalLabel" style="display: none;">
                                         <div class="modal-dialog">
-                                            <div class="modal-content" style="width:560px;height:310px;border:1px solid black;padding:20px 20px;" id="myModal-1-content">
-                                             <div class="clearfix">
-                                               <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
-                                               <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                               </br>
-                                               </div>
-                                               <div width="100%" id="look-collect"> 你可以<a href="/basic/member/wishlist/admin"><font color="#3388BB">查看收藏夹</font></a></div>
-                                               <hr />
-                                               <div class="col-xs-6 pull-left" align="left">收藏此商品的人还喜欢</div>
-                                               <div class="col-xs-6 pull-right" align="right"><a><font color="#3388BB">换一组更好的</font></a></div>
-                                               <div>
-                     <ul class="clearfix">
-       <li class="col-xs-2">
-        <a href="/basic/item/57" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_d_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-        <div width="100%" align="center" height="15px">$1299.00</div>
-       </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/59" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_iii_adaptiveResize_70_70.jpg" alt=""></a>
-         <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/35" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_T1vyPGFhxeXXXXXXXX_!!0-item_pic.jpg_460x460q90_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-         <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-       <li class="col-xs-2">
-        <a href="/basic/item/37" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_1015622205-1_u_1_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-            <div width="100%" align="center" height="15px">$1299.00</div>
-        </li>
-         <li class="col-xs-2">
-     <a href="/basic/item/58" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_f_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-          <div width="100%" align="center" height="15px">$1299.00</div>
-      </li>
-      <li class="col-xs-2">
-     <a href="/basic/item/31" title=""target="_blank"><img src="/basic/upload/item/manclothes/.tmb/thumb_01_adaptiveResize_70_70.jpg" class="li-img" alt=""></a>
-          <div width="100%" align="center" height="15px">$1299.00</div>
-     </li>
-                                                 </ul>
-                                               </div>
-                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
                                             <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
                                             <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
 
                                              <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
                                     </div>
@@ -550,10 +509,12 @@ $imageHelper=new ImageHelper();
                 $('.deal_size').addClass('prop-div-select');
             } else {
                 $('.deal_size').removeClass('prop-div-select');
+//                $('#deal').submit();
                 $.post($(this).data('url'), function(response){
                     if (response.status == 'login') {
                         $('#deal').submit();
                     } else {
+//                     $('#loginPage')
                         $('#myModal').modal('show');
                     }
                 }, 'json');
@@ -564,73 +525,4 @@ $imageHelper=new ImageHelper();
             $('#deal').submit();
         });
     });
-
-    var xmlHttp
-//    function test() {
-//        window.open("http://yincart/user/login/test?username="+$("#user").val()+"&password="+$("#password").val());
-//    }
-    function llogin() {
-        xmlHttp=GetXmlHttpObject();
-        if (xmlHttp==null)
-        {
-            alert ("Browser does not support HTTP Request")
-            return
-        }
-
-        var url= "http://yincart/user/login/llogin";
-        var data = { username: $("#user").val(), password: $("#password").val() };
-        url=url+"?username="+$("#user").val();
-        url=url+"&password="+$("#password").val();
-        xmlHttp.onreadystatechange=stateChanged(url);
-//        xmlHttp.open("POST",url,true);
-//        xmlHttp.send();
-    }
-
-    function stateChanged(url)
-    {
-//        if (xmlHttp.readyState==2 || xmlHttp.readyState=="complete")
-//        {
-//            if(){
-//                $('#deal').submit();
-//            }
-//            else
-//            {
-//                alert("Wrong username or password!");
-//            }
-            $.post(url, function(response){
-                if (response.status == 'login') {
-                    $('#deal').submit();
-                } else {
-                    alert("Wrong username or password!");
-                }
-            }, 'json');
-
-//            document.getElementById("user").innerHTML=xmlHttp.responseText;
-            //$("#myModal").css("display","none");
-  //      }
-    }
-
-    function GetXmlHttpObject()
-    {
-        var xmlHttp=null;
-
-        try
-        {
-            // Firefox, Opera 8.0+, Safari
-            xmlHttp=new XMLHttpRequest();
-        }
-        catch (e)
-        {
-            // Internet Explorer
-            try
-            {
-                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-            }
-            catch (e)
-            {
-                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-        }
-        return xmlHttp;
-    }
 </script>

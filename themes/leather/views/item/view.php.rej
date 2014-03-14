@@ -1,39 +1,9 @@
 diff a/themes/leather/views/item/view.php b/themes/leather/views/item/view.php	(rejected hunks)
-@@ -8,7 +8,7 @@
- Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/review.js');
- 
- $imageHelper=new ImageHelper();
--
-+var_dump(Yii::app()->getBaseUrl());
- /** @var Item $item */
- ?>
- <script type="text/javascript">
-@@ -169,7 +169,7 @@
-                                 <div> 密码：</div>
-                                 <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
-                             </div>
--                            <button id="log-btn-div"  name="button" type="submit"  class="btn-success btn">登录</button>
-+                            <button id="log-btn-div" type="button" name="button" onClick=location="<?php echo Yii::app()->createUrl('user/login/Login/'); ?>" class="btn-success btn">登录</button>
-                             <div id="register">
-                                 <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
-                                 <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
-@@ -193,7 +193,7 @@
+@@ -193,6 +193,7 @@
                                                <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入购物车！</span>
  
                                                 <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
--<!--                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>-->
-+                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
++<!--                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>-->
                                                </div><!-- /.modal-content -->
                                            </div><!-- /.modal-dialog -->
                                        </div>
-@@ -203,8 +203,8 @@
-                                             <div class="modal-content clearfix" style="width:200px;height:150px;border:1px solid black;padding:10px 10px;" id="myModal-1-content">
-                                             <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
- 
--<!--                                             <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>-->
--<!--                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>-->
-+                                             <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-+                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
-                                             </div><!-- /.modal-content -->
-                                         </div><!-- /.modal-dialog -->
-                                     </div>
