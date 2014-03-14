@@ -8,7 +8,6 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/cart/
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/review.js');
 
 $imageHelper=new ImageHelper();
-var_dump(Yii::app()->getBaseUrl());
 /** @var Item $item */
 ?>
 <script type="text/javascript">
