@@ -11,8 +11,8 @@ $this->breadcrumbs = array(
 
 
 <div class="box" >
-    <div class="box-title" style="text-align: left">新闻列表</div>
-    <div class="box-content" >
+    <div class="box-title" style="text-align: left"><a href="/basic/site/index">首页</a>>><a href="/basic/post/index">新闻列表</a></div>
+
     <div class="box-content" >
         <!-- <?php $this->widget('zii.widgets.CListView', array(
                      'dataProvider'=>$dataProvider,
@@ -172,17 +172,13 @@ $this->breadcrumbs = array(
              <div style="text-align:center"> <h4><b>热点追踪</b></h4>
              </div>
                <ul class=" pull-center" id="news-hot">
-                                  <li><a class="news-link "href="#">关于浮动（float）的最优清除方案推荐 </a></li>
-                                  <li><a class="news-link  href="#">如何用PhotoShop制作网站的favicon.ico </a></li>
-                                  <li><a class="news-link  href="#">	Web 开发者必备的 14 个 JavaScript 音频库</a></li>
-                                  <li><a class="news-link  href="#">	jquery ajax回调函数中调用$(this)的问题</a></li>
-                                  <li><a class="news-link  href="#">......</a></li>
-                                  <li><a  class="news-link  href="#">.....</a></li>
-                                  <li><a class="news-link  href="#">.....</a></li>
+                                  <li><a class="news-link "href="/basic/themes/leather/views/post/firstNews.html">关于浮动（float）的最优清除方案推荐 </a></li>
+                                  <li><a class="news-link" href="/basic/themes/leather/views/post/secondNews.html">如何用PhotoShop制作网站的favicon.ico </a></li>
+                                  <li><a class="news-link " href="/basic/themes/leather/views/post/thirdNews.html">	Web 开发者必备的 14 个 JavaScript 音频库</a></li>
+                                  <li><a class="news-link  "href="/basic/themes/leather/views/post/forthNews.html">	jquery ajax回调函数中调用$(this)的问题</a></li>
+                                  <li><a class="news-link  "href="">......</a></li>
+                                  <li><a  class="news-link " href="#">.....</a></li>
+                                  <li><a class="news-link " href="#">.....</a></li>
                               </ul>
         </div>
-
-
-
-    </div>
 </div>

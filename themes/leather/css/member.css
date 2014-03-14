@@ -19,7 +19,7 @@
 
 .box{
     border: 1px solid #ececec;
-    margin-bottom: 10px;
+    margin: 10px 0;
     padding: 0;
 }
 .box-title{
@@ -38,7 +38,7 @@
 }
 .box-title a{
     text-decoration: none;
-    color: #B7D6E7;
+    color: #0069D6;
 }
 .box-title a:hover{
     color: #0099FF
