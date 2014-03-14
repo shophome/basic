@@ -77,17 +77,20 @@
 .pd_sort{
 	overflow:hidden;
 	border-top:3px solid #2d2d2d;
-    margin-left: 0px;
-    padding: 0px;
+    margin-left: 5px;
+   margin-bottom:10px;
+   height:30px;
+   vertical-align:middle
+
 }
 .pd_sort_sold,.pd_sort_price,.pd_sort_new{
 	background:url(../image/sort.png) no-repeat right center;
     background-position:42px 10px;
 	float:left;
 	margin:0 5px;
-	padding:5px 15px 5px 5px ;
+	padding:5px;
 	cursor:pointer;
-    width: 40px;
+    width: 55px;
     text-align: center;
 
 	
@@ -97,9 +100,9 @@
     background-position:42px 10px;
     float:left;
     margin:0 5px;
-    padding:5px 15px 5px 5px;
+    padding:5px 5px 5px 5px;
     cursor:pointer;
-    width: 40px;
+    width: 55px;
     text-align: center;
 }
 
@@ -138,13 +141,14 @@
 }
 .pd_check{
 	float:left;
-	padding-top:2px;
+	padding-top:5px;
 	margin-left:15px;
 
 }
+
 .pd_check input{
 	vertical-align: middle;
-	margin: 0 0 2px;
+	margin: 3px 0 2px;
 }
 .pd_page {
 	float:right;
@@ -177,7 +181,9 @@
 }
 .product_pd{
 	float:left;
-    margin-right: 10px;
+    margin-right:10px;
+    margin-bottom:10px;
+
 }
 .page_p{
 	text-align:right;
@@ -488,3 +494,4 @@
     margin: 5px 0;
     width:555px;
 }
+

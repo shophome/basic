@@ -3,12 +3,7 @@ $this->breadcrumbs = array(
     'Orders' => array('index'),
     'Manage',
 );
-
 ?>
-<link rel="stylesheet" href="/css/yi.css" type="text/css"/>
-<script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
-<script language="JavaScript" type="text/javascript" src="/protected/extensions/bootstrap/assets/js/bootstrap.js"></script>
-
 <h1>Manage Orders</h1>
 
 <p>
@@ -33,13 +28,6 @@ $this->breadcrumbs = array(
             'name' => 'user_id',
             'header' => '会员账号',
             'value' => 'Tbfunction::getUser($data->user_id)',
-            'filter' => Tbfunction::showUser(),
-        ),
-        array(
-            'name' => 'user_id',
-            'value' => 'Tbfunction::showMemberRight($data->user_id)',
-            'header' => '会员级别',
-            'filter' => Tbfunction::ReturnMemberRight(),
         ),
         array(
             'name' => 'pay_status',
@@ -81,12 +69,16 @@ $this->breadcrumbs = array(
                 'deliver' => array(
                     'label' => '发货',
                     'icon' => 'plane',
-//                    'url'=>'Yii::app()->createUrl("mall/shipping/deliver")',
-
+                   'url'=>'Yii::app()->createUrl("mall/order/deliver", array("id"=>$data->order_id))',
                     'options'=>array(
-                        'class'=>'btn btn-small',
+                        'class'=>'plane',
                         'data-target'=> '#myModal',
                         'data-toggle' => 'modal',
+//                        'ajax'=>array(
+//                            'type'=>'POST',
+//                            'url'=>"js:$(this).attr('href')",
+//                            'success'=>'function(data) { $("#myModal .modal-body p").html(data); $("#myModal").modal(); }'
+//                        ),
                     ),
                 ),
             ),
@@ -98,7 +90,7 @@ $this->breadcrumbs = array(
 ));
 ?>
 
-<!-- Modal -->
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -107,59 +99,19 @@ $this->breadcrumbs = array(
                 <h4 class="modal-title" id="myModalLabel">Deliver</h4>
             </div>
             <div class="modal-body">
-                <div id="manage-order">
-                    <h1 align="center"">MANAGE ORDER</h1>
-
-                    订单号：<input class="txt"  type="text" />
-
-                    会员：<input class="txt"  type="text" />
-
-                    <div class="decoration-choice">
-                        付款状态：<div >
-                            <select class="choice" >
-                                <option>未付款</option>
-                                <option>已付款</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="decoration-choice">
-                        退款状态：<div>
-                            <select class="choice">
-                                <option>未退款</option>
-                                <option>已退款</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="decoration-choice">
-                        付款方式：<div >
-                            <select class="choice">
-                                <option>货到付款</option>
-                                <option>支付宝</option>
-                                <option>银行卡</option>
-                            </select>
-                        </div>
-                    </div>
-                    实付款：<input  class="txt" name="money" type="text"/>
-                    运费：  <input  class="txt" name="money" type="text"/>
-                    商品总金额：<input  class="txt" name="money" type="text"/>
-
-
-                    <div class="decoration-choice">
-                        配送方式： <div>
-                            <select  class="choice">
-                                <option>平邮</option>
-                                <option>快递</option>
-                            </select>
-                        </div>
-                    </div>
-                    下单时间：<input  class="txt" name="money" type="text"/>
-                    收货人：<input  class="txt" name="money" type="text"/>
-                </div>
+                loading...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">deliver</button>
+
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $("#myModal").on("hidden", function() {
+        $(this).removeData("modal");
+    });
+</script>

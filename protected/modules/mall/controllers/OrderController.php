@@ -360,7 +360,7 @@ class OrderController extends Controller
         $criteria->params[':price']=$sku->price;
         $criteria->params[':props_name']=$sku->props_name;
         $orderItem=OrderItem::model()->find($criteria);
-        if (($sku->stock+$orderItem->quantity) < $number) echo 0;
+        if (($sku->stock+$orderItem->quantity) < $number || $number <=0) echo 0;
         else echo 1;
 
     }
@@ -371,5 +371,27 @@ class OrderController extends Controller
         $order->ship_status = 1;
         $order->save();
         $this->redirect(array('/mall/order/admin'));
+    }
+
+    /**
+     * deliver product
+     */
+    public  function actionDeliver($id)
+    {
+        $order = Order::model()->findByPk($id);
+        if(isset($_POST['Order']))
+        {
+            $order->order_ship_id = $_POST['Order'][order_ship_id];
+            $order->ship_time = time();
+            $order->ship_status = 1;
+            $order->save();
+            $this->redirect(array('/mall/order/admin'));
+        }
+        else
+        {
+           $order = Order::model()->findByPk($id);
+//        var_dump($order);exit;
+          $this->renderPartial('deliver', array('Order' => $order));
+        }
     }
 }

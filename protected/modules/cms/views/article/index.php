@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=utf-8");
 $this->breadcrumbs=array(
 	'Articles',
 );
@@ -10,8 +11,7 @@ $this->menu=array(
 ?>
 
 <h1>Articles</h1>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">;
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',

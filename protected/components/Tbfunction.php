@@ -48,14 +48,6 @@ class Tbfunction {
         return array('0' => '无效', '1' => '有效');
     }
 
-    /**
-     * @return array
-     * return member if superuser
-     */
-    public function ReturnMemberRight()
-    {
-        return array('0' => '普通会员','1' => '超级会员');
-    }
 
     public function ReturnPayStatus(){
         return array('0' => '待支付', '1' => '已支付');
@@ -81,17 +73,25 @@ class Tbfunction {
         return array('0' => '货到付款', '1' => '支付宝', '2' => '银行卡');
     }
 
-    public function  showMemberRight($user_id)
-    {
-        $user = Users::model()->findByAttributes(array('id' => $user_id));
-        $member_right = $user->superuser;
-        $memberRight = array('0' => '普通会员','1' => '超级会员');
-        return $memberRight[$member_right];
-    }
 
     public function showPayStatus($pay_status){
         $payStatus=array('0'=>'待支付','1'=>'已支付');
         return $payStatus[$pay_status];
+    }
+
+    public function showReceiveAddress($order)
+    {
+
+        $detailAddress = '';
+        $country = Area::model()->findByPk(array('area_id'=>$order->receiver_country))->name;
+        $state = Area::model()->findByPk(array('area_id'=>$order->receiver_state))->name;
+        $city = Area::model()->findByPk(array('area_id' => $order->receiver_city))->name;
+        $district = Area::model()->findByPk(array('area_id'=>$order->receiver_district))->name;
+        $address = $order->receiver_address;
+//        var_dump($order);
+//        var_dump($address);
+        $detailAddress = $country.' '.$state.' '.$city.' '.$district.' '.$address;
+        return $detailAddress;
     }
 
     public function showRefundStatus($refund_status){
@@ -103,6 +103,8 @@ class Tbfunction {
         $shipMethod=array('0'=>'未设置','1'=>'平邮','2'=>'快递','3'=>'EMS');
         return $shipMethod[$ship_method];
     }
+
+
 
     public function showStatus($status){
         $Status=array('0'=>'未提交','1'=>'有效');

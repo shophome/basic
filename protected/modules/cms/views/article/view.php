@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=utf-8");
 $this->breadcrumbs=array(
 	'Articles'=>array('index'),
 	$model->title,
@@ -14,7 +15,8 @@ $this->menu=array(
 ?>
 
 <h1>View Article #<?php echo $model->article_id; ?></h1>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">;
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

@@ -119,7 +119,7 @@
                 }
                 ?>
             </div>
-            <div class="pd_sort" data-sort="<?php echo $sort?>">
+            <div class="pd_sort" id="pd-sort" data-sort="<?php echo $sort?>">
                 <a href="<?php echo Yii::app()->createUrl('catalog/index', array_merge($_GET, array('sort' => 'soldd'))); ?>">
                     <div class="pd_sort_sold current">销量</div>
                 </a>
@@ -192,10 +192,12 @@
                         <div class="product_name_1">
                             <a href="<?php echo $itemUrl; ?>"><?php echo $item->title; ?></a>
                         </div>
-                        <div class="product_price_1">
-                            <div class="product_price_n"><?php echo $item->currency . $item->price ?></div>
-                            <div class="product_price_p"><?php echo $item->currency . $item->price ?></div>
-                            <div class="product_price_v"><a href="<?php echo $itemUrl; ?>">详情点击</a></div>
+                        <div class="product_price_1" align="center">
+                            <div class="product_price_n1 center-block">促销价：<?php echo $item->currency . $item->price ?></div>
+                            <br>
+                            <div class="product_price_p1 center-bloc">一口价:<?php echo $item->currency . $item->price ?></div>
+                            <br>
+                            <div class="product_price_v1 center-block"><a href="<?php echo $itemUrl; ?>">详情点击</a></div>
                         </div>
                     </div>
                 <?php } ?>

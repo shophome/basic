@@ -423,24 +423,60 @@ a.online_ser{
 	overflow:hidden;
 	zoom:1;
 }
+
+
+
+
+
 .product_price_n{
-	font-size:18px;
-	font-weight:700;
-	color:#d50000;
-	float:left;
-} 
+    font-size:18px;
+    font-weight:700;
+    color:#d50000;
+    float:left;
+}
 .product_price_p{
     padding-top: 3px;
-	color:#b2b2b2;
-	float:left;
-	text-decoration:line-through;
-	line-height:21px;
+    color:#b2b2b2;
+    float:left;
+    text-decoration:line-through;
+    line-height:21px;
 }
 .product_price_v{
-	background:#d50000;
-	padding:1px 5px;
-	float:right;
+    background:#d50000;
+    padding:1px 5px;
+    float:right;
 }
+
+.product_price_n1{
+    font-size:18px;
+    font-weight:700;
+    color:#d50000;
+
+    font-family:"仿宋";
+
+}
+.product_price_p1{
+    padding-top: 0px;
+    color:#b2b2b2;
+
+    text-decoration:line-through;
+    line-height:21px;
+    margin-top:-10px ;
+}
+
+.product_price_v1{
+    background:#d50000;
+    padding:1px 5px;
+
+    width: 60px;
+    margin-top: -10px;
+    color: white;
+
+}
+.product_price_v1 a{
+    color:#fff;
+}
+
 .product_price_v a{
 	color:#fff;
 }
@@ -548,7 +584,7 @@ a.online_ser{
 	background:url(../image/bottom_newuser.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_new li,.foot_pay li,.foot_set li,.foot_back li,.foot_help li{
 	line-height:25px;
@@ -560,31 +596,31 @@ a.online_ser{
 	background:url(../image/bottom_pay.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_set{
 	background:url(../image/bottom_set.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_back{
 	background:url(../image/bottom_back.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_help{
 	background:url(../image/bottom_help.png) no-repeat top  left;
 	float:left;
 	padding-top:40px;
-	margin: 0 45px;
+	margin: 0 55px;
 }
 .foot_call{
 	background:url(../image/bottom_adv.png) no-repeat bottom left;
 	float:left;
 	padding-bottom:90px;
-	margin: 0 30px;
+	margin: 0 0 0 55px;
 }
 .cor_r{color:#990000;}
 .foot_u{
@@ -605,22 +641,13 @@ a.online_ser{
     margin:0 auto;
 
 }
-.chenyu{
-    height:220px;
-    width:220px;
-}
+
 .view1 {
     width: 280px;
     display: inline-block;
 }
-.wangjingye{
-    position : static;
-    text-align: center;
-}
-.shenyue{
-    text-align: right;
-    padding:10px;
-}
+
+
 .summary{
     text-align: right;
 }
@@ -678,5 +705,9 @@ post css
     height: 400px;
 }
 table th{
-    background: #F5F5F5;
+    background: #f8f8f8;
 }
+.product_price{
+    height: 50px;
+}
+

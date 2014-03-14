@@ -259,4 +259,11 @@ class OrderController extends Controller
             Yii::app()->end();
         }
     }
+
+    public function actionGetChildAreas($parent_id)
+    {
+        $areas = Area::model()->findAllByAttributes(array('parent_id' => $parent_id));
+        $areasData = CHtml::listData($areas, 'area_id', 'name');
+        echo json_encode(CMap::mergeArray(array('0' => ''), $areasData));
+    }
 }

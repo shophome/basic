@@ -164,6 +164,7 @@
     padding:0 4px 10px 4px;
     margin-bottom:10px;
     line-height:25px;
+   text-align:center;
 }
 
 .deal_describe_tit{
@@ -187,10 +188,7 @@
 .deal_describe{
     padding: 20px;
 }
-.chenyu{
-    height:220px;
-    width:220px;
-}
+
 #warning-load{
     width:350px;
     height:320px;
@@ -201,6 +199,9 @@
     margin:10px;
     position:fixed;
     background:rgb(255,255,255);
+
+
+
 
 }
 #btn{
@@ -242,7 +243,7 @@
 #logo{
     width:350px;
     height:40px;
-    background-color:#ce0606;
+    background-color:#AF733D;
     font-size:25px;
     font-family:Georgia, Times, "Times New Roman", serif;
     text-align:center;
@@ -291,14 +292,15 @@
     border-radius: 5px;
     left: 50px;
     bottom: 80px;
-    background: #CE0606;
+    background: #AF733D;
     font-size:20px;
     font-weight: bold;
     color: white;
+    border:1px solid lightgray;
 }
 #log-btn-div:hover{
-    background: red;
-
+   background: #EA7E22;
+   border:1px solid #AF733D;
 }
 #register{
     width: 300px;
@@ -326,7 +328,7 @@ position:absolute;
     display: inline-block;
 
 }
-#myModal-1-content span{
+#myModal-1-content span,#myModal-2-content span{
     display:block;
     height: 56px;
     line-height: 56px;
@@ -336,5 +338,21 @@ position:absolute;
 
 #myModal-1-content{
     top: 255px;
-    left: 160px;
+    left: 0px;
+}
+#look-collect{
+    padding: 1px 34px;
+}
+.li-img{
+    width:70px;
+    height: 70px;
+}
+#myModal-2-content{
+
+    left:167px;
+    top: 225px;
+}
+#num{
+    font-size: 12px;
+    font-weight: normal;
 }

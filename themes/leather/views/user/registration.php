@@ -34,19 +34,20 @@ $this->breadcrumbs=array(
         <div class="form_c">
             <div class="form_l"><?php echo $form->labelEx($model,'username'); ?></div>
             <?php echo $form->textField($model,'username'); ?>
-            <?php echo $form->error($model,'username'); ?>
+          <div class="center" >
+            <?php echo $form->error($model,'username'); ?></div>
         </div>
 
         <div class="form_c">
             <div class="form_l"><?php echo $form->labelEx($model,'email'); ?></div>
             <?php echo $form->textField($model,'email'); ?>
-            <?php echo $form->error($model,'email'); ?>
+            <div class="center" > <?php echo $form->error($model,'email'); ?></div>
         </div>
 
         <div class="form_c">
             <div class="form_l"><?php echo $form->labelEx($model,'password'); ?></div>
             <?php echo $form->passwordField($model,'password'); ?>
-            <?php echo $form->error($model,'password'); ?>
+            <div class="center" >  <?php echo $form->error($model,'password'); ?></div>
 
 
 <!--            <p class="hint">-->
@@ -65,7 +66,7 @@ $this->breadcrumbs=array(
         <div class="form_c">
             <div class="form_l"><?php echo $form->labelEx($model,'verifyPassword'); ?></div>
             <?php echo $form->passwordField($model,'verifyPassword'); ?>
-            <?php echo $form->error($model,'verifyPassword'); ?>
+            <div class="center" >  <?php echo $form->error($model,'verifyPassword'); ?></div>
         </div>
 
         <?php

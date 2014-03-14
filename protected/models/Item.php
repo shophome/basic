@@ -58,7 +58,7 @@ class Item extends YActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('category_id, title, stock, price, currency, props, props_name, desc, language, country, state, city', 'required'),
+            array('category_id, title, price, currency, props, props_name, desc, language, country, state, city', 'required'),
             array('is_show, is_promote, is_new, is_hot, is_best', 'numerical', 'integerOnly' => true),
             array('category_id, stock, min_number, price, shipping_fee, click_count, wish_count, review_count,deal_count,create_time, update_time, country, state, city', 'length', 'max' => 10),
             array('outer_id, language', 'length', 'max' => 45),

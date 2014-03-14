@@ -113,3 +113,54 @@ td,table,tr{
 
            background:#7bb8e3;
 }
+
+
+
+span[class="required"]{
+    color: red;
+}
+
+.news-img{
+
+    text-align: center;
+    height: 200px;
+
+   padding: 35px 0;
+
+
+}
+.news-link{
+    color:#0069d6;
+
+}
+.news-summary{
+    color: #808080;
+}
+.news-outside {
+    margin: 0px 5px;
+    border-bottom:1px solid darkgray ;
+    height: 230px;
+
+}
+#news-pag li a{
+   text-indent: 0px;
+    height: 35px;
+    width: 35px;
+}
+#news-pag-two li a{
+    text-indent: 0px;
+    height: 35px;
+    width: 35px;
+}
+#news-hot li{
+   margin: 5px 0px;
+}
+#comments-list li{
+    margin: 40px 10px 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    height:auto;
+}
+#comments-list{
+    padding-bottom: 20px;
+}
