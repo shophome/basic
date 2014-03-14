@@ -163,14 +163,15 @@ var_dump(Yii::app()->getBaseUrl());
 
                             <div class="user">
                                 <div> 用户名：</div>
-                                <input class="txt form-control" name="user" type="text" placeholder="请输入用户名"/>
+                                <input class="txt form-control" id="user" name="user" type="text" placeholder="请输入用户名"/>
                             </div>
-                            <div class="user">
+                               <div id="ajax"></div>
+                               <div class="user">
                                 <div> 密码：</div>
-                                <input class="txt form-control" name="password" type="password" placeholder="请输入密码"/>
+                                <input class="txt form-control" id="password" name="password" type="password" placeholder="请输入密码"/>
                             </div>
-                            <button id="log-btn-div" type="button" name="button" onClick=location="<?php echo Yii::app()->createUrl('user/login/Login/'); ?>" class="btn-success btn">登录</button>
-                            <div id="register">
+                               <button id="log-btn-div"  name="button" type="button" onclick="llogin()" class="btn-success btn">登录</button>
+                               <div id="register">
                                 <a href="<?php echo Yii::app()->createUrl('user/registration'); ?>" class="link"><u>免费注册</u></a>
                                 <a href="javascript:void" class="link buy-without-login" ><u>免登陆直接购买</u></a>
                             </div>
@@ -193,7 +194,7 @@ var_dump(Yii::app()->getBaseUrl());
                                               <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入购物车！</span>
 
                                                <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+                                               <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
                                               </div><!-- /.modal-content -->
                                           </div><!-- /.modal-dialog -->
                                       </div>
@@ -204,7 +205,7 @@ var_dump(Yii::app()->getBaseUrl());
                                             <s id="mymodal-1-png" class="pull-left"></s> <span class="pull-left">成功加入收藏夹！</span>
 
                                              <button class="close pull-right" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</btn>
+                                             <button class="btn btn-success center-block" aria-hidden="true" data-dismiss="modal">确定</button>
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
                                     </div>
@@ -525,4 +526,74 @@ var_dump(Yii::app()->getBaseUrl());
             $('#deal').submit();
         });
     });
+    var xmlHttp
+    //    function test() {
+    //        window.open("http://yincart/user/login/test?username="+$("#user").val()+"&password="+$("#password").val());
+    //    }
+    function llogin() {
+        xmlHttp=GetXmlHttpObject();
+        if (xmlHttp==null)
+        {
+            alert ("Browser does not support HTTP Request")
+            return
+        }
+
+        var url= "http://yincart/user/login/llogin";
+//        var data = { username: $("#user").val(), password: $("#password").val() };
+        url=url+"?username="+$("#user").val();
+        url=url+"&password="+$("#password").val();
+        xmlHttp.onreadystatechange=stateChanged(url);
+//        xmlHttp.open("POST",url,true);
+//        xmlHttp.send();
+    }
+
+    function stateChanged(url)
+    {alert("1");
+//        if (xmlHttp.readyState==2 || xmlHttp.readyState=="complete")
+//        {
+//            if(){
+//                $('#deal').submit();
+//            }
+//            else
+//            {
+//                alert("Wrong username or password!");
+//            }
+        $.post(url, function(response){
+
+            if (response.status == 'login') {
+                alert("3");
+                $('#deal').submit();
+            } else {
+                alert("Wrong username or password!");
+            }
+        }, 'json');
+
+//            document.getElementById("user").innerHTML=xmlHttp.responseText;
+        //$("#myModal").css("display","none");
+        //      }
+    }
+
+    function GetXmlHttpObject()
+    {
+        var xmlHttp=null;
+
+        try
+        {
+            // Firefox, Opera 8.0+, Safari
+            xmlHttp=new XMLHttpRequest();
+        }
+        catch (e)
+        {
+            // Internet Explorer
+            try
+            {
+                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e)
+            {
+                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        return xmlHttp;
+    }
 </script>
